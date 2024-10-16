@@ -1,0 +1,340 @@
+
+@import url(header.css);
+@import url(menuHamburguesa.css);
+@import url(footer.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* ACOMODAR ESE BODY */
+body{
+    background-color: var(--collection-1-fondo);
+}
+/* inicio cards */
+.card {
+    width: 210px;
+    height: 226px;
+    position: relative;
+}
+
+.card .overlap-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 204px;
+    height: 226px;
+    background-color: var(--collection-1-gris-cards);
+}
+
+.card .car {
+    position: absolute;
+    width: 100%;
+    height: 226px;
+    top: 11px;
+    left: 7.3px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover .overlap-group {
+    border-color: var(--collection-1-violeta-principal);
+    box-shadow: 0px 0px 8px 0px var(--collection-1-violeta-principal);
+}
+
+
+.card .card-img-juego {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid var(--collection-1-gris-cards);
+}
+
+
+.card .card-pie {
+    margin-top: 4px;
+    height: auto;
+    width: 204px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .card-estado {
+    display: flex;
+    flex-direction: row;
+    font-family: "Lato-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--collection-1-verde-primario);
+    font-size: 14px;
+    text-align: center;
+}
+
+.card-img-tilde {
+    width: 16px;
+    height: 13px;
+    margin-left: 10px;
+    margin-top: 1px;
+}
+
+.card .h-px {
+    font-family: "Lato-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.card .extra-bold {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.card .div-wrapper {
+    position: absolute;
+    width: 59px;
+    height: 29px;
+    top: 0;
+    left: 0;
+}
+
+.card .rectangle-2 {
+    width: 59px;
+    height: 21px;
+    top: 0;
+    border-radius: 6px 6px 6px 0px;
+    background: linear-gradient(180deg, rgb(16, 255, 19) 0%, rgb(16, 255, 19) 100%);
+    position: absolute;
+    left: 0;
+    background-color: var(--collection-1-verde-primario);
+}
+
+.card:hover .rectangle-2 {
+    border-top: 1px solid var(--collection-1-violeta-principal); /* Borde superior en hover */
+    border-left: 1px solid var(--collection-1-violeta-principal); /* Borde izquierdo en hover */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    box-shadow: 0px -1.8px 4px 0.5px var(--collection-1-violeta-principal); /* Sombra */
+}
+
+
+.card:hover .rectangle-wrapper {
+    border-left: 1px solid var(--collection-1-violeta-principal);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: -1.2px 2px 4px 0px var(--collection-1-violeta-principal);
+}
+.card .rectangle-wrapper {
+    position: absolute;
+    width: 9px;
+    height: 8px;
+    top: 21px;
+    left: 0;
+    background-color: #257d05;
+    border-radius: 0px 0px 0px 3px;
+}
+
+.card .en-carro .rectangle-2 {
+    width: 97px;
+}
+
+.card .rectangle-3 {
+    width: 9px;
+    height: 5px;
+    top: 0;
+    position: absolute;
+    left: 0;
+}
+
+.card .p {
+    position: absolute;
+    width: 35px;
+    height: 17px;
+    top: 2px;
+    left: 9px;
+}
+
+.card .p-px {
+    position: absolute;
+    width: 35px;
+    left: 0;
+    font-family: "Lato-ExtraBold", Helvetica;
+    white-space: nowrap;
+    font-weight: 800;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+/* FIN cards */
+
+/* INI Juegos destacados */
+.section-juegos-destacados .titulo-destacado {
+    margin-top: 5px;
+    margin-left: 144    px;
+}
+.cards-flechas {
+    width: 1348px;
+    height: 321px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 47px;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+}
+
+.juegos-destacados {
+    width: 1158px;
+    height: 284px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-x: scroll; 
+    scroll-behavior: smooth;
+    gap: 26px;
+}
+
+.juegos-destacados::-webkit-scrollbar {
+    display: none;
+}
+
+.img-destacado {
+    width: 413px; 
+    height: 238px;
+    flex-shrink: 0;
+}
+
+.circulitos {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    height: 17px;
+    margin-top: 10px;
+}
+
+.circulo {
+    background-color: var(--collection-1-color);
+    width: 17px;
+    height: 17px;
+    margin: 0 5px; 
+    border-radius: 50%;
+}
+
+.posicion-circulo {
+    background-color: var(--collection-1-violeta-principal);
+}
+
+.cards-flechas .flecha-izq,
+.cards-flechas .flecha-der {
+    width: 48px;
+    height: 75px;
+}
+
+/* INI carrusels por categorias */
+
+.juegos .card {
+    margin-top: 7px;
+    margin-right: 45px;
+    flex: 0 0 auto;
+    opacity: 0.4;
+    transform: scale(0.90);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.juegos .card.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.juegos-por-categoria{
+    margin-top: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 43px; 
+    justify-content: center;
+}
+.categoria-con-juegos {
+    width: 1440px;
+    height: 287px;
+}
+
+.nombre-categoria {
+    margin-left: 156px;
+    font-family: "Handjet", Helvetica;
+    font-weight: 600;
+    font-size: 25px;
+    letter-spacing: 0;
+    line-height: normal;
+    width: 207;
+    color: var(--collection-1-verde-primario);
+}
+
+.carrusel-juegos {
+    width: 1440px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 38px;
+}
+
+.carrusel-juegos .flecha-izq,
+.carrusel-juegos .flecha-der {
+    width: 40;
+    height: 259;
+    cursor: pointer;
+}
+
+.flecha-oculta {
+    visibility: hidden;
+}
+
+.juegos {
+    width: 1147px;
+    height: 259px;
+    left: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.juegos::-webkit-scrollbar {
+    display: none;
+}
+
+.juegos .card {
+    margin-top: 7px;
+    margin-right: 45px;
+    flex: 0 0 auto;
+}
+
+/* FIN carrusels por categorias */
+
+
+/* responsive */
+@media(max-width:768px){
+    .cards-flechas {
+        width: 100% ;
+    }
+    
+.carrusel-juegos {
+    width: 100%;
+}
+.juegos {
+    width: 600px;
+}
+.circulitos{
+    display: none;
+}
+.nombre-categoria{
+    margin-left: 96px;
+}
+}

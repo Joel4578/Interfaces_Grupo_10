@@ -1,0 +1,50 @@
+
+/* menu hamburguesa */
+.menu-hamburguesa {
+    background-color: #1b1b1b;
+    position: absolute;
+    height: 100vh;
+    width: 190px;
+    display: none;
+    z-index: 10;
+    transition: .5s;
+    list-style: none; 
+}
+    
+.menu-hamburguesa .men-ham {
+    padding: 0;
+    margin: 20px;
+    background-color: #1b1b1b;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-hamburguesa .container-iconos .iconos {
+    margin-left: 20px;
+}
+
+.iconos .icono {
+    background-color: #1b1b1b;
+    border: none;
+    margin: 10px;
+}
+
+.menu-hamburguesa .container-iconos .iconos li {
+    display: grid;
+    grid-template-columns: auto 80%;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-hamburguesa .container-iconos .iconos .container-icono {
+    justify-content: center;
+    align-self: start;
+}
+
+.menu-hamburguesa .container-iconos .iconos .container-icono a {
+    color: #10FF13;
+    margin-left: 3px;
+    justify-content: center;
+    font-size: 25px;
+    font-family: "Handjet", Helvetica;
+}

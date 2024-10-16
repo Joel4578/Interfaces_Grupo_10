@@ -1,0 +1,223 @@
+@import url(header.css);
+@import url(menuHamburguesa.css);
+@import url(footer.css);
+
+
+
+
+:root {
+    --collection-1-verde-primario: rgba(16, 255, 19, 1);
+    --collection-1-blanco-transparencia: rgba(255, 255, 255, 0.6);
+    --collection-1-blanco: rgba(255, 255, 255, 1);
+    --collection-1-verde-secundario: rgba(38, 125, 6, 1);
+    --collection-1-fondo: rgba(32, 32, 32, 1);
+    --collection-1-violeta-principal: rgba(102, 5, 248, 1);
+    --collection-1-violeta5: rgba(45, 3, 109, 1);
+    --collection-1-violeta-contraste: rgba(85, 7, 202, 1);
+    --collection-1-color: rgba(61, 61, 61, 1);
+    --collection-1-gris-5: rgba(255, 255, 255, 0.1);
+    --collection-1-color-2: var(--collection-1-gris-5);
+    --collection-1-gris-cards: rgba(27, 27, 27, 1);
+}
+/* menu de inicio de sesion */
+body{
+    background-color: var(--collection-1-fondo);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin-top: 35px;
+}
+
+.container h2 {
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 100;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+}
+
+.container p {
+    color: #fff;
+}
+
+.container button, input {
+    display: grid;
+    width: 408.38px;
+    height: 44px;
+    border-radius: 8px;
+    color: #ffffff;
+    background-color: #3d3d3d;
+    border: none;
+    /* margin: 10px; */
+    justify-content: center;
+    align-items: center;
+}
+
+.container input {
+    padding-left: 10px;
+}
+
+.container button a {
+    justify-content: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.container-enviar .enviar {
+    width: 125.73px;
+    background-color: #000;
+    border: solid 3px #10FF13;
+}
+
+.container-enviar .enviar:hover {
+    cursor: pointer;
+    background-color: #267D06;
+}
+
+.container-enviar {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.container-inicioSesion {
+    width: 557px;
+    height: 624px;
+    border: solid 3px #10FF13;
+    background-color: #1b1b1b;
+    border-radius: 20px;
+}
+
+.container-inicioSesion .container-principal {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 266px;
+}
+
+.container-principal {
+    margin-top: 80px;
+}
+
+.container-linea {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.linea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .container-IncioExterior {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.container .container-IncioExterior .btn-google {
+    background-color: #fff;
+    transition: 0.5s;
+    color: #000;
+    width: 485px;
+    height: 47px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 7px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto 80%;
+    margin: 10px;
+}
+
+.container .container-IncioExterior .btn-facebook {
+    background-color: #1878F1;
+    transition: 0.5s;
+    color: #fff;
+    width: 485px;
+    height: 47px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 7px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto 80%;
+    margin: 10px;
+}
+
+.container .container-IncioExterior .btn-google:hover {
+    background-color: #b5b5b5;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.container .container-IncioExterior .btn-facebook:hover {
+    background-color: #1565c6;
+    transition: 0.5s ease-in;
+    cursor: pointer;
+}
+
+.container-enviar {
+    position: relative; 
+}
+
+.container-enviar .enviar {
+    position: relative; 
+    width: 125.73px;
+    height: 44px; /* Asegúrate de que coincida con la altura del botón */
+    background-color: #000;
+    border: solid 3px var(--collection-1-verde-primario);
+    border-radius: 8px; /* Bordes redondeados */
+    color: #ffffff;
+    overflow: hidden; /* Para ocultar el pseudo-elemento fuera del botón */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Cambiar color y aplicar transformación suavemente */
+}
+
+/* Efecto hover para el botón de Login */
+.container-enviar .enviar:hover {
+    cursor: pointer;
+    background-color: var(--collection-1-verde-secundario); 
+    transform: translateY(-5px) scale(1.05); 
+    box-shadow: 0 4px 20px rgba(0, 255, 0, 0.5); 
+}
+
+/* Efecto de rebote */
+.container-enviar .enviar:active {
+    transform: translateY(2px) scale(0.98);
+}
+
+
+/*mensajes de error*/
+
+.content {
+    text-align: center;
+}
+
+.input-container {
+    position: relative; /* Necesario para posicionar el icono */
+}
+
+.error-icon {
+    color: red;
+    position: absolute; /* Posicionamiento absoluto */
+    right: 10px; /* Ajusta según necesites */
+    top: 50%; /* Centrado vertical */
+    transform: translateY(-50%); /* Ajusta para centrar realmente */
+    display: none; /* Inicialmente oculto */
+    font-size: 16px; /* Ajusta el tamaño del icono */
+    
+}
+.input-error {
+    border: 1px solid red; /* Cambia el borde a rojo */
+}

@@ -1,0 +1,174 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --collection-1-verde-primario: rgba(16, 255, 19, 1);
+    --collection-1-blanco-transparencia: rgba(255, 255, 255, 0.6);
+    --collection-1-blanco: rgba(255, 255, 255, 1);
+    --collection-1-verde-secundario: rgba(38, 125, 6, 1);
+    --collection-1-fondo: rgba(32, 32, 32, 1);
+    --collection-1-violeta-principal: rgba(102, 5, 248, 1);
+    --collection-1-violeta5: rgba(45, 3, 109, 1);
+    --collection-1-violeta-contraste: rgba(85, 7, 202, 1);
+    --collection-1-color: rgba(61, 61, 61, 1);
+    --collection-1-gris-5: rgba(255, 255, 255, 0.1);
+    --collection-1-color-2: var(--collection-1-gris-5);
+    --collection-1-gris-cards: rgba(27, 27, 27, 1);
+}
+
+.fondo {
+    background-color: #202020;
+    /* background-repeat: no-repeat; */
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+/* inicio header */
+.nav {
+    padding: 10px;
+    background-color: #1b1b1b;
+}
+
+.nav ul {
+    display: grid;
+    grid-template-columns: 10% 5% auto 5% 5%;
+    list-style: none;
+}
+
+.nav ul li .men-ham {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav .men-ham {
+    background-color: #1b1b1b;
+    border: none;
+    cursor: pointer;
+}
+
+.nav #search input {
+    height: 32px;
+    width: 170px;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+    padding-left: 10px;
+    background-color: #3d3d3d;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav #search .iconoSearch {
+    height: 10px;
+}
+
+.nav #search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav #tituloPrincipal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav #carrito {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.nav #cuenta {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+/* fin header */
+
+/* empieza el responsive!!!!!!! */
+
+@media(max-width:768px){
+
+    
+/* inicio header */
+.nav {
+    padding: 10px;
+    background-color: #1b1b1b;
+}
+
+.nav ul {
+    display: grid;
+    grid-template-columns: 20% 5% auto 5% 5%;
+    list-style: none;
+}
+
+.nav ul li .men-ham {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav .men-ham {
+    background-color: #1b1b1b;
+    border: none;
+    cursor: pointer;
+}
+
+.nav #search input {
+    height: 32px;
+    width: 120px;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+    margin-right: 20px;
+    background-color: #3d3d3d;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav #search .iconoSearch {
+    height: 10px;
+}
+
+.nav #search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.nav #tituloPrincipal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.nav #carrito {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: 8px;
+}
+
+.nav #cuenta {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+    
+}
