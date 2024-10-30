@@ -1,0 +1,42 @@
+.loader-container {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black; /* Color de fondo del home */
+    color: lime;
+    text-align: center;
+    margin: 0; /* Eliminar margenes */
+    overflow: hidden; /* Evitar el scroll mientras se carga */
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo semi-transparente */
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+}
+
+.percentage {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.bar {
+    width: 80%;
+    height: 20px;
+    border: 2px solid lime;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background-color: lime;
+}
+
+

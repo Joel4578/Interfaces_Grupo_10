@@ -1,0 +1,727 @@
+@import url(header.css);
+@import url(menuHamburguesa.css);
+@import url(footer.css);
+
+.container-principal {
+    display: grid;
+    width: 100%;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: center;
+}
+
+/* BREADCRUMB */
+
+.container-principal .container-breadcrumb {
+    display: grid;
+}
+
+.container-principal .breadcrumbs {
+    width: 100%;
+}
+
+.container-principal .breadcrumbs .breadcrumb {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    border-bottom: 2px solid #d2d2d252;
+    width: 18%;
+}
+
+.breadcrumbs a, p {
+    color: #d2d2d252;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.breadcrumb .pagina-donde-estamos {
+    color: #6605F8;
+}
+
+/* ZONA JUEGO */
+
+/* ZONA PANTALLA */
+
+.container-principal .container-principal-juego {
+    display: grid;
+    grid-template-columns: 60% auto;
+    justify-content: center;
+}
+
+.container-principal .juego {
+    justify-content: center;
+}
+
+.btn-jugar {
+    position: relative; 
+    padding: 10px 20px; 
+    background-color: #000; 
+    border: solid 2px var(--collection-1-verde-primario); 
+    color: #ffffff; 
+    font-size: 16px; 
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    border-radius: 10px; 
+    z-index: 1; 
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Sombra suave */
+}
+
+.btn-jugar:hover {
+    background: linear-gradient(45deg, var(--collection-1-verde-primario), var(--collection-1-verde-secundario)); /* Gradiente */
+    color: #000; /* Cambia el color del texto */
+    border: solid 2px var(--collection-1-verde-secundario);
+    transform: scale(1.1); /* Aumento de tamaño */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
+}
+
+.btn-jugar:active {
+    transform: scale(1.05); /* Reduce ligeramente el tamaño al hacer clic */
+}
+
+.pantalla {
+    background-image: url(../imgs/foto-web-jueguitos/carrusel-juegos/CuatroEnLineaMario.png);
+    background-size: cover;
+    width: 755px;
+    height: 443px;
+    opacity: .7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pantalla .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-principal .container-titulo {
+    background-color: #3D3D3D;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto;
+    width: 755px;
+    height: 60px;
+    margin-bottom: 30px;
+}
+
+.container-principal .container-titulo .boton .btn-compartir {
+    padding: 5px 10px;
+    background-color: #000; 
+    border: solid 2px var(--collection-1-verde-primario); 
+    color: #ffffff;
+    font-size: 14px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-compartir:hover {
+    background-color: var(--collection-1-verde-secundario);
+    transform: translateY(-3px); /* Movimiento hacia arriba */
+    box-shadow: 0 0 10px var(--collection-1-verde-secundario), 
+                0 0 20px var(--collection-1-verde-secundario); /* Resplandor */
+}
+
+.container-principal .container-titulo .boton img {
+    width: 21px;
+    height: 24px;
+}
+
+.container-principal .container-titulo .botones-extra {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.container-principal .container-titulo .botones-extra img {
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+}
+
+.botones-extra .corazon {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    outline: none; /* Sin contorno al hacer clic */
+    transition: transform 0.3s ease; /* Transición para la transformación */
+}
+
+.botones-extra .corazon img {
+    width: 30px; /* Ajusta el tamaño según sea necesario */
+    height: 30px; /* Ajusta el tamaño según sea necesario */
+    transition: filter 0.3s ease; /* Transición para el cambio de color */
+}
+
+/* Efecto hover para el botón corazón */
+.botones-extra .corazon:hover img {
+    filter: brightness(0) saturate(1000%) invert(25%) sepia(100%) hue-rotate(0deg) brightness(0) saturate(1000%) invert(0%); /* Cambia a rojo */
+    transform: scale(1.1); /* Aumento del tamaño para el efecto de rebote */
+}
+
+/* Efecto de rebote al hacer clic */
+.botones-extra .corazon:active img {
+    transform: scale(0.9); /* Efecto de "presionar" al hacer clic */
+}
+
+/* Cambiar el color a rojo de forma permanente al hacer clic */
+.botones-extra .corazon.active img {
+    filter: brightness(0) saturate(1000%) invert(50%) sepia(100%) hue-rotate(0deg) brightness(0) saturate(1000%) invert(0%); /* Rojo */
+}
+
+.botones-extra .btn-fullscreen {
+    background-color: #3D3D3D;
+    border: none;
+    cursor: pointer;
+}
+
+/* JUEGO ACTIVO */
+
+.pantalla-activa {
+    background-image: url(../imgs/cuatro-en-linea/fondo-juego.png);
+    background-size: cover;
+    width: 755px;
+    height: 443px;
+    display: none;
+    justify-content: center;
+}
+
+.pantalla-activa .pantalla-principal .titulo, .btn {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(50px);
+        animation: entrada 1s ease-out forwards;
+}
+
+@keyframes entrada {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pantalla-activa .pantalla-principal{
+    display: grid;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    height: 90%;
+    width: 350px;
+}
+
+.pantalla-activa .pantalla-principal img {
+    padding-top: 10px;
+    width: 200px;
+    user-select: none;
+}
+
+.pantalla-activa .pantalla-principal .opciones {
+    display: grid;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.pantalla-activa .pantalla-principal .opciones .btn {
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+    user-select: none;
+}
+
+.pantalla-activa .pantalla-principal .opciones .btn:hover {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    transition: .3s;
+    border-radius: 10px;
+    cursor: pointer;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+/* CANVAS */
+
+#c {
+    display: none;
+}
+
+#c{
+    &.hover{
+      cursor: grab;
+    }
+  
+    &.grabbing{
+      cursor: grabbing;
+    }
+  
+    &.pointer{
+      cursor: pointer;
+    }
+  
+    &.illegal{
+      cursor: no-drop;
+    }
+  }
+
+/* JUEGO ACTIVO (SOLO) */
+
+.pantalla-activa-solo {
+    background-image: url(../imgs/cuatro-en-linea/fondo-juego.png);
+    background-size: cover;
+    width: 755px;
+    height: 443px;
+    display: none;
+    justify-content: center;
+}
+
+.pantalla-activa-solo .pantalla-principal .titulo, .btn {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(50px);
+        animation: entrada 1s ease-out forwards;
+}
+
+@keyframes entrada {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pantalla-activa-solo .pantalla-principal{
+    display: grid;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    height: 90%;
+    width: 350px;
+}
+
+.pantalla-activa-solo .pantalla-principal .titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.pantalla-activa-solo .pantalla-principal .titulo p {
+    color: #ffffff;
+    font-size: 30px;
+    font-family: "Lato-Regular", Helvetica;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+.pantalla-activa-solo .pantalla-principal .opciones {
+    display: grid;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.pantalla-activa-solo .pantalla-principal .opciones .btn {
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+    user-select: none;
+}
+
+.pantalla-activa-solo .pantalla-principal .opciones .btn:hover {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    transition: .3s;
+    border-radius: 10px;
+    cursor: pointer;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+/* JUEGO ACTIVO (FICHAS) */
+
+.pantalla-activa-fichas {
+    background-image: url(../imgs/cuatro-en-linea/fondo-juego.png);
+    background-size: cover;
+    width: 755px;
+    height: 443px;
+    display: none;
+    justify-content: center;
+}
+
+.pantalla-activa-fichas .pantalla-principal .titulo, .btn {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(50px);
+        animation: entrada 1s ease-out forwards;
+}
+
+@keyframes entrada {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pantalla-activa-fichas .pantalla-principal{
+    display: grid;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    height: 90%;
+    width: 400px;
+}
+
+.pantalla-activa-fichas .pantalla-principal .titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.pantalla-activa-fichas .pantalla-principal .titulo p {
+    color: #ffffff;
+    font-size: 30px;
+    font-family: "Lato-Regular", Helvetica;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+.pantalla-activa-fichas .pantalla-principal .jugador {
+    display: grid;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.pantalla-activa-fichas .pantalla-principal .contenedor-jugadores {
+    display: flex;
+}
+
+.pantalla-activa-fichas .pantalla-principal .contenedor-jugadores p {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "Lato-Regular", Helvetica;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    animation: entrada 1s ease-out forwards;
+}
+
+.pantalla-activa-fichas .pantalla-principal .jugador .btn {
+    padding: 10px;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+    user-select: none;
+}
+
+.pantalla-activa-fichas .pantalla-principal .jugador .btn img {
+    width: 60px;
+    user-select: none;
+}
+
+.pantalla-activa-fichas .pantalla-principal .jugador .btn:hover {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    transition: .3s;
+    border-radius: 10px;
+    cursor: pointer;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+/* ZONA COMENTARIOS */
+
+/* ESCRIBIR COMENTARIOS */
+
+.container-general-comentarios {
+    margin-bottom: 10px;
+}
+
+.container-principal .container-comentarios .dejar-comentario {
+    width: 755px;
+    height: 55px;
+    background-color: #3D3D3D;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 90%;
+    margin-bottom: 30px;
+}
+
+.dejar-comentario .container-img {
+    display: flex;
+    justify-content: center;
+}
+
+.dejar-comentario .container-img img {
+    width: 38px;
+    height: 36px;
+} 
+
+.dejar-comentario .container-comentario-nuevo {
+    border-bottom: 2px solid #fff;
+    width: 95%;
+    margin: 5px;
+}
+
+.dejar-comentario .container-comentario-nuevo p {
+    color: #fff;
+    font-size: 14px;
+    font-family: "Lato-Regular", Helvetica;
+}
+
+/* COMENTARIOS PUBLICADOS */
+
+.container-comentarios .comentario {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto 90%;
+    width: 755px;
+    height: 121px;
+    background-color: #3D3D3D;
+    margin-bottom: 10px;
+}
+
+.comentario .comentario-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-comentarios .comentario img {
+    width: 38px;
+    height: 36px;
+}
+
+.container-comentarios .container-comentario {
+    display: grid;
+    align-items: center;
+    margin-left: 20px;
+    align-content: start;
+}
+
+.container-comentario .container-informacion {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.container-comentario .container-calificacion {
+    display: flex;
+    bottom: 0;
+    align-items: end;
+    margin-top: 5px;
+}
+
+.container-comentarios .comentario a{
+    color: #10FF13;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "Lato-Regular", Helvetica;
+    padding-left: 10px;
+}
+
+.container-comentarios .comentario .info p {
+    color: #fff;
+    font-weight: bold;
+}
+
+.container-comentarios .container-mensaje {
+    display: flex;
+    margin-top: 2px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.container-comentarios .container-mensaje p {
+    width: 100%;
+    display: flex;
+    align-items: start;
+}
+
+.container-comentarios .comentario p{
+    color: #fff;
+    width: 100%;
+}
+
+.container-comentarios .comentario .container-calificacion {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.container-comentarios .comentario .container-calificacion img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    transition: filter 0.3s ease;
+    cursor: pointer;
+} 
+
+.container-comentarios .comentario .container-calificacion img:hover {
+    filter: brightness(0) saturate(1000%) invert(25%) sepia(100%) hue-rotate(0deg) brightness(0) saturate(1000%) invert(0%);
+    transform: scale(1.1);
+} 
+
+.container-comentarios .comentario .container-calificacion img:active {
+    transform: scale(0.9);
+} 
+
+/* MAS COMENTARIOS */
+
+.container-comentarios .mas-comentarios {
+    background-color: #3D3D3D;
+    width: 755px;
+    height: 31px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-comentarios .mas-comentarios p {
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "Lato-Regular", Helvetica;
+}
+
+/* ZONA TUTORIAL */
+
+.container-zona-tutorial {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+}
+
+/* TUTORIAL */
+
+.container-zona-tutorial .tutorial {
+    display: grid;
+    justify-content: center;
+}
+
+.tutorial .titulo {
+    margin-bottom: 25px;
+}
+
+.tutorial h2, h3 {
+    color: #267D06;
+    padding: 10px;
+    display: flex;
+    font-size: 16px;
+    font-family: "Lato-Regular", Helvetica;
+}
+
+.container-zona-tutorial p {
+    color: #fff;
+    font-family: "Lato-Regular", Helvetica;
+    font-size: 14px;
+}
+
+.container-zona-tutorial h2 {
+    justify-content: center;
+    height: 10px;
+    font-size: 18px;
+    font-family: "Lato-Regular", Helvetica;
+}
+
+.tutorial .instrucciones {
+    width: 508px;
+    height: 121px;
+    margin-bottom: 35px;
+}
+
+.tutorial .controles {
+    width: 508px;
+    height: 199px;
+}
+
+.tutorial .controles li {
+    color: #fff;
+    font-family: "Lato-Regular", Helvetica;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.tutorial .controles .imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* VIDEOS TUTORIALES */
+
+.container-zona-tutorial .videos-tutoriales {
+    display: grid;
+    margin-top: 40px;
+}
+
+.videos-tutoriales h2 {
+    color: #267D06;
+    padding: 10px;
+    font-size: 16px;
+    font-family: "Lato-Regular", Helvetica;
+    margin-bottom: 30px;
+}
+
+.videos-tutoriales .videos {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items:  center;
+}
+
+.videos-tutoriales .videos img {
+    margin: 10px;
+}

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 en linea - Pixel Universe</title>
+
+    <link rel="stylesheet" href="styles/intermedia.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imgs/logoIcono.png" />
+
+</head>
+<body>
+
+    <div class="fondo">
+
+        <div class="fondo">
+
+            <!-- MENU HAMBURGUESA ABIERTO -->
+        
+            <div class="container-menu-hamburguesa-abierto">
+                <div class="menu-hamburguesa" id="menuHambAbierto">
+                    <div class="container-iconos">
+                    <li><button id="menuHambAb" class="men-ham"><img src="imgs/header/Menu hamburguesa.png" alt=""></button></li>
+                    
+                        <div class="iconos">
+                        <div class="container-icono"><li><button class="icono"><img src="imgs/iconos-menu-hamburguesa/icono-clasicos.png" alt=""></button><a href="home.html">Clasicos</a></li></div>
+                        <div class="container-icono"><li><button class="icono"><img src="imgs/iconos-menu-hamburguesa/icono-autos.png" alt=""></button><a href="home.html">Vehiculos</a></li></div>
+                        <div class="container-icono"><li><button class="icono"><img src="imgs/iconos-menu-hamburguesa/icono-accion.png" alt=""></button><a href="home.html">Accion</a></li></div>
+                        <div class="container-icono"><li><button class="icono"><img src="imgs/iconos-menu-hamburguesa/icono-deporte.png" alt=""></button><a href="home.html">Deporte</a></li></div>
+                        <div class="container-icono"><li><button class="icono"><img src="imgs/iconos-menu-hamburguesa/icono-estrategia.png" alt=""></button><a href="home.html">Estrategia</a></li></div>
+                        <div class="container-icono"><li><button class="icono"><img src="imgs/iconos-menu-hamburguesa/icono-puzzle.png" alt=""></button><a href="home.html">Puzzle</a></li></div>
+                        <div class="container-icono"><li><button class="icono"><img src="imgs/iconos-menu-hamburguesa/icono-login.png" alt=""></button><a href="inicioSesion.html">Cerrar sesion</a></li></div>
+                        </div>
+                        
+                    </div>
+    
+                </div>
+            </div>
+        
+            <!-- NAV -->
+        
+            <header>
+                <div class="nav">
+                    <ul>
+                        <li><button id="menuHamb" class="men-ham"><img src="imgs/header/Menu hamburguesa.png" alt=""></button></li>
+                        <li id="search"><input placeholder="Buscar Juego"></input></li>
+                        <li id="tituloPrincipal"><a href="home.html"><img src="imgs/Logo.png" alt=""></a></li>
+                        <li id="carrito"><a href=""><img src="imgs/header/carrito.png" alt=""></a></li>
+                        <li id="cuenta"><a href="registro.html"><img src="imgs/header/login.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <!-- PAGINA INTERMEDIA -->
+            
+            <div class="container-principal">
+
+                <div class="container-breadcrumb">
+                    <div class="breadcrumbs">
+                        <div class="breadcrumb">
+                            <a href="home.html">Home</a><p> > </p><a href="">Clasicos</a><p> > </p><a href="" class="pagina-donde-estamos">4 en linea</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-principal-juego">
+
+                    <div class="container-zona-juego">
+
+                        <div class="zona-juego">
+    
+                            <div class="juego">
+                                
+                                <!-- PANTALLA -->
+
+                                <div id="pantalla-juego" class="pantalla">
+                                    <div class="img">
+                                        <button id="btn-play" class="btn-jugar"><span class="logo-btn"></span>PLAY</button>
+                                    </div>
+                                </div>
+
+                                <canvas id="c" width="755" height="433"></canvas>
+
+                                <div id="pantalla-juego-principal" class="pantalla-activa">
+                                    <div class="img">
+                                        
+                                        <div class="pantalla-principal">
+
+                                            <div class="titulo">
+                                                <img src="imgs/cuatro-en-linea/titulo-juego.png" alt="">
+                                            </div>
+
+                                            <div class="opciones">
+                                                <button id="solo" class="btn">Jugar Solo</button>
+                                                <button id="multijugador" class="btn">Multijugador</button>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- JUGAR SOLO -->
+
+                                <div id="pantalla-juego-solo" class="pantalla-activa-solo">
+                                    <div class="img">
+                                        
+                                        <div class="pantalla-principal">
+
+                                            <div class="titulo">
+                                                <p>Juego solo</p>
+                                            </div>
+
+                                            <div class="opciones">
+                                                <button id="cuatroPorCuatro" class="btn">Jugar 4 x 4</button>
+                                                <button id="cincoPorCinco" class="btn">Jugar 5 x 5</button>
+                                                <button id="seisPorSeis" class="btn">Jugar 6 x 6</button>
+                                                <button id="volver" class="btn">Volver</button>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- SELECCION FICHAS -->
+
+                                <div id="pantalla-seleccionar-fichas" class="pantalla-activa-fichas">
+                                    <div class="img">
+                                        
+                                        <div class="pantalla-principal">
+
+                                            <div class="titulo">
+                                                <p>Seleccionar Personaje</p>
+                                            </div>
+
+                                            <div class="contenedor-jugadores">
+                                                <div class="jugador">
+                                                    <p>Jugador 1</p>
+                                                    <button id="ficha" class="btn"><img src="imgs/cuatro-en-linea/fichas/ficha-mario.png" alt=""></button>
+                                                    <button id="ficha" class="btn"><img src="imgs/cuatro-en-linea/fichas/ficha-peach.png" alt=""></button>
+                                                    <button id="ficha" class="btn"><img src="imgs/cuatro-en-linea/fichas/ficha-bowser.png" alt=""></button>
+                                                </div>
+    
+                                                <div class="jugador">
+                                                    <p>Jugador 2</p>
+                                                    <button id="ficha" class="btn"><img src="imgs/cuatro-en-linea/fichas/ficha-mario.png" alt=""></button>
+                                                    <button id="ficha" class="btn"><img src="imgs/cuatro-en-linea/fichas/ficha-peach.png" alt=""></button>
+                                                    <button id="ficha" class="btn"><img src="imgs/cuatro-en-linea/fichas/ficha-bowser.png" alt=""></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="contendor-opciones">
+                                                <button id="volver" class="btn">Volver</button>
+                                                <button id="jugar" class="btn">Jugar</button>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- ZONA DEBAJO DE LA PANTALLA -->
+
+                                <div class="container-titulo">
+
+                                    <div class="boton">
+                                        <button class="btn-compartir"><span class="logo-btn"><img src="imgs/intermedia-fotos/share.png" alt=""></span>Compartir</button>
+                                        
+                                    </div>
+
+                                    <div class="botones-extra">
+                                        <button class="corazon"> <img src="imgs/intermedia-fotos/Corazon2.png" alt=""></button>
+                                        <button id="btn-fullscreen" class="btn-fullscreen" ><img src="imgs/intermedia-fotos/gridicons_fullscreen.png" alt=""></button>
+                                    </div>
+
+                                </div>
+
+<!-- COMENTARIOS -->
+
+                                    <div class="container-comentarios">
+
+<!-- ESCRIBIR COMENTARIOS -->
+                                        <div class="dejar-comentario">
+                                            
+                                            <div class="container-img">
+                                                <img src="imgs/intermedia-fotos/img-perfil1.png" alt="">
+                                            </div>
+    
+                                            <div class="container-comentario-nuevo">
+                                                <p>Escribir nuevo comentario...</p>
+                                            </div>
+                                        </div>
+
+<!-- comentario-->
+                                        <section class="comentarios-ej">
+                                            
+                                            <div class="container-comentarios-ej">
+
+<!-- comentario 1 -->
+                                                <div class="comentario">
+                                                
+                                                    <div class="container-img">
+                                                        <img src="imgs/intermedia-fotos/img-perfil1.png" alt="">
+                                                    </div>
+        
+                                                    <div class="container-comentario">
+
+
+        
+                                                        <div class="container-informacion">
+                                                            
+                                                            <div class="nombre">
+                                                                <a href="">@elNegroLeiva</a>
+                                                            </div>
+        
+                                                            <div class="info">
+                                                                <p>hace 15 minutos</p>
+                                                            </div>
+                                                            
+                                                        </div>
+
+
+        
+                                                        <div class="container-mensaje">
+                                                            <p>jaja malardo, ojala lo eliminen este juego horrible!!</p>
+                                                        </div>
+
+
+        
+                                                        <div class="container-calificacion">
+                                                            <img src="imgs/intermedia-fotos/like.png" alt="">
+                                                            <img src="imgs/intermedia-fotos/dislike.png" alt="">
+                                                            <p>responder</p>
+                                                        </div>
+
+                                                    </div>
+        
+                                                </div>
+
+<!-- comentario 2 -->
+                                                <div class="comentario">
+                                                
+                                                    <div class="container-img">
+                                                        <img src="imgs/intermedia-fotos/img-perfil2.png" alt="">
+                                                    </div>
+        
+                                                    <div class="container-comentario">
+
+
+        
+                                                        <div class="container-informacion">
+                                                            
+                                                            <div class="nombre">
+                                                                <a href="">@JoelPugliese1</a>
+                                                            </div>
+        
+                                                            <div class="info">
+                                                                <p>hace 22 minutos</p>
+                                                            </div>
+                                                            
+                                                        </div>
+
+
+        
+                                                        <div class="container-mensaje">
+                                                            <p>busco jugador 2, ya me aburri de jugar con la maquina</p>
+                                                        </div>
+
+
+        
+                                                        <div class="container-calificacion">
+                                                            <img src="imgs/intermedia-fotos/like.png" alt="">
+                                                            <img src="imgs/intermedia-fotos/dislike.png" alt="">
+                                                            <p>responder</p>
+                                                        </div>
+
+
+        
+                                                    </div>
+        
+                                                </div>
+
+
+<!-- comentario 3 -->
+                                                <div class="comentario">
+                                                
+                                                    <div class="container-img">
+                                                        <img src="imgs/intermedia-fotos/img-perfil3.png" alt="">
+                                                    </div>
+        
+                                                    <div class="container-comentario">
+
+
+        
+                                                        <div class="container-informacion">
+                                                            
+                                                            <div class="nombre">
+                                                                <a href="">@chicaGamer77</a>
+                                                            </div>
+        
+                                                            <div class="info">
+                                                                <p>hace 1 hora</p>
+                                                            </div>
+                                                            
+                                                        </div>
+
+
+        
+                                                        <div class="container-mensaje">
+                                                            <div class="mensaje">
+                                                                <p>gran juegoo!!!! uwu </p>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="container-calificacion">
+                                                            <img src="imgs/intermedia-fotos/like.png" alt="">
+                                                            <img src="imgs/intermedia-fotos/dislike.png" alt="">
+                                                            <p>responder</p>
+                                                        </div>
+
+
+                                                    </div>
+        
+                                                </div>
+
+                                            </div>
+    
+                                        </section>
+
+                                        <!-- MAS COMENTARIOS -->
+
+                                        <div class="mas-comentarios">
+                                            <p>mas comentarios</p>
+                                        </div>
+
+                                    </div>
+
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+    
+                    <div class="container-zona-tutorial">
+                        
+                        <div class="tutorial">
+
+                            <div class="titulo">
+                            <h2>4 En Linea</h2>
+                            </div>
+    
+                            <div class="instrucciones">
+    
+                            <h3>Instrucciones</h3>
+    
+                            <p>Las normas del cuatro en linea son muy sencillas. Se juega siempre entre 2 jugadores y sobre un tablero de 7x6 casillas. En cada turno cada jugador coloca una ficha de su color en una columna y esta cae hasta la primer casilla disponible. El que consigue ubicar 4 fichas del mismo color seguidas en horizontal, vertical u oblicuogana. Si nadie lo consigue la partida termiana en empate.</p>
+    
+                            </div>
+
+                            <div class="controles">
+                            <h3>Controles</h3>
+    
+                            <p>Controles de teclado:</p>
+    
+                            <li>usa las flechas de izquierda y derecha para moverte por las columnas del tablero.</li>
+                            <li>presiona espacio o enter para dejar caer una ficha cobre la columna seleccionada.</li>
+    
+                            <div class="imgs">
+                                <img src="imgs/intermedia-fotos/controles flechas.png" alt="">
+                                <img src="imgs/intermedia-fotos/controles enter.png" alt="">
+                            </div>
+                            </div>
+
+                        </div>
+
+                        <div class="videos-tutoriales">
+                            
+                            <div class="titulo">
+                                <h2>Gameplays y tutoriales:</h2>
+                            </div>
+
+                            <div class="videos">
+
+                                <img src="imgs/intermedia-fotos/gameplay1.png" alt="">
+                                <img src="imgs/intermedia-fotos/gameplay2.png" alt="">
+                                <img src="imgs/intermedia-fotos/gameplay3.png" alt="">
+                                <img src="imgs/intermedia-fotos/gameplay4.png" alt="">
+
+                            </div>
+
+                        </div>
+    
+                    </div> 
+                </div>
+
+            </div>
+
+            <!-- FOOTER -->
+
+            <footer>
+        <div class="footer-container">
+            <div class="footer-image">
+                <img src="imgs/footer/logoFooter.png" alt="">
+            </div>
+
+            <div class="footer-links">
+                <div class="container-footer-links">
+                    <section>
+                        <h2>Ayuda</h2>
+                        <ul>
+                            <li><a href="#">Acerca de</a></li>
+                            <li><a href="#">Preguntas frecuentes</a></li>
+                            <li><a href="#">Feedback</a></li>
+                        </ul>
+                    </section>
+    
+                    <section>
+                        <h2>Desarrolladores</h2>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">¿Quiénes somos?</a></li>
+                        </ul>
+                    </section>
+    
+                    <section>
+                        <h2>Términos de uso</h2>
+                        <ul>
+                            <li><a href="#">Uso de la página</a></li>
+                            <li><a href="#">Ámbito de validez</a></li>
+                        </ul>
+                    </section>
+    
+                    <section>
+                        <h2>Privacidad</h2>
+                        <ul>
+                            <li><a href="#">Declaración de Privacidad</a></li>
+                            <li><a href="#">Declaración de cookies</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <ul>
+                    <li><a href="#"><img src="imgs/footer/icono-facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="imgs/footer/icono-x.png" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="imgs/footer/icono-instagram.png" alt="Instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+            </footer>
+
+    </div>
+
+    <script src="scripts/menuHamburguesa.js"></script>
+    <script src="scripts/loader.js"></script>
+
+    <!-- SCRIPT PARA QUE ANDE EL JUEGO -->
+
+    <script src="scripts/juego/cuatroEnLinea.js"></script>
+    <script src="scripts/juego/Escena.js"></script>
+    <script src="scripts/juego/Dibujable.js"></script>
+    <script src="scripts/juego/ResizedImage.js"></script>
+    <script src="scripts/juego/utils.js"></script>
+    <script src="scripts/juego/UIElement.js"></script>
+    <script src="scripts/juego/Circulo.js"></script>
+    <script src="scripts/juego/Casillero.js"></script>
+    <script src="scripts/juego/Ficha.js"></script>
+    <script src="scripts/juego/Tablero.js"></script>
+    <script src="scripts/juego/Juego.js"></script>
+    <script src="scripts/juego/main.js"></script>
+
+</body>
+</html>

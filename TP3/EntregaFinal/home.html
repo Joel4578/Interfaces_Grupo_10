@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Pixel Universe</title>
+    
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/loader.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imgs/logoIcono.png" />
+</head>
+
+<body>
+    <div class="loader-container">
+    <div class="loader" id="loader">
+        <div class="percentage" id="percentage">0%</div>
+        <div class="bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+</div>
+
+    <!-- MENU HAMBURGUESA ABIERTO -->
+        
+    <div class="container-menu-hamburguesa-abierto">
+        <div class="menu-hamburguesa" id="menuHambAbierto">
+            <div class="container-iconos">
+                <li><button id="menuHambAb" class="men-ham"><img src="imgs/header/Menu hamburguesa.png" alt=""></button></li> 
+                <div class="iconos">
+                    <div class="container-icono"><li><button class="icono"><img src="imgs/iconos-menu-hamburguesa/icono-clasicos.png" alt=""></button><a href="home.html">Clasicos</a></li></div>
+                    <div class="container-icono"><li><button class="icono"><img src="imgs/iconos-menu-hamburguesa/icono-autos.png" alt=""></button><a href="home.html">Vehiculos</a></li></div>
+                    <div class="container-icono"><li><button class="icono"><img src="imgs/iconos-menu-hamburguesa/icono-accion.png" alt=""></button><a href="home.html">Accion</a></li></div>
+                    <div class="container-icono"><li><button class="icono"><img src="imgs/iconos-menu-hamburguesa/icono-deporte.png" alt=""></button><a href="home.html">Deporte</a></li></div>
+                    <div class="container-icono"><li><button class="icono"><img src="imgs/iconos-menu-hamburguesa/icono-estrategia.png" alt=""></button><a href="home.html">Estrategia</a></li></div>
+                    <div class="container-icono"><li><button class="icono"><img src="imgs/iconos-menu-hamburguesa/icono-puzzle.png" alt=""></button><a href="home.html">Puzzle</a></li></div>
+                    <div class="container-icono"><li><button class="icono"><img src="imgs/iconos-menu-hamburguesa/icono-login.png" alt=""></button><a href="inicioSesion.html">Cerrar sesion</a></li></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAV -->
+    <header>
+        <div class="nav">
+            <ul>
+                <li><button id="menuHamb" class="men-ham"><img src="imgs/header/Menu hamburguesa.png" alt=""></button></li>
+                <li id="search"><input placeholder="Buscar Juego"></input></li>
+                <li id="tituloPrincipal"><a href="home.html"><img src="imgs/Logo.png" alt=""></a></li>
+                <li id="carrito"><a href=""><img src="imgs/header/carrito.png" alt=""></a></li>
+                <li id="cuenta"><a href="registro.html"><img src="imgs/header/login.png" alt=""></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Carrusel Principal -->
+    <section class="section-juegos-destacados">
+        <p class="nombre-categoria titulo-destacado">Juegos Destacados</p>
+        <div class="cards-flechas">
+            <img class="flecha-izq" id="scroll-btn-izquierda-Dest" src="imgs/Flecha.svg" />
+            <div class="juegos-destacados">
+                <img class="img-destacado" src="imgs/foto-web-jueguitos/Destacados/Group 20.png" alt="">
+                    <a href="intermedia.html"><img class="img-destacado" src="imgs/foto-web-jueguitos/Destacados/Rectangle 160.png" alt=""></a>
+                <img class="img-destacado" src="imgs/foto-web-jueguitos/Destacados/Rectangle 160 (2).png" alt="">
+                <img class="img-destacado" src="imgs/foto-web-jueguitos/Destacados/Group 23.png" alt="">
+                <img class="img-destacado" src="imgs/foto-web-jueguitos/Destacados/Group 24.png" alt="">
+                <img class="img-destacado" src="imgs/foto-web-jueguitos/Destacados/Group 25.png" alt="">
+            </div>
+            <img class="flecha-der" id="scroll-btn-derecha-Dest" src="imgs/flechaDerecha.svg" />
+        </div>
+    
+        <div class="circulitos">
+            <div class="circulo"></div>
+            <div class="circulo"></div>
+            <div class="circulo"></div>
+            <div class="circulo"></div> <!-- Ajuste: Asegúrate de tener el número correcto de circulitos -->
+            <div class="circulo"></div> <!-- Ajuste: Uno por cada imagen en el carrusel -->
+        </div>
+    </section>
+
+    <section  class="juegos-por-categoria">
+        <div class="categoria-con-juegos">
+            <h2 class="nombre-categoria">Juegos Accion</h2>
+    
+            <div class="carrusel-juegos">
+                <img class="flecha-izq" id="scroll-btn-izquierda" src="imgs/Flecha.svg" />
+    
+                <div class="juegos" id="#juegos-accion">
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                    <img class="card-img-juego" src="imgs/foto-web-jueguitos/Accion/Mortalcompat.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Mortal Kom...</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>FREE</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="div-wrapper">
+                                <div class="div-wrapper">
+                                    <div class="rectangle-2"></div>
+                                    <div class="rectangle-wrapper"><img class="rectangle-3" src="img/rectangle-135.svg"/>
+                                    </div>
+                                </div>
+                                <div class="p">
+                                    <div class="p-px">FREE</div>
+                                </div>
+                            </div>
+                    </div>
+    
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Accion/doom.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Doom</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>$500</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="div-wrapper">
+                            <div class="div-wrapper">
+                                <div class="rectangle-2"></div>
+                                <div class="rectangle-wrapper"><img class="rectangle-3" src="img/rectangle-135.svg" />
+                                </div>
+                            </div>
+                            <div class="p">
+                                <div class="p-px">PAGO</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Accion/good of wars.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Good of Wars</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>en tu biblioteca</p>
+                                        <img class="card-img-tilde" src="imgs/tilde.svg"
+                                            alt="este juego esta en tu biblioteca">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Accion/descarga.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Jetpack Joyr...</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div-wrapper en-carro">
+                            <div class="div-wrapper">
+                                <div class="rectangle-2"></div>
+                                <div class="rectangle-wrapper"><img class="rectangle-3" src="img/rectangle-135.svg" />
+                                </div>
+                            </div>
+                            <div class="p">
+                                <p class="p-px">EN CARRO</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Accion/half life.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Half Life</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>en tu biblioteca</p>
+                                        <img class="card-img-tilde" src="imgs/tilde.svg"
+                                            alt="este juego esta en tu biblioteca">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Accion/comando 1.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Comando 1</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>FREE</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="div-wrapper">
+                            <div class="div-wrapper">
+                                <div class="rectangle-2"></div>
+                                <div class="rectangle-wrapper"><img class="rectangle-3" src="img/rectangle-135.svg" />
+                                </div>
+                            </div>
+                            <div class="p">
+                                <div class="p-px">FREE</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Accion/call-duty-wwii.webp" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Call of Duty</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>$500</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div-wrapper">
+                            <div class="div-wrapper">
+                                <div class="rectangle-2"></div>
+                                <div class="rectangle-wrapper"><img class="rectangle-3" src="img/rectangle-135.svg" />
+                                </div>
+                            </div>
+                            <div class="p">
+                                <div class="p-px">PAGO</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Accion/Fighters 2.png" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Fighters 2</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>FREE</p>
+                                        <img class="card-img-tilde" src="imgs/tilde.svg"
+                                            alt="este juego esta en tu biblioteca">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div-wrapper">
+                            <div class="div-wrapper">
+                                <div class="rectangle-2"></div>
+                                <div class="rectangle-wrapper"><img class="rectangle-3" src="img/rectangle-135.svg" />
+                                </div>
+                            </div>
+                            <div class="p">
+                                <div class="p-px">FREE</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img class="flecha-der" id="scroll-btn-derecha" src="imgs/flechaDerecha.svg" />
+            </div>
+        </div>
+
+        <div class="categoria-con-juegos">
+            <h2 class="nombre-categoria">Juegos Estrategia</h2>
+            <div class="carrusel-juegos">
+                <img class="flecha-izq" id="scroll-btn-izquierda" src="imgs/Flecha.svg" />
+
+                <div class="juegos">
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Estrategia/Age of empire" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Age of empire</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>FREE</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div-wrapper">
+                            <div class="div-wrapper">
+                                <div class="rectangle-2"></div>
+                                <div class="rectangle-wrapper"><img class="rectangle-3" src="img/rectangle-135.svg" />
+                                </div>
+                            </div>
+                            <div class="p">
+                                <div class="p-px">FREE</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Estrategia/city atack" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">City Atack</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>$500</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div-wrapper">
+                            <div class="div-wrapper">
+                                <div class="rectangle-2"></div>
+                                <div class="rectangle-wrapper"><img class="rectangle-3" src="img/rectangle-135.svg" />
+                                </div>
+                            </div>
+                            <div class="p">
+                                <div class="p-px">PAGO</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Estrategia/combat" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Combat</h2>
+                                    </div>
+
+                                    <div class="card-estado">
+                                        <p>en tu biblioteca</p>
+                                        <img class="card-img-tilde" src="imgs/tilde.svg"
+                                            alt="este juego esta en tu biblioteca">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Estrategia/Europa Universalls IV" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Europa Uni...</h2>
+                                    </div>
+
+                                    <div class="card-estado"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div-wrapper en-carro">
+                            <div class="div-wrapper">
+                                <div class="rectangle-2"></div>
+                                <div class="rectangle-wrapper"><img class="rectangle-3" src="img/rectangle-135.svg" />
+                                </div>
+                            </div>
+                            <div class="p">
+                                <p class="p-px">EN CARRO</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Estrategia/farm and war" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Farm and War</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>en tu biblioteca</p>
+                                        <img class="card-img-tilde" src="imgs/tilde.svg"
+                                            alt="este juego esta en tu biblioteca">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Estrategia/imperio romano" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Imperio Ro...</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>FREE</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div-wrapper">
+                            <div class="div-wrapper">
+                                <div class="rectangle-2"></div>
+                                <div class="rectangle-wrapper"><img class="rectangle-3" src="img/rectangle-135.svg" />
+                                </div>
+                            </div>
+                            <div class="p">
+                                <div class="p-px">FREE</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Estrategia/tanque de guerra" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">1994 war</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>$500</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div-wrapper">
+                            <div class="div-wrapper">
+                                <div class="rectangle-2"></div>
+                                <div class="rectangle-wrapper"><img class="rectangle-3" src="img/rectangle-135.svg" />
+                                </div>
+                            </div>
+                            <div class="p">
+                                <div class="p-px">PAGO</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Estrategia/league of legends" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Star Craft</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>FREE</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="div-wrapper">
+                            <div class="div-wrapper">
+                                <div class="rectangle-2"></div>
+                                <div class="rectangle-wrapper"><img class="rectangle-3" src="img/rectangle-135.svg" />
+                                </div>
+                            </div>
+                            <div class="p">
+                                <div class="p-px">FREE</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <img class="flecha-der" id="scroll-btn-derecha" src="imgs/flechaDerecha.svg" />
+                
+            </div>
+     
+        </div>
+        
+        <div class="categoria-con-juegos">
+
+            <h2 class="nombre-categoria">Juegos Clasicos</h2>
+
+            <div class="carrusel-juegos">
+                <img class="flecha-izq" id="scroll-btn-izquierda" src="imgs/Flecha.svg" />
+
+                <div class="juegos">
+
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Clasicos/crash bandicoot.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Crash Band...</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>FREE</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div-wrapper">
+                            <div class="div-wrapper">
+                                <div class="rectangle-2"></div>
+                                <div class="rectangle-wrapper"><img class="rectangle-3" src="img/rectangle-135.svg" />
+                                </div>
+                            </div>
+                            <div class="p">
+                                <div class="p-px">FREE</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Clasicos/mario bross.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Mario Bross</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>$500</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div-wrapper">
+                            <div class="div-wrapper">
+                                <div class="rectangle-2"></div>
+                                <div class="rectangle-wrapper"><img class="rectangle-3" src="img/rectangle-135.svg" />
+                                </div>
+                            </div>
+                            <div class="p">
+                                <div class="p-px">PAGO</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Clasicos/pacman.png" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Pacman</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>en tu biblioteca</p>
+                                        <img class="card-img-tilde" src="imgs/tilde.svg"
+                                            alt="este juego esta en tu biblioteca">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Clasicos/sonic.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Sonic</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div-wrapper en-carro">
+                            <div class="div-wrapper">
+                                <div class="rectangle-2"></div>
+                                <div class="rectangle-wrapper"><img class="rectangle-3" src="img/rectangle-135.svg" />
+                                </div>
+                            </div>
+                            <div class="p">
+                                <p class="p-px">EN CARRO</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Clasicos/juego serpiente.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Viborita</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>en tu biblioteca</p>
+                                        <img class="card-img-tilde" src="imgs/tilde.svg"
+                                            alt="este juego esta en tu biblioteca">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Clasicos/battletoads.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">BattleToads Ro...</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>FREE</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div-wrapper">
+                            <div class="div-wrapper">
+                                <div class="rectangle-2"></div>
+                                <div class="rectangle-wrapper"><img class="rectangle-3" src="img/rectangle-135.svg" />
+                                </div>
+                            </div>
+                            <div class="p">
+                                <div class="p-px">FREE</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Clasicos/mariokart 2.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Mariokart 2</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>$500</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div-wrapper">
+                            <div class="div-wrapper">
+                                <div class="rectangle-2"></div>
+                                <div class="rectangle-wrapper"><img class="rectangle-3" src="img/rectangle-135.svg" />
+                                </div>
+                            </div>
+                            <div class="p">
+                                <div class="p-px">PAGO</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Clasicos/mariokart.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">MarioKart</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>FREE</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div-wrapper">
+                            <div class="div-wrapper">
+                                <div class="rectangle-2"></div>
+                                <div class="rectangle-wrapper"><img class="rectangle-3" src="img/rectangle-135.svg" />
+                                </div>
+                            </div>
+                            <div class="p">
+                                <div class="p-px">FREE</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <img class="flecha-der" id="scroll-btn-derecha" src="imgs/flechaDerecha.svg" />
+                
+            </div>
+     
+        </div>
+        
+        <div class="categoria-con-juegos">
+
+            <h2 class="nombre-categoria">Juegos Puzzle</h2>
+
+            <div class="carrusel-juegos">
+                <img class="flecha-izq" id="scroll-btn-izquierda" src="imgs/Flecha.svg" />
+
+                <div class="juegos">
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Puzzle/block x block.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Block x Block</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>FREE</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Puzzle/booble.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Booble</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>$500</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Puzzle/jewel block.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Jewel Block</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>en tu biblioteca</p>
+                                        <img class="card-img-tilde" src="imgs/tilde.svg" alt="este juego esta en tu biblioteca">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Puzzle/kids puzzle.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Kids Puzzle</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div-wrapper en-carro">
+                            <div class="div-wrapper">
+                                <div class="rectangle-2"></div>
+                                <div class="rectangle-wrapper"><img class="rectangle-3" src="img/rectangle-135.svg" /></div>
+                            </div>
+                            <div class="p">
+                                <p class="p-px">EN CARRO</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Puzzle/logica puzzle.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Logica Puzzle</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>en tu biblioteca</p>
+                                        <img class="card-img-tilde" src="imgs/tilde.svg" alt="este juego esta en tu biblioteca">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Puzzle/mosaic puzzle.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Mosaic Puzzle</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>FREE</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Puzzle/Rompecabeza.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Rompecabeza</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>$500</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <div class="car">
+                            <div class="overlap-group">
+                                <img class="card-img-juego" src="imgs/foto-web-jueguitos/Puzzle/title master.jfif" />
+                                <div class="card-pie">
+                                    <div class="extra-bold card-titulo-juego">
+                                        <h2 class="h-px">Title Master</h2>
+                                    </div>
+                                    <div class="card-estado">
+                                        <p>FREE</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img class="flecha-der" id="scroll-btn-derecha" src="imgs/flechaDerecha.svg" />
+                
+            </div>
+     
+        </div>
+        
+        <div class="categoria-con-juegos">
+
+            <h2 class="nombre-categoria">Juegos De Vehiculos</h2>
+
+            <div class="carrusel-juegos">
+                <img class="flecha-izq" id="scroll-btn-izquierda" src="imgs/Flecha.svg" />
+
+                <div class="juegos">
+                    
+        <div class="card">
+            <div class="car">
+                <div class="overlap-group">
+                    <img class="card-img-juego" src="imgs/foto-web-jueguitos/Vehiculos/simulator car.jfif" />
+                    <div class="card-pie">
+                        <div class="extra-bold card-titulo-juego">
+                            <h2 class="h-px">Car Simulator</h2>
+                        </div>
+                        <div class="card-estado">
+                            <p>FREE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="car">
+                <div class="overlap-group">
+                    <img class="card-img-juego" src="imgs/foto-web-jueguitos/Vehiculos/drift.jfif" />
+                    <div class="card-pie">
+                        <div class="extra-bold card-titulo-juego">
+                            <h2 class="h-px">Drift</h2>
+                        </div>
+                        <div class="card-estado">
+                            <p>$500</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="car">
+                <div class="overlap-group">
+                    <img class="card-img-juego" src="imgs/foto-web-jueguitos/Vehiculos/escapar policia.jfif" />
+                    <div class="card-pie">
+                        <div class="extra-bold card-titulo-juego">
+                            <h2 class="h-px">Escapar Policia</h2>
+                        </div>
+                        <div class="card-estado">
+                            <p>en tu biblioteca</p>
+                            <img class="card-img-tilde" src="imgs/tilde.svg" alt="este juego esta en tu biblioteca">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="car">
+                <div class="overlap-group">
+                    <img class="card-img-juego" src="imgs/foto-web-jueguitos/Vehiculos/extreme road.jfif" />
+                    <div class="card-pie">
+                        <div class="extra-bold card-titulo-juego">
+                            <h2 class="h-px">Extreme Road</h2>
+                        </div>
+                        <div class="card-estado">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="div-wrapper en-carro">
+                <div class="div-wrapper">
+                    <div class="rectangle-2"></div>
+                    <div class="rectangle-wrapper"><img class="rectangle-3" src="img/rectangle-135.svg" /></div>
+                </div>
+                <div class="p">
+                    <p class="p-px">EN CARRO</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="car">
+                <div class="overlap-group">
+                    <img class="card-img-juego" src="imgs/foto-web-jueguitos/Vehiculos/Forza Horizon 2.jfif" />
+                    <div class="card-pie">
+                        <div class="extra-bold card-titulo-juego">
+                            <h2 class="h-px">Forza Horizon 2</h2>
+                        </div>
+                        <div class="card-estado">
+                            <p>en tu biblioteca</p>
+                            <img class="card-img-tilde" src="imgs/tilde.svg" alt="este juego esta en tu biblioteca">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="car">
+                <div class="overlap-group">
+                    <img class="card-img-juego" src="imgs/foto-web-jueguitos/Vehiculos/hotwheels.jfif" />
+                    <div class="card-pie">
+                        <div class="extra-bold card-titulo-juego">
+                            <h2 class="h-px">HotWheels</h2>
+                        </div>
+                        <div class="card-estado">
+                            <p>FREE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="car">
+                <div class="overlap-group">
+                    <img class="card-img-juego" src="imgs/foto-web-jueguitos/Vehiculos/Racin.jfif" />
+                    <div class="card-pie">
+                        <div class="extra-bold card-titulo-juego">
+                            <h2 class="h-px">Racin</h2>
+                        </div>
+                        <div class="card-estado">
+                            <p>$500</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="car">
+                <div class="overlap-group">
+                    <img class="card-img-juego" src="imgs/foto-web-jueguitos/Vehiculos/Red Bull Rally.jfif" />
+                    <div class="card-pie">
+                        <div class="extra-bold card-titulo-juego">
+                            <h2 class="h-px">Red Bull Rally</h2>
+                        </div>
+                        <div class="card-estado">
+                            <p>FREE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+                <img class="flecha-der" id="scroll-btn-derecha" src="imgs/flechaDerecha.svg" />
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
+                <img class="img-logo-footer" src="imgs/footer/logoFooter.png" alt="">
+
+            <div class="footer-links">
+                <div class="container-footer-links">
+                    <section>
+                        <h2>Ayuda</h2>
+                        <ul>
+                            <li><a href="#">Acerca de</a></li>
+                            <li><a href="#">Preguntas frecuentes</a></li>
+                            <li><a href="#">Feedback</a></li>
+                        </ul>
+                    </section>
+    
+                    <section>
+                        <h2>Desarrolladores</h2>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">¿Quiénes somos?</a></li>
+                        </ul>
+                    </section>
+    
+                    <section>
+                        <h2>Términos de uso</h2>
+                        <ul>
+                            <li><a href="#">Uso de la página</a></li>
+                            <li><a href="#">Ámbito de validez</a></li>
+                        </ul>
+                    </section>
+    
+                    <section>
+                        <h2>Privacidad</h2>
+                        <ul>
+                            <li><a href="#">Declaración de Privacidad</a></li>
+                            <li><a href="#">Declaración de cookies</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <ul>
+                    <li><a href="#"><img src="imgs/footer/icono-facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="imgs/footer/icono-x.png" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="imgs/footer/icono-instagram.png" alt="Instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+            </footer>
+
+    <script src="scripts/carrusel.js"></script>
+    <script src="scripts/menuHamburguesa.js"></script>
+    <script src="scripts/loader.js"></script>
+</body>
+</html>

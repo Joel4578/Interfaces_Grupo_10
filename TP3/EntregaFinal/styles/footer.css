@@ -1,0 +1,88 @@
+/* FOOTER */
+
+/* Estilos básicos para el footer */
+footer {
+    background-color: #202020; /* Color de fondo negro */
+    color: #fff; /* Texto blanco */
+    font-family: Arial, sans-serif;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    align-self: flex-end;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 25% 60% auto;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 232px;
+    margin-bottom: 10px;
+    /* position: fixed; */
+}
+
+.footer-links {
+    justify-content: center;
+}
+
+.footer-links h2 {
+    font-size: 16px;
+    font-family: "Lato-Regular", Helvetica;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-links li, a {
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-links .container-footer-links {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    align-self: start;
+}
+
+.footer-social {
+    display: grid;
+    align-self: flex-end;
+}
+
+.footer-social ul {
+    display: flex;
+    align-self: flex-end;
+}
+
+.footer-social li {
+    list-style: none;
+}
+
+.footer-social img {
+    width: 34px;
+    height: 34px;
+    margin: 10px;
+    display: grid;
+    justify-content: center;
+}
+
+@media(max-width:768px){
+.img-logo-footer{
+    width: 200px;
+    height: 160px;
+}
+.footer-links .container-footer-links {
+    gap: 25px;
+}
+.footer-social ul {
+    display: block;
+    margin-block: 39px;
+}
+.footer-social ul li {
+    margin-bottom: 20px;
+}
+
+}
