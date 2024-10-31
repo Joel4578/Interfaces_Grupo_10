@@ -1,5 +1,7 @@
 class Juego {
 
+  // ESTAS SON MODIFICACIONES
+
     // CONSTRUCTOR JUEGO
 
     constructor(ctx = CanvasRenderingContext2D, canvas = HTMLCanvasElement) {
@@ -87,7 +89,7 @@ class Juego {
 
         // ESTADO EN EL QUE COMIENZA (MENU)
     
-        this.state = this.STATES.GAME
+        this.state = this.STATES.MENU
     
         this.UI = {}
 
@@ -442,19 +444,13 @@ class Juego {
     
         this.state = this.STATES.STARTING
     
-        const imagenesCasilleros = []
-        for (let i = 0; i < 3; i++) {
           let img = new Image()
           img.src = 'imgs/cuatro-en-linea/casillero.png'
           imagenesCasilleros.push(img)
     
-        }
         this.tablero = new Tablero(columns, rows, imagenesCasilleros, undefined, undefined, this.ctx)
         this.tablero.centerOnScreen(this.canvas.width, this.canvas.height)
         this.tablero.setMatrix()
-    
-    
-    
     
     
       }
@@ -477,9 +473,16 @@ class Juego {
 
         if(this.state == this.STATES.SELECCIONAR_MODO){
           this.UI.SELECCION_FICHA[4].mouseHover(this.mouse.x, this.mouse.y)
+        }
+
+        if(this.state == this.STATES.SELECCIONAR_MODO){
           this.UI.SELECCION_FICHA[5].mouseHover(this.mouse.x, this.mouse.y)
+        }
+
+        if(this.state == this.STATES.SELECCIONAR_MODO){
           this.UI.SELECCION_FICHA[6].mouseHover(this.mouse.x, this.mouse.y)
         }
+    
     
         if (this.state == this.STATES.SELECT_MODE) {
           this.UI.SELECTMODE[4].mouseHover(this.mouse.x, this.mouse.y)

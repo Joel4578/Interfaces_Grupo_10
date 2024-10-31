@@ -1,5 +1,7 @@
 class Juego {
 
+    // ESTE ES EL QUE SE ENTREGA
+
     // CONSTRUCTOR JUEGO
 
     constructor(ctx = CanvasRenderingContext2D, canvas = HTMLCanvasElement) {
@@ -64,12 +66,12 @@ class Juego {
             STARTING: 'starting',
             WINNER: 'winner',
             TIE: 'tie',
-            FICHA_DROP: 'ficha drop',
+            FICHA_DROP: 'ficha drop'
         }
 
         // ESTADO EN EL QUE COMIENZA (MENU)
     
-        this.state = this.STATES.MENU
+        this.state = this.STATES.GAME
     
         this.UI = {}
 
@@ -180,7 +182,7 @@ class Juego {
             this.ctx.fillStyle = '#000'
             this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height)
 
-            // MENU DIBUJADO
+        // MENU DIBUJADO
 
         if (this.state == this.STATES.MENU) {
             this.UI.MENU.draw()
@@ -233,12 +235,11 @@ class Juego {
             this.state = this.STATES.STARTING
         
             const imagenesCasilleros = []
-            for (let i = 0; i < 3; i++) {
+
                 let img = new Image()
-                img.src = `./img/juego/casillero-${i}.png`
+                img.src = 'imgs/cuatro-en-linea/juego/'
                 imagenesCasilleros.push(img)
         
-            }
             this.tablero = new Tablero(columns, rows, imagenesCasilleros, undefined, undefined, this.ctx)
             this.tablero.centerOnScreen(this.canvas.width, this.canvas.height)
             this.tablero.setMatrix()
@@ -297,6 +298,8 @@ class Juego {
             }
         
         }
+
+        //  ACCIONES CON CLICK 
 
         mouseDown(e) {
     

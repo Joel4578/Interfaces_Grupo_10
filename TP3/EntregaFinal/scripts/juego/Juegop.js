@@ -1,4 +1,6 @@
-class Juego {
+class Juego {}
+
+  // ESTE LO HIZO LUCAS
 
   // CONSTRUCTOR PARA EL JUEGO
 
@@ -64,7 +66,6 @@ class Juego {
 
     this.STATES = {
       MENU: 'menu',
-      SELECTION_FICHA_MENU: ,
       TRANSITION_MENU_SELECT_MODE: 'transition menu to select ficha',
       SELECT_MODE: 'select mode',
       SELECT_FICHA: 'select ficha',
