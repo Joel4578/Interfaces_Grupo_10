@@ -10,7 +10,7 @@ class Ficha extends Dibujable{
 
 
     this.size = Ficha.size
-    this.image = getResizedImage(`./img/juego/ficha_${this.equipo}.png`, this.size, this.size, this.pos.x, this.pos.y, this.ctx)
+    this.image = getResizedImage(`imgs/cuatro-en-linea/fichas/ficha-mario.png`, this.size, this.size, this.pos.x, this.pos.y, this.ctx)
     
     this.circle = new Circulo(this.size / 2, this.pos.x + this.size / 2, this.pos.y + this.size / 2, ctx)
 

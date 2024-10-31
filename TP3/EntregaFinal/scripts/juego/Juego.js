@@ -44,15 +44,12 @@ class Juego {
             SELECCION_FICHAS: {
               4 : {
                 default : getImage('imgs/cuatro-en-linea/4-EN-LINEA.png'),
-                hover: getImage('imgs/cuatro-en-linea/4-EN-LINEA_hover.png')
               },
               5 : {
                 default : getImage('imgs/cuatro-en-linea/5-EN-LINEA.png'),
-                hover: getImage('imgs/cuatro-en-linea/5-EN-LINEA_hover.png')
               },
               6 : {
                 default : getImage('imgs/cuatro-en-linea/6-EN-LINEA.png'),
-                hover: getImage('imgs/cuatro-en-linea/6-EN-LINEA_hover.png')
               }
             },
             SELECTMODE: {
@@ -75,7 +72,8 @@ class Juego {
     
         this.STATES = {
             MENU: 'menu',
-            SELECTION_CANTIDAD_FICHAS_MENU: 'selecciona cantidad de fichas',
+            SELECCIONAR_MODO: 'selecciona entre los diferentes modos',
+            SELECCION_PERSONAJE: 'seleccionar personaje',
             SELECT_MODE: 'select mode',
             SELECT_FICHA: 'select ficha',
             TRANSITION_SELECT_FICHA_STARTING: 'transition select ficha to starting',
@@ -86,8 +84,10 @@ class Juego {
             TIE: 'tie',
             FICHA_DROP: 'ficha drop',
         }
+
+        // ESTADO EN EL QUE COMIENZA (MENU)
     
-        this.state = this.STATES.MENU
+        this.state = this.STATES.GAME
     
         this.UI = {}
 
@@ -106,7 +106,7 @@ class Juego {
         // ACCIONES DEL BOTON CLICPARAEMEPEZAR
         
         this.UI.CLICPARAEMPEZAR.onClick = () => {
-            this.state = this.STATES.SELECTION_CANTIDAD_FICHA_MENU
+            this.state = this.STATES.SELECCIONAR_MODO
             this.canvas.classList.remove('pointer')
         }
     
@@ -124,64 +124,58 @@ class Juego {
 
         this.UI.TITULO_CANTIDAD_FICHAS = new UIElement(new ResizedImage(this.IMGS.CANT_FICHAS, 664, 33, 0, 0, ctx), null, canvas.width /2 - 330 ,  canvas.height / 2 - 60  , this.ctx);
 
-        this.UI.SELECCION_FICHAS = {
-            4: new UIElement(new ResizedImage(this.IMGS.SELECCION_FICHAS[4].default, 167, 29, undefined, undefined, ctx),new ResizedImage(this.IMGS.SELECCION_FICHAS[4].hover, 226, 29, undefined, undefined, ctx), canvas.width / 2 - 94, canvas.height - 210, ctx),
-            5: new UIElement(new ResizedImage(this.IMGS.SELECCION_FICHAS[5].default, 167, 29, undefined, undefined, ctx),new ResizedImage(this.IMGS.SELECCION_FICHAS[5].hover, 226, 29, undefined, undefined, ctx), canvas.width / 2 - 94, canvas.height - 140, ctx),
-            6: new UIElement(new ResizedImage(this.IMGS.SELECCION_FICHAS[6].default, 167, 29, undefined, undefined, ctx),new ResizedImage(this.IMGS.SELECCION_FICHAS[6].hover, 226, 29, undefined, undefined, ctx), canvas.width / 2 - 94, canvas.height - 70, ctx)
+        this.UI.SELECCION_FICHA = {
+            4: new UIElement(new ResizedImage(this.IMGS.SELECCION_FICHAS[4].default, 167, 29, 0, 0, ctx), null, canvas.width / 2 - 94, canvas.height - 210, ctx),
+            5: new UIElement(new ResizedImage(this.IMGS.SELECCION_FICHAS[5].default, 167, 29, 0, 0, ctx), null, canvas.width / 2 - 94, canvas.height - 140, ctx),
+            6: new UIElement(new ResizedImage(this.IMGS.SELECCION_FICHAS[6].default, 167, 29, 0, 0, ctx), null, canvas.width / 2 - 94, canvas.height - 70, ctx)
         }
 
-        this.UI.CUATROFICHAS = new UIElement(new ResizedImage(this.IMGS.SELECCION_FICHAS[4].default, 167, 29, undefined, undefined, ctx),new ResizedImage(this.IMGS.SELECCION_FICHAS[4].hover, 226, 29, undefined, undefined, ctx), canvas.width / 2 - 94, canvas.height - 210, ctx)
-
-        this.UI.CUATROFICHAS.onClick = () => {
+        this.UI.SELECCION_FICHA[4].onClick = () => {
+          this.state = this.STATES.SELECCION_PERSONAJE
           this.gameSettings.fichasToWin = 4
           this.gameSettings.columnas = 7
           this.gameSettings.duration = this.gameSettings.columnas * this.gameSettings.rows * 10
           this.canvas.classList.remove('pointer')
+        }
+
+        this.UI.SELECCION_FICHA[4].onHover = () => {
+          this.canvas.classList.add('pointer')
+        }
+
+        this.UI.SELECCION_FICHA[4].onHoverLeave = () => {
+          this.canvas.classList.remove('pointer')
+        }
+
+        this.UI.SELECCION_FICHA[5].onClick = () => {
           this.state = this.STATES.SELECCION_PERSONAJE
-        }
-
-        this.UI.CUATROFICHAS.onHover = () => {
-          this.canvas.classList.add('pointer');
-        }
-
-        this.UI.CUATROFICHAS.onHoverLeave = () => {
-          this.canvas.classList.remove('pointer');
-        }
-
-        this.UI.CINCOFICHAS = new UIElement(new ResizedImage(this.IMGS.SELECCION_FICHAS[5].default, 167, 29, undefined, undefined, ctx),new ResizedImage(this.IMGS.SELECCION_FICHAS[5].hover, 226, 29, undefined, undefined, ctx), canvas.width / 2 - 94, canvas.height - 140, ctx)
-        
-        this.UI.CINCOFICHAS.onClick = () => {
           this.gameSettings.fichasToWin = 5
-          this.gameSettings.columnas = 8
+          this.gameSettings.columnas = 7
           this.gameSettings.duration = this.gameSettings.columnas * this.gameSettings.rows * 10
           this.canvas.classList.remove('pointer')
+        }
+
+        this.UI.SELECCION_FICHA[5].onHover = () => {
+          this.canvas.classList.add('pointer')
+        }
+
+        this.UI.SELECCION_FICHA[5].onHoverLeave = () => {
+          this.canvas.classList.remove('pointer')
+        }
+
+        this.UI.SELECCION_FICHA[6].onClick = () => {
           this.state = this.STATES.SELECCION_PERSONAJE
-        }
-
-        this.UI.CINCOFICHAS.onHover = () => {
-          this.canvas.classList.add('pointer');
-        }
-
-        this.UI.CINCOFICHAS.onHoverLeave = () => {
-          this.canvas.classList.remove('pointer');
-        }
-
-        this.UI.SEISFICHAS = new UIElement(new ResizedImage(this.IMGS.SELECCION_FICHAS[6].default, 167, 29, undefined, undefined, ctx),new ResizedImage(this.IMGS.SELECCION_FICHAS[6].hover, 226, 29, undefined, undefined, ctx), canvas.width / 2 - 94, canvas.height - 70, ctx)
-
-        this.UI.CINCOFICHAS.onClick = () => {
           this.gameSettings.fichasToWin = 6
-          this.gameSettings.columnas = 9
+          this.gameSettings.columnas = 7
           this.gameSettings.duration = this.gameSettings.columnas * this.gameSettings.rows * 10
           this.canvas.classList.remove('pointer')
-          this.state = this.STATES.SELECCION_PERSONAJE
         }
 
-        this.UI.CINCOFICHAS.onHover = () => {
-          this.canvas.classList.add('pointer');
+        this.UI.SELECCION_FICHA[6].onHover = () => {
+          this.canvas.classList.add('pointer')
         }
 
-        this.UI.CINCOFICHAS.onHoverLeave = () => {
-          this.canvas.classList.remove('pointer');
+        this.UI.SELECCION_FICHA[6].onHoverLeave = () => {
+          this.canvas.classList.remove('pointer')
         }
 
         this.UI.SELECTMODE = {
@@ -222,46 +216,6 @@ class Juego {
           }
         }
     
-        this.UI.SELECTMODE[4].onHover = () => {
-          this.UI.SELECTMODE[5].isHovereable = false
-          this.UI.SELECTMODE[6].isHovereable = false
-          this.UI.SELECTMODE[7].isHovereable = false
-        }
-        this.UI.SELECTMODE[5].onHover = () => {
-          this.UI.SELECTMODE[4].isHovereable = false
-          this.UI.SELECTMODE[6].isHovereable = false
-          this.UI.SELECTMODE[7].isHovereable = false
-        }
-        this.UI.SELECTMODE[6].onHover = () => {
-          this.UI.SELECTMODE[4].isHovereable = false
-          this.UI.SELECTMODE[5].isHovereable = false
-          this.UI.SELECTMODE[7].isHovereable = false
-        }
-        this.UI.SELECTMODE[7].onHover = () => {
-          this.UI.SELECTMODE[4].isHovereable = false
-          this.UI.SELECTMODE[6].isHovereable = false
-          this.UI.SELECTMODE[5].isHovereable = false
-        }
-        this.UI.SELECTMODE[4].onHoverLeave = () => {
-          this.UI.SELECTMODE[5].isHovereable = true
-          this.UI.SELECTMODE[6].isHovereable = true
-          this.UI.SELECTMODE[7].isHovereable = true
-        }
-        this.UI.SELECTMODE[5].onHoverLeave = () => {
-          this.UI.SELECTMODE[4].isHovereable = true
-          this.UI.SELECTMODE[6].isHovereable = true
-          this.UI.SELECTMODE[7].isHovereable = true
-        }
-        this.UI.SELECTMODE[6].onHoverLeave = () => {
-          this.UI.SELECTMODE[4].isHovereable = true
-          this.UI.SELECTMODE[5].isHovereable = true
-          this.UI.SELECTMODE[7].isHovereable = true
-        }
-        this.UI.SELECTMODE[7].onHoverLeave = () => {
-          this.UI.SELECTMODE[4].isHovereable = true
-          this.UI.SELECTMODE[5].isHovereable = true
-          this.UI.SELECTMODE[6].isHovereable = true
-        }
         this.UI.SELECTMODE[4].onClick = () => {
           this.gameSettings.fichasToWin = 4
           this.gameSettings.columnas = 7
@@ -386,25 +340,14 @@ class Juego {
     
         // SELECCION CANTIDAD DE FICHAS MENU
 
-        if(this.state == this.STATES.SELECTION_FICHA_MENU){
+        if(this.state == this.STATES.SELECCIONAR_MODO){
             this.UI.FONDO.draw()
             this.UI.TITULO_PEQUENIO.draw()
             this.UI.TITULO_CANTIDAD_FICHAS.draw()
-            this.UI.SELECCION_FICHAS[4].draw();
-            // this.UI.CUATROFICHAS.draw();
-            // this.UI.CUATROFICHAS.draw();
-            // this.UI.CINCOFICHAS.draw();
-            // this.UI.SEISFICHAS.draw();
+            this.UI.SELECCION_FICHA[4].draw()
+            this.UI.SELECCION_FICHA[5].draw()
+            this.UI.SELECCION_FICHA[6].draw()
         }
-        
-        // if (this.state == this.STATES.TRANSITION_MENU_SELECT_MODE) {
-        //   this.UI.MENU.draw()
-        //   this.UI.SELECTMODE[4].draw()
-        //   this.UI.SELECTMODE[5].draw()
-        //   this.UI.SELECTMODE[6].draw()
-        //   this.UI.SELECTMODE[7].draw()
-        //   this.ESCENAS.TRANSITION_MENU_SELECT_MODE.animate(0)
-        // }
     
         if (this.state == this.STATES.SELECT_MODE) {
           this.UI.SELECTMODE[4].draw()
@@ -453,6 +396,7 @@ class Juego {
     
         if (this.state == this.STATES.GAME) {
           
+          this.FONDO.draw()
           this.tablero.draw()
           this.ESCENAS.ANIMATE_HINTS.animate(1)
           this.EQUIPOS_EN_JUEGO.forEach(equipo => {
@@ -501,7 +445,7 @@ class Juego {
         const imagenesCasilleros = []
         for (let i = 0; i < 3; i++) {
           let img = new Image()
-          img.src = `./img/juego/casillero-${i}.png`
+          img.src = 'imgs/cuatro-en-linea/casillero.png'
           imagenesCasilleros.push(img)
     
         }
@@ -523,8 +467,18 @@ class Juego {
         this.mouse.x = Math.floor(layerX - canvasXOffset);
         this.mouse.y = Math.floor(layerY - canvasYOffset);
     
+        // DETECTA EL MOVIMIENTO SOBRE EL BOTON CLICPARACOMENZAR
+
         if (this.state == this.STATES.MENU) {
           this.UI.CLICPARAEMPEZAR.mouseHover(this.mouse.x, this.mouse.y)
+        }
+
+        // DETECTA EL MOVIMIENTO SOBRE LOS BOTONES DE SELECCION DE FICHAS
+
+        if(this.state == this.STATES.SELECCIONAR_MODO){
+          this.UI.SELECCION_FICHA[4].mouseHover(this.mouse.x, this.mouse.y)
+          this.UI.SELECCION_FICHA[5].mouseHover(this.mouse.x, this.mouse.y)
+          this.UI.SELECCION_FICHA[6].mouseHover(this.mouse.x, this.mouse.y)
         }
     
         if (this.state == this.STATES.SELECT_MODE) {
@@ -635,6 +589,12 @@ class Juego {
     
         if (this.state == this.STATES.MENU) {
           this.UI.CLICPARAEMPEZAR.mouseClick()
+        }
+
+        if(this.state == this.STATES.SELECCIONAR_MODO){
+          this.UI.SELECCIONAR_MODO[4].mouseClick()
+          this.UI.SELECCIONAR_MODO[5].mouseClick()
+          this.UI.SELECCIONAR_MODO[6].mouseClick()
         }
     
         if (this.state == this.STATES.SELECT_MODE) {
