@@ -128,6 +128,7 @@
                                                 </div> 
                                             </div> 
                                         </div>
+
                                         <div class="seleccion-juego">
                                             <div>
                                                 <input class="seleccion-input" type="radio" name="enlinea" value="4" required>
@@ -145,18 +146,18 @@
                                                 <input class="seleccion-input" type="radio" name="enlinea" value="7">
                                                 <label class="txtbtn">7 en linea</label>            
                                             </div>
-                                        
                                         </div>
+
                                         <button class="btn-primario txtbtn" id="btn-listo-para-jugar" type="submit">jugar</button> 
                                     </form>
                                 
                                     <div id="juego-pantalla" class="juego">
                                         <div class="info-play">
-                                            <h2 class="mostrar-jugador titulo-h2"></h2>
-                                            <div class="temporizador txtbtn"></div>
-                                            <button class="btn-primario txtbtn reiniciar">Reiniciar</button>   
+                                            <h2 id="mostrar-jugador" class="mostrar-jugador titulo-h2"></h2>
+                                            <div id="temporizador" class="temporizador txtbtn"></div>
+                                            <button id="reiniciar" class="btn-primario txtbtn reiniciar">Reiniciar</button>   
                                         </div>
-                                        <div class="ganador titulo-h2"></div>
+                                        <div id="ganador" class="ganador titulo-h2"></div>
                                         <canvas id="canvas" width="755" height="433"></canvas>
                                     </div>   
                                 </section>
@@ -179,6 +180,8 @@
 
                                     </div>
                                 </div>
+
+                                
 
                                 <!-- JUGAR SOLO -->
 

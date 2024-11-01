@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rayo vs Chick</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    
+</head>
+<body>
+    <header>
+        <div class="logo-header">
+           <button><a href="home.html"><img src="images/logo.png" alt="Logo Ensigna games"></a></button>
+        </div>
+        <div class="icono-avatar">
+            <button class="btn-menu">
+                <img class="img-avatar" src="images/avatar.jpg" alt="avatar.png">
+            </button>
+        </div>
+         
+        <div class="container-buscador">
+            <form class="buscador">
+                <input type="text" placeholder="¿A qué jugamos hoy?">
+                <button class="lupa"><img src="images/lupa.png" alt="Lupa"></button>
+            </form>
+        </div>
+        <div class="icono-carrito">
+            <button class="btn-menu">
+                <img src="images/carrito.png" alt="">
+            </button>
+        </div>
+   </header>
+    <div class="container-juego">
+        <!--Menu desplegable-->
+    <div class="perfil menu">
+        <ul class="lista-perfil">
+            <hr class="division-menu">
+                <li class="txtbtn"><a href="#" class="btn-terciario">Perfil</a></li>
+                <li class="txtbtn"><a href="#" class="btn-terciario">Editar perfil</a></li>
+                <li class="txtbtn"><a href="#" class="btn-terciario">Mis juegos</a></li>
+                <li class="txtbtn"><a href="#" class="btn-terciario">Cerrar sesión</a></li>          
+            <hr class="division-menu">
+        </ul>
+    </div>
+
+    <div class="carrito menu">
+        <h2 class="titulo-h2">Mi carrito</h2>
+        <hr class="division-menu">
+        <ul class="lista">
+            <li class="item">
+                <div class="card-carrito">
+                    <img class="img-carrito" src="images/jumpforce.png" alt="Jump force">
+                    <div class="info-carrito">
+                        <h3 class="titulo-h3">Jump Force</h3>
+                        <p class="txtbody">$3500</p>
+                    </div>
+                </div>
+                <img class="img-eliminar" src="images/eliminar.png" alt="eliminar.png">
+            </li>
+
+            <li class="item">
+                <div class="card-carrito">
+                    <img class="img-carrito" src="images/battlefield3.jpg" alt="Battlefield 3">
+                    <div class="info-carrito">
+                        <h3 class="titulo-h3">Battlefield 3</h3>
+                        <p class="txtbody">$2500</p>
+                    </div>
+                </div>               
+                <img class="img-eliminar" src="images/eliminar.png" alt="eliminar.png">
+            </li>
+
+            <li class="item">
+                <div class="card-carrito">
+                    <img class="img-carrito" src="images/fifa-23.jpg" alt="Fifa 23">
+                    <div class="info-carrito">
+                        <h3 class="titulo-h3">FIFA 23</h3>
+                        <p class="txtbody">$5000</p>
+                    </div>
+                </div>    
+                <img class="img-eliminar"src="images/eliminar.png" alt="eliminar.png">
+            </li>
+
+        </ul>
+        <hr class="division-menu">
+        <div class="carrito-precio">
+            <h3 class="titulo-h3">total</h3>
+            <h3 class="titulo-h3">$11.000</h3>
+        </div>
+        <div class="btn-carrito">
+            <button class="btn-primario txtbtn" type="button">Finalizar la compra</button>
+        </div>  
+    </div>
+        <main class="contenido-principal">
+            <div class="breadcrumbs">
+                <a href="home.html" class="txtbtn btn-terciario">Home</a>
+                <span class="txtbtn">→</span>
+                <span class="txtbtn">Destacados</span>
+                <span class="txtbtn">→</span>
+                <span class="txtbtn">Rayo vs Chick</span>
+            </div>
+            <h1 class="titulo-h1">Rayo vs Chick</h1>
+
+            <section class="juego-ejecucion">
+                <form action="" class="form-juego">
+                    <div class="container-fichas">
+                        <div class="fichas-jugador">
+                            <h3 class="titulo-h3">Player 1</h3>
+                            <div class="opcion-ficha">
+                                <img class="img-ficha" src="images/juego/rayo.png"  alt="">
+                                <input type="radio" name="grupo1" value="images/juego/rayo.png" required>
+                            </div>
+                            <div class="opcion-ficha">
+                                <img class="img-ficha" src="images/juego/guido.png"  alt="">
+                                <input type="radio" name="grupo1" value="images/juego/guido.png">
+                            </div>
+                            <div class="opcion-ficha">
+                                <img class="img-ficha"  src="images/juego/mate.png"  alt="">
+                                <input type="radio" name="grupo1" value="images/juego/mate.png">
+                            </div>
+                            <div class="opcion-ficha">
+                                <img class="img-ficha" src="images/juego/chick.png"  alt="">
+                                <input type="radio" name="grupo1" value="images/juego/chick.png">
+                            </div>  
+                        </div>
+                        <div class="fichas-jugador">
+                            <h3 class="titulo-h3">Player 2</h3>
+
+                            <div class="opcion-ficha">
+                                <img class="img-ficha" src="images/juego/rayo.png"  alt="" >
+                                <input type="radio" name="grupo2" value="images/juego/rayo.png" required>
+                            </div>
+                            <div class="opcion-ficha">
+                                <img class="img-ficha" src="images/juego/guido.png"  alt="">
+                                <input type="radio" name="grupo2" value="images/juego/guido.png" >
+                            </div>
+                            <div class="opcion-ficha">
+                                <img class="img-ficha" src="images/juego/mate.png"  alt="">
+                                <input type="radio" name="grupo2" value="images/juego/mate.png">
+                            </div>
+                            <div class="opcion-ficha">
+                                <img class="img-ficha" src="images/juego/chick.png"  alt="">
+                                <input type="radio" name="grupo2" value="images/juego/chick.png">
+                            </div>  
+                        </div> 
+                    </div>
+                    <div class="seleccion-juego">
+                        <div>
+                            <input class="seleccion-input" type="radio" name="enlinea" value="4" required>
+                            <label class="txtbtn">4 en linea</label>
+                        </div>
+                        <div>
+                            <input class="seleccion-input" type="radio" name="enlinea" value="5">
+                            <label class="txtbtn">5 en linea</label>            
+                        </div>
+                        <div>
+                            <input class="seleccion-input" type="radio" name="enlinea" value="6">
+                            <label class="txtbtn">6 en linea</label>            
+                        </div>
+                        <div>
+                            <input class="seleccion-input" type="radio" name="enlinea" value="7">
+                            <label class="txtbtn">7 en linea</label>            
+                        </div>
+                       
+                    </div>
+                    <button class="btn-primario txtbtn"  type="submit">jugar</button> 
+                </form>
+            
+                <div class="juego">
+                    <div class="info-play">
+                        <h2 class="mostrar-jugador titulo-h2"></h2>
+                        <div class="temporizador txtbtn"></div>
+                        <button class="btn-primario txtbtn reiniciar">Reiniciar</button>   
+                    </div>
+                    <div class="ganador titulo-h2"></div>
+                    <canvas id="canvas" width="900" height="500"></canvas>
+                </div>   
+            </section>
+            
+            <div class="calificar-compartir">
+                <div class="icono-calif-comp">
+                    <img src="images/pulgar-arriba.png" alt="icono pulgar arriba">
+                    <span class="porcentaje-mg titulo-h3">70%</span>
+                </div>
+                <div class="icono-calif-comp">
+                    <img src="images/disgusto.png" alt="icono pulgar abajo">
+                    <span class="porcentaje-mg titulo-h3">30%</span>
+                </div>
+                <div class="icono-calif-comp compartir">
+                    <img src="images/compartir.png" alt="icono compartir">
+                </div>
+            </div>  
+
+            <section class="info-juego">
+                <h2 class="titulo-h2">Descripción</h2>
+                <hr class="division-seccion">
+                <p class="txtbody">¡Prepárate para la carrera más emocionante jamás vista en Radiator Springs!</p>
+                <p class="txtbody">Rayo McQueen y Chick Hicks se enfrentan nuevamente en una batalla final para reclamar la codiciada Copa Pistón y el título de campeón.</p>
+                <p class="txtbody">Para conseguirlo, quien logre ubicar 4 fichas en línea, ganará la partida.</p>
+                <p class="txtbody">¿Logrará Rayo McQueen superar a Chick Hicks y reclamar la Copa Pistón, o su rival tramposo tendrá la última palabra?</p>
+
+                <div class="imgs-desc">
+                    <img src="images/juego1.png" alt="Demostración del juego">
+                    <img src="images/juego2.png" alt="Demostración del juego">
+                    <img src="images/juego3.png" alt="Demostración del juego">
+
+                </div>
+            </section>
+            <section class="info-juego">
+                <h2 class="titulo-h2">¿Cómo jugar?</h2>
+                <hr class="division-seccion">
+               <div class="cont-instrucciones">
+                    <div class="instrucciones-juego">
+                        <div class="instruccion-juego">
+                            <img src="images/mouse-click.png" alt="">
+                            <span class="txtbody">Haz click en una ficha</span>
+                        </div>
+                        <div class="instruccion-juego">
+                            <img src="images/mouse-deslizar.png" alt="">
+                            <span class="txtbody">Arrastra la ficha sobre la columna que desees dejarla caer</span>
+                        </div>
+                        
+                    </div>
+                    <figure>
+                        <img src="images/video-como-jugar.png" alt="Video instruccion del juego" class="video-instruccion">
+                    </figure>
+                </div> 
+            </section>
+            <section class="info-juego comentarios">
+                <h2 class="titulo-h2">Comentarios</h2>
+                <hr class="division-seccion">
+                <div class="comentarios-flex">
+                    <div class="publicacion">
+                        <div class="usuario-comentario">
+                            <img src="images/avatar.jpg" alt="Avatar del perfil">
+                            <p class="txtbody-bold">Tú</p>
+                        </div>
+                        <hr>
+                        <div class="comentario-publicar">
+                            <textarea cols="30" rows="2" placeholder="¿Qué piensas de este juego?"></textarea>
+                            <button class="txtbtn-chico">Publicar</button>
+                        </div>      
+                    </div>
+
+                    <div class="comentario">
+                        <div class="usuario-comentario">
+                            <img src="images/avatar-1.png" alt="Avatar del perfil">
+                            <p class="txtbody-bold">Usuario5587</p>
+                        </div>
+                        <hr>
+                        <div class="comentario-publicar">
+                            <p class="txtbody">Me encanta este juego!</p>
+                        </div>
+                        <span class="txtbody2">Hace 8 horas</span>
+                    </div>  
+                    
+                    <div class="comentario">
+                        <div class="usuario-comentario">
+                            <img src="images/avatar-2.png" alt="Avatar del perfil">
+                            <p class="txtbody-bold">Usuario8773</p>
+                        </div>
+                        <hr>
+                        <div class="comentario-publicar">
+                            <p class="txtbody">No me gustó, muy aburrido!</p>
+                        </div>
+                        <span class="txtbody2">Hace 3 días</span>
+                    </div>
+                  </div>    
+            </section>
+        </main>
+    
+        <aside>
+            <div class="publicidad">
+                <img src="images/publicidad-pepsi.jpeg" alt="Publicidad Pepsi">
+            </div>
+            <div class="publicidad">
+                <img src="images/publicidad-hamburguesa.jpeg" alt="Publicidad hamburguesa">
+            </div>
+            <div class="publicidad">
+                <img src="images/publicidad-nike.jpeg" alt="Publicidad Nike">
+            </div>
+            <div class="publicidad">
+                <img src="images/publicidad-spotify.jpeg" alt="Publicidad Spotify">
+            </div>
+            <div class="publicidad">
+                <img src="images/publicidad-prime-video.jpeg" alt="Publicidad Prime video">
+            </div>
+        </aside>
+    </div>
+    <footer>
+        <div class="footer-info">
+            <div class="lista-footer">
+                    <h3 class="titulo-h3">Compañía</h3>
+                    <ul>
+                        <li><a href="" class="txtbtn btn-terciario">Acerca de</a></li>
+                        <li><a href="" class="txtbtn btn-terciario">Blog</a></li>
+                        <li><a href="" class="txtbtn btn-terciario">Contactanos</a></li>
+                    </ul>
+            </div>
+            <div class="lista-footer">
+                <h3 class="titulo-h3">Soporte</h3>
+                <ul>
+                    <li><a href="" class="txtbtn btn-terciario">Centro de ayuda</a></li>
+                    <li><a href="" class="txtbtn btn-terciario">Enviar un juego</a></li>
+                    <li><a href="" class="txtbtn btn-terciario">Reportar un juego</a></li>
+                </ul>
+            </div>
+            <div class="lista-footer">
+                <h3 class="titulo-h3">Privacidad y términos</h3>
+                <ul>
+                    <li><a href="" class="txtbtn btn-terciario">Términos de usos</a></li>
+                    <li><a href="" class="txtbtn btn-terciario">Políticas de privacidad</a></li>
+                    <li><a href="" class="txtbtn btn-terciario">Política de devoluciones</a></li>
+                </ul>
+            </div>
+        </div>
+       <hr class="linea-divisoria">
+       <div class="redes-footer">
+            <ul>
+                <li><a href="http://" target="_blank" class="icono-footer"><img src="images/icono-ig.png" alt="Icono Instagram"></a></li>
+                <li><a href="http://" target="_blank" class="icono-footer"><img src="images/icono-twitter.png" alt="Icono Twitter"></a></li>
+                <li><a href="http://" target="_blank" class="icono-footer"><img src="images/icono-whatsapp.png" alt="Icono Whatsapp"></a></li>
+                <li><a href="http://" target="_blank" class="icono-footer"><img src="images/icono-skype.png" alt="Icono Skype"></a></li>
+            </ul>
+       </div>
+    </footer>
+    <script src="js/4enlinea/figura.js"></script>
+    <script src="js/4enlinea/ficha.js"></script>
+    <script src="js/4enlinea/form.js"></script>
+    <script src="js/4enlinea/player.js"></script>
+    <script src="js/4enlinea/tablero.js"></script>
+    <script src="js/4enlinea/juego.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
