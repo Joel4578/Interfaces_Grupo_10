@@ -1,71 +1,69 @@
-class Ficha extends Dibujable{
+class Ficha extends Figure {
+  constructor(posX, posY, radius, fill, context, player, imageURL) {
+      super(posX, posY, fill, context);   
+      this.radius = radius;
+      this.player = player;
+      this.disponible = true;
+      this.image = new Image();
+      this.imageURL = imageURL;
+  }
+ 
+  draw() {
+      /*me traigo todos los valores de las propiedades
+      del constructor de la clase padre
+       y se la asigno a la funcion dibujar*/
+      super.draw();
+      this.ctx.beginPath();
+      this.ctx.arc(this.posX, this.posY, this.radius, 0, 2 * Math.PI);
+      this.ctx.fill();
+      
+      if(this.resaltado === true){
+          
+          this.ctx.strokeStyle = this.resaltadoEstilo;
+          this.ctx.lineWidth = 5;
+          this.ctx.stroke();
+      }
+     
+      //cuando creo la ficha le asigno la url de la imagen, solo accede una vez
+      if(this.image.src === ""){
+          this.image.src = this.imageURL;
+          let cargarImg = function (){
+              this.ctx.drawImage(this.image, this.posX - this.radius, this.posY - this.radius, this.radius / .5,
+              this.radius / .5);
+          }
+          this.image.onload = cargarImg.bind(this);
+      }else{
+          this.ctx.drawImage(this.image, this.posX - this.radius, this.posY - this.radius, this.radius / .5,
+              this.radius / .5);
+      }
+
+      this.ctx.closePath();
+  }
   
-
-  static size = 40
-
-  constructor(equipo = "", xPos = 0, yPos = 0 ,ctx = CanvasRenderingContext2D){
-    super(ctx, xPos, yPos)
-
-    this.equipo = equipo
-
-
-    this.size = Ficha.size
-    this.image = getResizedImage(`imgs/cuatro-en-linea/fichas/ficha-mario.png`, this.size, this.size, this.pos.x, this.pos.y, this.ctx)
-    
-    this.circle = new Circulo(this.size / 2, this.pos.x + this.size / 2, this.pos.y + this.size / 2, ctx)
-
-    this.isHover = false
-    this.isClicked = false
-    this.isHovereable = true
-
-    this.originalPosition = {
-      x : xPos,
-      y : yPos
-    }
-  }
-
-  draw(){
-    super.draw()
-    this.image.draw()
-    this.circle.draw()
-
-  }
-
-  updatePos(x = 0, y = 0){
-    super.updatePos(x,y)
-    this.image.updatePos(x,y)
-    this.circle.updatePos(x + this.size / 2, y + this.size / 2)
+  getRadius() {
+      return this.radius;
   }
   
-  addPos(x = 0, y = 0){
-    super.addPos(x,y)
-    this.image.addPos(x,y)
-    this.circle.addPos(x + this.size / 2, y + this.size / 2)
+  isPointInside(x,y){
+      if(this.disponible == true){
+      let _x = this.posX -x;
+      let _y = this.posY -y;
+      
+      return Math.sqrt(_x * _x + _y * _y) < this.radius;
+      }
+      return false;
   }
 
-  hasMouseOver(x = 0, y = 0){
-    
-    let centerX = this.pos.x + this.size / 2;
-    let centerY = this.pos.y + this.size / 2;
-  
-    let dx = x - centerX;
-    let dy = y - centerY;
-  
-    let distance = Math.sqrt(dx ** 2 + dy ** 2);
-  
-    return distance < (this.size / 2 + 3);
+  isDisponible(){
+      return this.disponible;
   }
 
-  setOverFill(fill = "#0000"){
-    this.circle.fill = fill
+  setDisponible(boolean){
+      this.disponible = boolean;
   }
 
-  updateOriginalPosition(){
-    this.originalPosition = {
-      x : this.pos.x,
-      y : this.pos.y
-    }
+  getPlayerId(){
+      return this.player.getId();
   }
-
 
 }

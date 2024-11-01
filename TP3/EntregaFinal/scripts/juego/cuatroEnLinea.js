@@ -7,7 +7,6 @@ const pantallaGrande = document.getElementById('btn-fullscreen');
 const play = document.getElementById('btn-play');
 const pantalla = document.getElementById('pantalla-juego');
 const pantallaPrincipal = document.getElementById('pantalla-juego-principal');
-const canvas = document.getElementById('c');
 
 // botones pantalla principal
 
@@ -30,8 +29,7 @@ const pantallaSeleccionarFicha = document.getElementById('pantalla-seleccionar-f
 
 play.addEventListener('click', () =>{
     pantalla.style.display = 'none';
-    canvas.style.display = 'flex';
-    // pantallaPrincipal.style.display = 'flex';
+    pantallaPrincipal.style.display = 'flex';
 });
 
 // jugar solo 

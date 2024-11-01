@@ -258,31 +258,11 @@
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
-/* CANVAS */
+/* JUEGO ACTIVO (SOLO) */
 
-#c {
+.juego-ejecucion  {
     display: none;
 }
-
-#c{
-    &.hover{
-      cursor: grab;
-    }
-  
-    &.grabbing{
-      cursor: grabbing;
-    }
-  
-    &.pointer{
-      cursor: pointer;
-    }
-  
-    &.illegal{
-      cursor: no-drop;
-    }
-  }
-
-/* JUEGO ACTIVO (SOLO) */
 
 .pantalla-activa-solo {
     background-image: url(../imgs/cuatro-en-linea/fondo-juego.png);
