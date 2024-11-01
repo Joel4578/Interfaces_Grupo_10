@@ -184,7 +184,6 @@ class Juego {
           4: new UIElement(new ResizedImage(this.IMGS.SELECTMODE[4].empty, 197, 50, undefined, undefined, this.ctx), new ResizedImage(this.IMGS.SELECTMODE[4].filled, 197, 50, undefined, undefined, this.ctx), canvas.width / 2 - 343 / 2, (canvas.height / 2 - 50 / 2) * 4, this.ctx),
           5: new UIElement(new ResizedImage(this.IMGS.SELECTMODE[5].empty, 243, 50, undefined, undefined, this.ctx), new ResizedImage(this.IMGS.SELECTMODE[5].filled, 243, 50, undefined, undefined, this.ctx), canvas.width / 2 - 343 / 2, (canvas.height / 2 - 50 / 2) * 4, this.ctx),
           6: new UIElement(new ResizedImage(this.IMGS.SELECTMODE[6].empty, 290, 50, undefined, undefined, this.ctx), new ResizedImage(this.IMGS.SELECTMODE[6].filled, 290, 50, undefined, undefined, this.ctx), canvas.width / 2 - 343 / 2, (canvas.height / 2 - 50 / 2) * 4, this.ctx),
-          7: new UIElement(new ResizedImage(this.IMGS.SELECTMODE[7].empty, 343, 50, undefined, undefined, this.ctx), new ResizedImage(this.IMGS.SELECTMODE[7].filled, 343, 50, undefined, undefined, this.ctx), canvas.width / 2 - 343 / 2, (canvas.height / 2 - 50 / 2) * 4, this.ctx),
         }
     
         this.UI.SELECTMODE[5].clickableArea = {
@@ -207,17 +206,7 @@ class Juego {
             end: this.UI.SELECTMODE[6].pos.y + this.UI.SELECTMODE[6].height
           }
         }
-        this.UI.SELECTMODE[7].clickableArea = {
-          x: {
-            start: this.UI.SELECTMODE[6].pos.x + this.UI.SELECTMODE[6].width,
-            end: this.UI.SELECTMODE[7].pos.x + this.UI.SELECTMODE[7].width
-          },
-          y: {
-            start: this.UI.SELECTMODE[7].pos.y,
-            end: this.UI.SELECTMODE[7].pos.y + this.UI.SELECTMODE[7].height
-          }
-        }
-    
+  
         this.UI.SELECTMODE[4].onClick = () => {
           this.gameSettings.fichasToWin = 4
           this.gameSettings.columnas = 7
@@ -239,14 +228,7 @@ class Juego {
     
           this.state = this.STATES.SELECT_FICHA
         }
-        this.UI.SELECTMODE[7].onClick = () => {
-          this.gameSettings.fichasToWin = 7
-          this.gameSettings.columnas = 10
-          this.gameSettings.duration = this.gameSettings.columnas * this.gameSettings.rows * 10
-    
-          this.state = this.STATES.SELECT_FICHA
-        }
-    
+  
         this.tablero
     
         this.mouse = {
@@ -589,6 +571,8 @@ class Juego {
       }
     
       mouseDown(e) {
+
+       
     
         if (this.state == this.STATES.MENU) {
           this.UI.CLICPARAEMPEZAR.mouseClick()
@@ -599,13 +583,7 @@ class Juego {
           this.UI.SELECCIONAR_MODO[5].mouseClick()
           this.UI.SELECCIONAR_MODO[6].mouseClick()
         }
-    
-        if (this.state == this.STATES.SELECT_MODE) {
-          this.UI.SELECTMODE[4].mouseClick()
-          this.UI.SELECTMODE[5].mouseClick()
-          this.UI.SELECTMODE[6].mouseClick()
-          this.UI.SELECTMODE[7].mouseClick()
-        }
+      
     
         if (this.state == this.STATES.DISPLAY_CURRENT_FICHAS) {
     
