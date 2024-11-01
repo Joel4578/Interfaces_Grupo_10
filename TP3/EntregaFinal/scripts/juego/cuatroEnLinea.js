@@ -21,10 +21,6 @@ const cuatroFichas = document.getElementById('cuatroPorCuatro');
 const cincoFichas = document.getElementById('cincoPorCinco');
 const seisFichas = document.getElementById('seisPorSeis');
 
-// seleccionar fichas
-
-const pantallaSeleccionarFicha = document.getElementById('pantalla-seleccionar-fichas');
-
 // mostrar inicio de juego
 
 play.addEventListener('click', () =>{
@@ -37,13 +33,6 @@ btnJugarSolo.addEventListener('click', () =>{
     pantallaPrincipal.style.display = 'none';
     pantallaSolo.style.display = 'flex';
 }); 
-
-// cuatro por cuatro (facil)
-
-cuatroFichas.addEventListener('click', () => {
-    pantallaSolo.style.display = 'none';
-    pantallaSeleccionarFicha.style.display = 'flex';
-})
 
 // volver atras 
 

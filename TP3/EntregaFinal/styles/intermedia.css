@@ -261,6 +261,15 @@
 /* JUEGO ACTIVO (SOLO) */
 
 .juego-ejecucion  {
+    background-image: url(../imgs/cuatro-en-linea/fondo-juego.png);
+    background-size: cover;
+    width: 755px;
+    height: 443px;
+    display: none;
+    justify-content: center;
+}
+
+.juego-ejecucion .juego {
     display: none;
 }
 
