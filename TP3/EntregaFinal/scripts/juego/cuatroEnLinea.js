@@ -7,7 +7,6 @@ const pantallaGrande = document.getElementById('btn-fullscreen');
 const play = document.getElementById('btn-play');
 const pantalla = document.getElementById('pantalla-juego');
 const pantallaPrincipal = document.getElementById('pantalla-juego-principal');
-const canvas = document.getElementById('c');
 
 // botones pantalla principal
 
@@ -22,16 +21,16 @@ const cuatroFichas = document.getElementById('cuatroPorCuatro');
 const cincoFichas = document.getElementById('cincoPorCinco');
 const seisFichas = document.getElementById('seisPorSeis');
 
-// seleccionar fichas
+// comenzar juego 
 
-const pantallaSeleccionarFicha = document.getElementById('pantalla-seleccionar-fichas');
+const jugar = document.getElementById('btn-listo-para-jugar');
+const juego = document.getElementById('juego-pantalla');
 
 // mostrar inicio de juego
 
 play.addEventListener('click', () =>{
     pantalla.style.display = 'none';
-    canvas.style.display = 'flex';
-    // pantallaPrincipal.style.display = 'flex';
+    pantallaPrincipal.style.display = 'flex';
 });
 
 // jugar solo 
@@ -40,12 +39,10 @@ btnJugarSolo.addEventListener('click', () =>{
     pantallaSolo.style.display = 'flex';
 }); 
 
-// cuatro por cuatro (facil)
-
-cuatroFichas.addEventListener('click', () => {
+jugar.addEventListener('click', () =>{
     pantallaSolo.style.display = 'none';
-    pantallaSeleccionarFicha.style.display = 'flex';
-})
+    juego.style.display = 'flex';
+}); 
 
 // volver atras 
 

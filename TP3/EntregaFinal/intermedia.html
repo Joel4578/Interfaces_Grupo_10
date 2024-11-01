@@ -41,7 +41,7 @@
     
                 </div>
             </div>
-        
+
             <!-- NAV -->
         
             <header>
@@ -84,7 +84,82 @@
                                     </div>
                                 </div>
 
-                                <canvas id="c" width="755" height="433"></canvas>
+                                <!-- FORMULARIO PERSONAJES Y MODO -->
+                                <section class="juego-ejecucion">
+                                    <form id="pantalla-juego-solo" action="" class="form-juego">
+                                        <div class="container-fichas">
+                                            <div class="fichas-jugador">
+                                                <h3 class="titulo-h3">Player 1</h3>
+                                                <div class="opcion-ficha">
+                                                    <img class="img-ficha" src="imgs/cuatro-en-linea/fichas/ficha-mario.png"  alt="">
+                                                    <input type="radio" name="grupo1" value="imgs/cuatro-en-linea/fichas/ficha-mario.png" required>
+                                                </div>
+                                                <div class="opcion-ficha">
+                                                    <img class="img-ficha" src="imgs/cuatro-en-linea/fichas/ficha-peach.png"  alt="">
+                                                    <input type="radio" name="grupo1" value="imgs/cuatro-en-linea/fichas/ficha-peach.png">
+                                                </div>
+                                                <div class="opcion-ficha">
+                                                    <img class="img-ficha"  src="imgs/cuatro-en-linea/fichas/ficha-bowser.png"  alt="">
+                                                    <input type="radio" name="grupo1" value="imgs/cuatro-en-linea/fichas/ficha-bowser.png">
+                                                </div>
+                                                <div class="opcion-ficha">
+                                                    <img class="img-ficha" src="imgs/cuatro-en-linea/fichas/ficha-yoshi.png"  alt="">
+                                                    <input type="radio" name="grupo1" value="imgs/cuatro-en-linea/fichas/ficha-yoshi.png">
+                                                </div>  
+                                            </div>
+                                            <div class="fichas-jugador">
+                                                <h3 class="titulo-h3">Player 2</h3>
+
+                                                <div class="opcion-ficha">
+                                                    <img class="img-ficha" src="imgs/cuatro-en-linea/fichas/ficha-mario.png"  alt="">
+                                                    <input type="radio" name="grupo2" value="imgs/cuatro-en-linea/fichas/ficha-mario.png" required>
+                                                </div>
+                                                <div class="opcion-ficha">
+                                                    <img class="img-ficha" src="imgs/cuatro-en-linea/fichas/ficha-peach.png"  alt="">
+                                                    <input type="radio" name="grupo2" value="imgs/cuatro-en-linea/fichas/ficha-peach.png">
+                                                </div>
+                                                <div class="opcion-ficha">
+                                                    <img class="img-ficha"  src="imgs/cuatro-en-linea/fichas/ficha-bowser.png"  alt="">
+                                                    <input type="radio" name="grupo2" value="imgs/cuatro-en-linea/fichas/ficha-bowser.png">
+                                                </div>
+                                                <div class="opcion-ficha">
+                                                    <img class="img-ficha" src="imgs/cuatro-en-linea/fichas/ficha-yoshi.png"  alt="">
+                                                    <input type="radio" name="grupo2" value="imgs/cuatro-en-linea/fichas/ficha-yoshi.png">
+                                                </div> 
+                                            </div> 
+                                        </div>
+                                        <div class="seleccion-juego">
+                                            <div>
+                                                <input class="seleccion-input" type="radio" name="enlinea" value="4" required>
+                                                <label class="txtbtn">4 en linea</label>
+                                            </div>
+                                            <div>
+                                                <input class="seleccion-input" type="radio" name="enlinea" value="5">
+                                                <label class="txtbtn">5 en linea</label>            
+                                            </div>
+                                            <div>
+                                                <input class="seleccion-input" type="radio" name="enlinea" value="6">
+                                                <label class="txtbtn">6 en linea</label>            
+                                            </div>
+                                            <div>
+                                                <input class="seleccion-input" type="radio" name="enlinea" value="7">
+                                                <label class="txtbtn">7 en linea</label>            
+                                            </div>
+                                        
+                                        </div>
+                                        <button class="btn-primario txtbtn" id="btn-listo-para-jugar" type="submit">jugar</button> 
+                                    </form>
+                                
+                                    <div id="juego-pantalla" class="juego">
+                                        <div class="info-play">
+                                            <h2 class="mostrar-jugador titulo-h2"></h2>
+                                            <div class="temporizador txtbtn"></div>
+                                            <button class="reiniciar">Reiniciar</button>   
+                                        </div>
+                                        <div class="ganador titulo-h2"></div>
+                                        <canvas id="canvas" width="755" height="433"></canvas>
+                                    </div>   
+                                </section>
 
                                 <div id="pantalla-juego-principal" class="pantalla-activa">
                                     <div class="img">
@@ -107,7 +182,7 @@
 
                                 <!-- JUGAR SOLO -->
 
-                                <div id="pantalla-juego-solo" class="pantalla-activa-solo">
+                                <!-- <div id="pantalla-juego-solo" class="pantalla-activa-solo">
                                     <div class="img">
                                         
                                         <div class="pantalla-principal">
@@ -126,7 +201,7 @@
                                         </div>
 
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <!-- SELECCION FICHAS -->
 
@@ -459,23 +534,20 @@
 
     </div>
 
+    <!-- SCRIPT DE PAGINA -->
+
     <script src="scripts/menuHamburguesa.js"></script>
     <script src="scripts/loader.js"></script>
 
     <!-- SCRIPT PARA QUE ANDE EL JUEGO -->
 
     <script src="scripts/juego/cuatroEnLinea.js"></script>
-    <script src="scripts/juego/Escena.js"></script>
-    <script src="scripts/juego/Dibujable.js"></script>
-    <script src="scripts/juego/ResizedImage.js"></script>
-    <script src="scripts/juego/utils.js"></script>
-    <script src="scripts/juego/UIElement.js"></script>
-    <script src="scripts/juego/Circulo.js"></script>
-    <script src="scripts/juego/Casillero.js"></script>
+    <script src="scripts/juego/Figure.js"></script>
+    <script src="scripts/juego/Form.js"></script>
     <script src="scripts/juego/Ficha.js"></script>
     <script src="scripts/juego/Tablero.js"></script>
     <script src="scripts/juego/Juego.js"></script>
-    <script src="scripts/juego/main.js"></script>
+    <script src="scripts/juego/Jugador.js"></script>
 
 </body>
 </html>
