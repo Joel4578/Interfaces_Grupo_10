@@ -85,47 +85,47 @@
                                 </div>
 
                                 <!-- FORMULARIO PERSONAJES Y MODO -->
-                                <section id="pantalla-juego-solo" class="juego-ejecucion">
-                                    <form action="" class="form-juego">
+                                <section class="juego-ejecucion">
+                                    <form id="pantalla-juego-solo" action="" class="form-juego">
                                         <div class="container-fichas">
                                             <div class="fichas-jugador">
                                                 <h3 class="titulo-h3">Player 1</h3>
                                                 <div class="opcion-ficha">
-                                                    <img class="img-ficha" src="images/juego/rayo.png"  alt="">
-                                                    <input type="radio" name="grupo1" value="imgs/cuatro-en-linea/fichas/ficha-bowser.png" required>
+                                                    <img class="img-ficha" src="imgs/cuatro-en-linea/fichas/ficha-mario.png"  alt="">
+                                                    <input type="radio" name="grupo1" value="imgs/cuatro-en-linea/fichas/ficha-mario.png" required>
                                                 </div>
                                                 <div class="opcion-ficha">
-                                                    <img class="img-ficha" src="images/juego/guido.png"  alt="">
-                                                    <input type="radio" name="grupo1" value="images/juego/guido.png">
+                                                    <img class="img-ficha" src="imgs/cuatro-en-linea/fichas/ficha-peach.png"  alt="">
+                                                    <input type="radio" name="grupo1" value="imgs/cuatro-en-linea/fichas/ficha-peach.png">
                                                 </div>
                                                 <div class="opcion-ficha">
-                                                    <img class="img-ficha"  src="images/juego/mate.png"  alt="">
-                                                    <input type="radio" name="grupo1" value="images/juego/mate.png">
+                                                    <img class="img-ficha"  src="imgs/cuatro-en-linea/fichas/ficha-bowser.png"  alt="">
+                                                    <input type="radio" name="grupo1" value="imgs/cuatro-en-linea/fichas/ficha-bowser.png">
                                                 </div>
                                                 <div class="opcion-ficha">
-                                                    <img class="img-ficha" src="images/juego/chick.png"  alt="">
-                                                    <input type="radio" name="grupo1" value="images/juego/chick.png">
+                                                    <img class="img-ficha" src="imgs/cuatro-en-linea/fichas/ficha-yoshi.png"  alt="">
+                                                    <input type="radio" name="grupo1" value="imgs/cuatro-en-linea/fichas/ficha-yoshi.png">
                                                 </div>  
                                             </div>
                                             <div class="fichas-jugador">
                                                 <h3 class="titulo-h3">Player 2</h3>
 
                                                 <div class="opcion-ficha">
-                                                    <img class="img-ficha" src="images/juego/rayo.png"  alt="" >
-                                                    <input type="radio" name="grupo2" value="images/juego/rayo.png" required>
+                                                    <img class="img-ficha" src="imgs/cuatro-en-linea/fichas/ficha-mario.png"  alt="">
+                                                    <input type="radio" name="grupo2" value="imgs/cuatro-en-linea/fichas/ficha-mario.png" required>
                                                 </div>
                                                 <div class="opcion-ficha">
-                                                    <img class="img-ficha" src="images/juego/guido.png"  alt="">
-                                                    <input type="radio" name="grupo2" value="images/juego/guido.png" >
+                                                    <img class="img-ficha" src="imgs/cuatro-en-linea/fichas/ficha-peach.png"  alt="">
+                                                    <input type="radio" name="grupo2" value="imgs/cuatro-en-linea/fichas/ficha-peach.png">
                                                 </div>
                                                 <div class="opcion-ficha">
-                                                    <img class="img-ficha" src="images/juego/mate.png"  alt="">
-                                                    <input type="radio" name="grupo2" value="images/juego/mate.png">
+                                                    <img class="img-ficha"  src="imgs/cuatro-en-linea/fichas/ficha-bowser.png"  alt="">
+                                                    <input type="radio" name="grupo2" value="imgs/cuatro-en-linea/fichas/ficha-bowser.png">
                                                 </div>
                                                 <div class="opcion-ficha">
-                                                    <img class="img-ficha" src="images/juego/chick.png"  alt="">
-                                                    <input type="radio" name="grupo2" value="images/juego/chick.png">
-                                                </div>  
+                                                    <img class="img-ficha" src="imgs/cuatro-en-linea/fichas/ficha-yoshi.png"  alt="">
+                                                    <input type="radio" name="grupo2" value="imgs/cuatro-en-linea/fichas/ficha-yoshi.png">
+                                                </div> 
                                             </div> 
                                         </div>
                                         <div class="seleccion-juego">
@@ -147,10 +147,10 @@
                                             </div>
                                         
                                         </div>
-                                        <button class="btn-primario txtbtn"  type="submit">jugar</button> 
+                                        <button class="btn-primario txtbtn" id="btn-listo-para-jugar" type="submit">jugar</button> 
                                     </form>
                                 
-                                    <div class="juego">
+                                    <div id="juego-pantalla" class="juego">
                                         <div class="info-play">
                                             <h2 class="mostrar-jugador titulo-h2"></h2>
                                             <div class="temporizador txtbtn"></div>

@@ -260,7 +260,7 @@
 
 /* JUEGO ACTIVO (SOLO) */
 
-.juego-ejecucion  {
+.juego-ejecucion .form-juego {
     background-image: url(../imgs/cuatro-en-linea/fondo-juego.png);
     background-size: cover;
     width: 755px;
@@ -273,91 +273,9 @@
     display: none;
 }
 
-.pantalla-activa-solo {
-    background-image: url(../imgs/cuatro-en-linea/fondo-juego.png);
-    background-size: cover;
-    width: 755px;
-    height: 443px;
-    display: none;
-    justify-content: center;
-}
-
-.pantalla-activa-solo .pantalla-principal .titulo, .btn {
-        margin-top: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: translateY(50px);
-        animation: entrada 1s ease-out forwards;
-}
-
-@keyframes entrada {
-    0% {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.pantalla-activa-solo .pantalla-principal{
+.juego-ejecucion .juego .container-fichas {
     display: grid;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    margin-top: 20px;
-    height: 90%;
-    width: 350px;
-}
-
-.pantalla-activa-solo .pantalla-principal .titulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.pantalla-activa-solo .pantalla-principal .titulo p {
-    color: #ffffff;
-    font-size: 30px;
-    font-family: "Lato-Regular", Helvetica;
-    font-weight: bold;
-    padding: 0;
-    margin: 0;
-    user-select: none;
-}
-
-.pantalla-activa-solo .pantalla-principal .opciones {
-    display: grid;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    width: 100%;
-}
-
-.pantalla-activa-solo .pantalla-principal .opciones .btn {
-    padding: 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: .3s;
-    font-weight: bold;
-    font-size: 30px;
-    color: #fff;
-    user-select: none;
-}
-
-.pantalla-activa-solo .pantalla-principal .opciones .btn:hover {
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #ffffff;
-    transition: .3s;
-    border-radius: 10px;
-    cursor: pointer;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    grid-template-columns: auto auto;
 }
 
 /* JUEGO ACTIVO (FICHAS) */
