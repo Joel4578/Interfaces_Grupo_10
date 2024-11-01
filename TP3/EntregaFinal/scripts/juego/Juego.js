@@ -1,8 +1,8 @@
 // hay que cambiar todo lo que falte que quedó copiado del codigo, reemplazarlo por lo nuestro
 // se cambia el JS, NO EL HTML
 
-
-let canvas = document.getElementById('#canvas');
+document.addEventListener('DOMContentLoaded', function() {
+let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext("2d");
 
 let canvasWidth = canvas.width;
@@ -66,9 +66,10 @@ let segundos = 0;
 
 
 //obtengo los datos del formulario para iniciar el juego y los asigno a las variables globales
-let form = document.getElementById('pantalla-juego-solo');
+let form = document.querySelector('.form-juego');
 form.addEventListener('submit', function (e){
     e.preventDefault();
+    console.log("Formulario enviado");
 
     let formData = new FormData(form);
     
@@ -85,13 +86,14 @@ form.addEventListener('submit', function (e){
 
 
 function iniciarJuego(){
-    iniciartemporizador();
+    //iniciartemporizador();
+    
 
     //oculto el formulario y muestro el juego
     let juego = document.getElementById('juego-pantalla');
     let formJuego = document.getElementById('pantalla-juego-solo');
     formJuego.classList.add('ocultar');
-    juego.classList.add('mostrar');
+    juego.classList.remove('ocultar');
     
     //creo el tablero y calculo la cantidad total de fichas
     tablero = new Tablero(filas, columnas, canvas);
@@ -397,4 +399,6 @@ document.querySelector('.reiniciar').addEventListener('click', () => {
     segundos = 0;
     domGanador.classList.remove('mostrar');
     iniciarJuego();
+});
+
 });

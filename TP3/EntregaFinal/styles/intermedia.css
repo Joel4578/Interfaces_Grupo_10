@@ -182,6 +182,8 @@
     cursor: pointer;
 }
 
+
+
 /* JUEGO ACTIVO */
 
 .pantalla-activa {
@@ -387,6 +389,25 @@
     cursor: pointer;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
+
+ /*juego*/
+
+ .form-juego{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    background-color: var(--collection-1-verde-primario);
+    box-shadow: var(--collection-1-verde-secundario);
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+}
+
+
+
+
 
 /* ZONA COMENTARIOS */
 
