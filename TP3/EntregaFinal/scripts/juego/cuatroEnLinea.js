@@ -39,10 +39,10 @@ btnJugarSolo.addEventListener('click', () =>{
     pantallaSolo.style.display = 'flex';
 }); 
 
-jugar.addEventListener('click', () =>{
-    pantallaSolo.style.display = 'none';
-    juego.style.display = 'flex';
-}); 
+// jugar.addEventListener('click', () =>{
+//     pantallaSolo.style.display = 'none';
+//     juego.style.display = 'flex';
+// }); 
 
 // volver atras 
 

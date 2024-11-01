@@ -66,7 +66,7 @@ let segundos = 0;
 
 
 //obtengo los datos del formulario para iniciar el juego y los asigno a las variables globales
-let form = document.querySelector('.form-juego');
+let form = document.getElementById('pantalla-juego-solo');
 form.addEventListener('submit', function (e){
     e.preventDefault();
 
@@ -88,9 +88,8 @@ function iniciarJuego(){
     iniciartemporizador();
 
     //oculto el formulario y muestro el juego
-    let juego = document.querySelector('.juego');
-    let formJuego = document.querySelector('.form-juego');
-    console.log(juego);
+    let juego = document.getElementById('juego-pantalla');
+    let formJuego = document.getElementById('pantalla-juego-solo');
     formJuego.classList.add('ocultar');
     juego.classList.add('mostrar');
     
@@ -249,7 +248,7 @@ function fichasDisponibles(){
 }
 
 //en caso de haber ganador, lo muestro en el dom
-let domGanador = document.querySelector('.ganador');
+let domGanador = document.getElementById('ganador');
 function mostrarGanador(player){
     domGanador.classList.add('mostrar');
     domGanador.innerHTML = "";
@@ -257,7 +256,7 @@ function mostrarGanador(player){
 }
 
 //muestro el turno actual
-let domTurno = document.querySelector('.mostrar-jugador');
+let domTurno = document.getElementById('mostrar-jugador');
 function mostrarTurno(player){
     domTurno.innerHTML = "";
     domTurno.innerHTML = `Turno: ${player.getNombre()}`;
