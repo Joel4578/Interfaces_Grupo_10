@@ -313,6 +313,14 @@
     justify-content: center;
 }
 
+.opcion-ficha input[type="radio"] {
+    display: none;
+}
+
+.opcion-ficha [type="radio"]:checked + .radio-label {
+    transform: scale(1.1); /* Efecto de escala */
+}
+
 .container .seleccion-juego {
     display: grid;
     justify-content: center;
