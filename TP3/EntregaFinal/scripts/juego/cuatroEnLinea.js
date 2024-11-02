@@ -36,7 +36,7 @@ play.addEventListener('click', () =>{
 // jugar solo 
 btnJugarSolo.addEventListener('click', () =>{
     pantallaPrincipal.style.display = 'none';
-    pantallaSolo.style.display = 'flex';
+    pantallaSolo.style.display = 'grid';
 }); 
 
 // jugar.addEventListener('click', () =>{
