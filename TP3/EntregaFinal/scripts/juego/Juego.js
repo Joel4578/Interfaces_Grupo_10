@@ -21,6 +21,7 @@ let fichasEnLinea = 0;
 let filas;
 let columnas;
 let totalFichas;
+let modo;
 let tablero = null;
 let fichas = [];
 
@@ -84,7 +85,7 @@ form.addEventListener('submit', function (e){
     columnas = fichasEnLinea + 3;
     personaje1 = formData.get('grupo1');
     personaje2 = formData.get('grupo2');
-
+    modo = formData.get('enlinea');
     iniciarJuego();
 });
 
@@ -101,7 +102,7 @@ function iniciarJuego(){
     juego.classList.add('mostrar');
     
     //creo el tablero y calculo la cantidad total de fichas
-    tablero = new Tablero(filas, columnas, canvas);
+    tablero = new Tablero(filas, columnas, canvas, modo);
     totalFichas = filas * columnas;
     
     //creo los jugadores
