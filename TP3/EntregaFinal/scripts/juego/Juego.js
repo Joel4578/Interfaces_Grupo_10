@@ -1,9 +1,11 @@
 // hay que cambiar todo lo que falte que quedó copiado del codigo, reemplazarlo por lo nuestro
 // se cambia el JS, NO EL HTML
 
-document.addEventListener('DOMContentLoaded', function() {
-let canvas = document.getElementById('canvas');
-let ctx = canvas.getContext("2d");
+let  canvas = document.getElementById('canvas');
+let  ctx = canvas.getContext('2d');
+
+// let canvas = document.querySelector("#c");
+// let ctx = canvas.getContext("2d");
 
 let canvasWidth = canvas.width;
 let canvasHeight = canvas.height;
@@ -38,6 +40,7 @@ let minutos = 2;
 let segundos = 0;
 
 // function iniciartemporizador(){
+
 //     let tempDom = document.querySelector(".temporizador");
 
 //     temporizador = setInterval(() => {
@@ -65,11 +68,14 @@ let segundos = 0;
 // }
 
 
+
+
 //obtengo los datos del formulario para iniciar el juego y los asigno a las variables globales
+
+
 let form = document.querySelector('.form-juego');
 form.addEventListener('submit', function (e){
     e.preventDefault();
-    console.log("Formulario enviado");
 
     let formData = new FormData(form);
     
@@ -86,17 +92,14 @@ form.addEventListener('submit', function (e){
 
 
 function iniciarJuego(){
-    //iniciartemporizador();
-    
+    // iniciartemporizador();
 
     //oculto el formulario y muestro el juego
     let juego = document.getElementById('juego-pantalla');
     let formJuego = document.getElementById('pantalla-juego-solo');
     formJuego.classList.add('ocultar');
-    formJuego.classList.remove('mostrar');
     juego.classList.add('mostrar');
-    juego.classList.remove('ocultar');
-    console.log('enviado');
+    
     //creo el tablero y calculo la cantidad total de fichas
     tablero = new Tablero(filas, columnas, canvas);
     totalFichas = filas * columnas;
@@ -392,15 +395,13 @@ function buscarFicha(x, y, player){
     return false;
 }
 
-//reinicio el juego
-document.querySelector('.reiniciar').addEventListener('click', () => {
-    tablero = null;
-    fichas = [];
-    detenerTemporizador();
-    minutos = 2;
-    segundos = 0;
-    domGanador.classList.remove('mostrar');
-    iniciarJuego();
-});
-
-});
+// //reinicio el juego
+// document.querySelector('.reiniciar').addEventListener('click', () => {
+//     tablero = null;
+//     fichas = [];
+//     detenerTemporizador();
+//     minutos = 2;
+//     segundos = 0;
+//     domGanador.classList.remove('mostrar');
+//     iniciarJuego();
+// });

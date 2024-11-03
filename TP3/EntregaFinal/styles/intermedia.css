@@ -272,12 +272,101 @@
 }
 
 .juego-ejecucion .juego {
+    width: 755px;
+    height: 443px;
     display: none;
 }
 
-.juego-ejecucion .juego .container-fichas {
+.juego-ejecucion .container {
+    width: 500px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.juego-ejecucion .container h3 {
+    background: none;
+    border: none;
+    transition: .3s;
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.juego-ejecucion .container-fichas {
+    width: 100%;
     display: grid;
     grid-template-columns: auto auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+
+}
+
+.container-fichas .fichas-jugador h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    background-color: none;
+}
+
+.container-fichas .fichas-jugador .opcion-ficha {
+    display: flex;
+    justify-content: center;
+}
+
+.opcion-ficha input[type="radio"] {
+    display: none;
+}
+
+.opcion-ficha [type="radio"]:checked + .radio-label {
+    transform: scale(1.1); /* Efecto de escala */
+}
+
+.container .seleccion-juego {
+    display: grid;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+}
+
+.container .seleccion-juego .opcion {
+    cursor: pointer;
+}
+
+.container .seleccion-juego .opcion:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container .seleccion-juego label {
+    background: none;
+    border: none;
+    transition: .3s;
+    font-weight: bold;
+    color: #fff;
+    user-select: none;
+}
+
+.container .opciones {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 5px;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.container .opciones button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    user-select: none;
+    justify-content: center;
+    margin: 0;
 }
 
 /* JUEGO ACTIVO (FICHAS) */
@@ -390,24 +479,31 @@
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
- /*juego*/
+/* JUEGO ACTIVO MULTIJUGADOR */
 
- .form-juego{
-    display: flex;
-    flex-direction: column;
+.multijugador {
+    background-image: url(../imgs/cuatro-en-linea/fondo-juego.png);
+    background-size: cover;
+    width: 755px;
+    height: 443px;
+    display: none;
     justify-content: center;
-    width: 500px;
-    height: 500px;
-    background-color: var(--collection-1-verde-primario);
-    box-shadow: var(--collection-1-verde-secundario);
-    text-align: center;
-    position: absolute;
-    z-index: 2;
+    align-items: center;
 }
 
+.multijugador .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 500px;
+    height: 300px;
+}
 
-
-
+.multijugador .container p {
+    color: #fff;
+}
 
 /* ZONA COMENTARIOS */
 
@@ -652,4 +748,66 @@
 
 .videos-tutoriales .videos img {
     margin: 10px;
+}
+
+/* juego */
+/* 
+.form-juego{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    background-color: var(--collection-1-verde-primario);
+    box-shadow: var(--collection-1-verde-secundario);
+    text-align: center;
+    
+} */
+
+
+.form-juego.ocultar {
+    display: none;
+}
+
+.info-play {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0 30px 0;
+    
+}
+
+.reiniciar {
+    width: 80px;
+}
+
+.juego.mostrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.juego {
+    height: 433px;
+}
+
+.temporizador {
+    width: 50px;
+    font-size: 30px;
+}
+
+.ganador {
+    background-color: green;
+    width: 400px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--elevacion1);
+    border-radius: 5%;
+    position: absolute;
+    align-self: center;
+    display: none;
+}
+
+.ganador.mostrar {
+    display: flex;
 }
