@@ -66,7 +66,7 @@ class Tablero {
             for (let j = 0; j < this.columnas; j++) {
                 const x = margenHorizontal + j * this.anchoCasilla; 
                 const y = margenVertical + i * this.altoCasilla;
-                ctx.drawImage(casilleroImg, x, y, this.anchoCasilla, this.altoCasilla);
+                this.context.drawImage(casilleroImg, x, y, this.anchoCasilla, this.altoCasilla);
             }
         }
     };

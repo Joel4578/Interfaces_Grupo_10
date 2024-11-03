@@ -320,6 +320,10 @@
     display: none;
 }
 
+.ocultar {
+    display: none;
+}
+
 .opcion-ficha [type="radio"]:checked + .radio-label {
     transform: scale(1.1); /* Efecto de escala */
 }

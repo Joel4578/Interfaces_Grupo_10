@@ -1,6 +1,6 @@
 // hay que cambiar todo lo que falte que quedó copiado del codigo, reemplazarlo por lo nuestro
 // se cambia el JS, NO EL HTML
-
+document.addEventListener('DOMContentLoaded', function() {
 let  canvas = document.getElementById('canvas');
 let  ctx = canvas.getContext('2d');
 
@@ -75,6 +75,7 @@ let segundos = 0;
 
 let form = document.querySelector('.form-juego');
 form.addEventListener('submit', function (e){
+    console.log("Formulario enviado");
     e.preventDefault();
 
     let formData = new FormData(form);
@@ -84,6 +85,7 @@ form.addEventListener('submit', function (e){
     columnas = fichasEnLinea + 3;
     personaje1 = formData.get('grupo1');
     personaje2 = formData.get('grupo2');
+    console.log('Datos del formulario:', formData.get('enlinea'), formData.get('grupo1'), formData.get('grupo2'));
 
     iniciarJuego();
 });
@@ -94,11 +96,23 @@ form.addEventListener('submit', function (e){
 function iniciarJuego(){
     // iniciartemporizador();
 
-    //oculto el formulario y muestro el juego
-    let juego = document.getElementById('juego-pantalla');
-    let formJuego = document.getElementById('pantalla-juego-solo');
-    formJuego.classList.add('ocultar');
-    juego.classList.add('mostrar');
+        let juego = document.getElementById('juego');
+        let formJuego = document.getElementById('pantalla-juego-solo');
+
+        if (formJuego) {
+            console.log("Estado antes de ocultar:", formJuego.classList);
+            formJuego.classList.add('ocultar');
+            console.log("Estado después de ocultar:", formJuego.classList);
+
+        } else {
+            console.log("formJuego no se encontró");
+        }
+    
+        if (juego) {
+            juego.classList.add('mostrar');
+        } else {
+            console.log("juego no se encontró");
+        }
     
     //creo el tablero y calculo la cantidad total de fichas
     tablero = new Tablero(filas, columnas, canvas);
@@ -404,4 +418,4 @@ function buscarFicha(x, y, player){
 //     segundos = 0;
 //     domGanador.classList.remove('mostrar');
 //     iniciarJuego();
-// });
+ });
