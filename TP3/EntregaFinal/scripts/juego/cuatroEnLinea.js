@@ -8,23 +8,27 @@ const play = document.getElementById('btn-play');
 const pantalla = document.getElementById('pantalla-juego');
 const pantallaPrincipal = document.getElementById('pantalla-juego-principal');
 
-// botones pantalla principal
+// botones principales
 
 const btnJugarSolo = document.getElementById('solo');
 const btnMultijugador = document.getElementById('multijugador');
+const volverAtras = document.getElementById('volver');
 
-// pantalla jugar solo
+// pantalla jugar solo y pantalla multijugador
 
 const pantallaSolo = document.getElementById('pantalla-juego-solo');
-const volverAtras = document.getElementById('volver');
-const cuatroFichas = document.getElementById('cuatroPorCuatro');
-const cincoFichas = document.getElementById('cincoPorCinco');
-const seisFichas = document.getElementById('seisPorSeis');
+const pantallaMultijugador = document.getElementById('pantalla-multijugador');
 
 // comenzar juego 
 
-const jugar = document.getElementById('btn-listo-para-jugar');
-const juego = document.getElementById('juego-pantalla');
+// const jugar = document.getElementById('btn-listo-para-jugar');
+// const juego = document.getElementById('juego');
+
+// jugar.addEventListener('submit', () =>{
+//     pantallaSolo.style.display = 'none';
+//     juego.style.display = 'flex';
+// });
+
 
 // mostrar inicio de juego
 
@@ -39,10 +43,12 @@ btnJugarSolo.addEventListener('click', () =>{
     pantallaSolo.style.display = 'grid';
 }); 
 
-// jugar.addEventListener('click', () =>{
-//     pantallaSolo.style.display = 'none';
-//     juego.style.display = 'flex';
-// }); 
+// multijugador 
+
+btnMultijugador.addEventListener('click', () =>{
+    pantallaPrincipal.style.display = 'none';
+    pantallaMultijugador.style.display = 'grid';
+}); 
 
 // volver atras 
 

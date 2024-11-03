@@ -85,7 +85,7 @@
                                 </div>
 
                                 <!-- FORMULARIO PERSONAJES Y MODO -->
-                                <section class="juego-ejecucion">
+                                <section id="juego" class="juego-ejecucion">
                                     <form id="pantalla-juego-solo" action="" class="form-juego">
 
                                         <div class="container">
@@ -153,30 +153,33 @@
                                             </div>
     
                                             <div class="seleccion-juego">
-                                                <div>
+                                                <div class="opcion">
                                                     <input class="seleccion-input" type="radio" name="enlinea" value="4" required>
                                                     <label class="txtbtn">4 en linea</label>
                                                 </div>
-                                                <div>
+                                                <div class="opcion">
                                                     <input class="seleccion-input" type="radio" name="enlinea" value="5">
                                                     <label class="txtbtn">5 en linea</label>            
                                                 </div>
-                                                <div>
+                                                <div class="opcion">
                                                     <input class="seleccion-input" type="radio" name="enlinea" value="6">
                                                     <label class="txtbtn">6 en linea</label>            
                                                 </div>
-                                                <div>
+                                                <div class="opcion">
                                                     <input class="seleccion-input" type="radio" name="enlinea" value="7">
                                                     <label class="txtbtn">7 en linea</label>            
                                                 </div>
                                             </div>
 
-                                            <button id="volver" class="btn">Volver</button>
-                                            <button class="btn-primario txtbtn" id="btn-listo-para-jugar" type="submit">jugar</button> 
+                                            <div class="opciones">
+                                                <button id="volver" class="btn">Volver</button>
+
+                                                <button class="btn-primario txtbtn" type="submit">jugar</button> 
+                                            </div>
 
                                         </div>
 
-                                        <div id="juego-pantalla" class="juego">
+                                        <div class="juego">
                                             <div class="info-play">
                                                 <h2 id="mostrar-jugador" class="mostrar-jugador titulo-h2"></h2>
                                                 <div id="temporizador" class="temporizador txtbtn"></div>
@@ -209,41 +212,10 @@
 
                                     </div>
                                 </div>
-
-                                <!-- SELECCION FICHAS creo que se borra --> 
-
-                                <div id="pantalla-seleccionar-fichas" class="pantalla-activa-fichas">
-                                    <div class="img">
-                                        
-                                        <div class="pantalla-principal">
-
-                                            <div class="titulo">
-                                                <p>Seleccionar Personaje</p>
-                                            </div>
-
-                                            <div class="contenedor-jugadores">
-                                                <div class="jugador">
-                                                    <p>Jugador 1</p>
-                                                    <button id="ficha" class="btn"><img src="imgs/cuatro-en-linea/fichas/ficha-mario.png" alt=""></button>
-                                                    <button id="ficha" class="btn"><img src="imgs/cuatro-en-linea/fichas/ficha-peach.png" alt=""></button>
-                                                    <button id="ficha" class="btn"><img src="imgs/cuatro-en-linea/fichas/ficha-bowser.png" alt=""></button>
-                                                </div>
-    
-                                                <div class="jugador">
-                                                    <p>Jugador 2</p>
-                                                    <button id="ficha" class="btn"><img src="imgs/cuatro-en-linea/fichas/ficha-mario.png" alt=""></button>
-                                                    <button id="ficha" class="btn"><img src="imgs/cuatro-en-linea/fichas/ficha-peach.png" alt=""></button>
-                                                    <button id="ficha" class="btn"><img src="imgs/cuatro-en-linea/fichas/ficha-bowser.png" alt=""></button>
-                                                </div>
-                                            </div>
-
-                                            <div class="contendor-opciones">
-                                                <button id="volver" class="btn">Volver</button>
-                                                <button id="jugar" class="btn">Jugar</button>
-                                            </div>
-
-                                        </div>
-
+                                
+                                <div id="pantalla-multijugador" class="multijugador">
+                                    <div class="container">
+                                        <p>Proximamente</p>
                                     </div>
                                 </div>
 

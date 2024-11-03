@@ -2,6 +2,8 @@ class Tablero {
   constructor(filas, columnas, canvas) {
     this.filas = filas;
     this.columnas = columnas;
+    this.anchoCasilla = 50; // Ajusta este valor según tus necesidades
+    this.altoCasilla = 50;
     this.canvas = canvas;
     this.context = this.canvas.getContext('2d');
     this.matriz = this.crearMatriz();    
@@ -20,9 +22,9 @@ class Tablero {
         // ancho rect / por el numero de columnas de la matriz.
         const cellWidth = rectWidth / this.columnas;
         const cellHeight = rectHeight / this.filas;
-        /*el tamaño de los circulos*/
+        /el tamaño de los circulos/
     
-        /*posiciones del rectangulo x e y*/ 
+        // /posiciones del rectangulo x e y/ 
         //dividido 2 para que este en el medio del canvas
         const offsetX = (this.canvas.width - rectWidth) / 2;
         const offsetY = (this.canvas.height - rectHeight) / 4;
@@ -50,29 +52,25 @@ class Tablero {
   
  
   dibujartablero() {
-      /*cuanto ocupa el ancho del rectagulo*/ 
-      /*y la multiplicacion por si queremos que ocupe todo el ancho
-      del canvas*/
-      const rectWidth = this.canvas.width * 0.8;
-      const rectHeight = this.canvas.height * 0.6;
-      const offsetX = (this.canvas.width - rectWidth) / 2;
-      const offsetY = (this.canvas.height - rectHeight) / 4;
+    const anchoCanvas = this.canvas.width * 0.8;
+    const altoCanvas = this.canvas.height * 0.6;
+    const margenHorizontal = (anchoCanvas - this.columnas * this.anchoCasilla) / 2;
+    const margenVertical = (altoCanvas - this.filas * this.altoCasilla) / 2;
 
+    // Cargar la imagen del casillero
+    const casilleroImg = new Image();
+    casilleroImg.src = 'imgs/cuatro-en-linea/casillero.png';
 
-      this.context.fillStyle = '#578cd2';
-      // rellena el rectángulo , estos son las medidas del rectangulo
-      this.context.fillRect(offsetX, offsetY, rectWidth, rectHeight); 
-        
-      for (let i = 0; i < this.filas; i++) {
-        for (let j = 0; j < this.columnas; j++) {
-            let celda = this.matriz[i][j];
-            //dibujo la celda
-            this.context.beginPath();
-            this.context.arc(celda.x, celda.y, celda.radius, 0, 2 * Math.PI);
-            this.context.fillStyle = "white";
-            this.context.fill();
+    casilleroImg.onload = () => {
+        for (let i = 0; i < this.filas; i++) {
+            for (let j = 0; j < this.columnas; j++) {
+                const x = margenHorizontal + j * this.anchoCasilla; 
+                const y = margenVertical + i * this.altoCasilla;
+                ctx.drawImage(casilleroImg, x, y, this.anchoCasilla, this.altoCasilla);
+            }
         }
-      }     
+    };
+
   }
 
   getRadio(){
@@ -144,10 +142,10 @@ class Tablero {
             ficha.resaltado = false;
             break;
         }
-        
-    }
+        
+    }
 
- }
- 
+ }
+ 
 
 }

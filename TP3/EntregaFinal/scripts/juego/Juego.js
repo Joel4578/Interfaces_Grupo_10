@@ -1,9 +1,11 @@
 // hay que cambiar todo lo que falte que quedó copiado del codigo, reemplazarlo por lo nuestro
 // se cambia el JS, NO EL HTML
 
+let  canvas = document.getElementById('canvas');
+let  ctx = canvas.getContext('2d');
 
-let canvas = document.querySelector("#c");
-let ctx = canvas.getContext("2d");
+// let canvas = document.querySelector("#c");
+// let ctx = canvas.getContext("2d");
 
 let canvasWidth = canvas.width;
 let canvasHeight = canvas.height;
@@ -38,6 +40,7 @@ let minutos = 2;
 let segundos = 0;
 
 // function iniciartemporizador(){
+
 //     let tempDom = document.querySelector(".temporizador");
 
 //     temporizador = setInterval(() => {
@@ -65,8 +68,12 @@ let segundos = 0;
 // }
 
 
+
+
 //obtengo los datos del formulario para iniciar el juego y los asigno a las variables globales
-let form = document.getElementById('pantalla-juego-solo');
+
+
+let form = document.querySelector('.form-juego');
 form.addEventListener('submit', function (e){
     e.preventDefault();
 
@@ -388,13 +395,13 @@ function buscarFicha(x, y, player){
     return false;
 }
 
-//reinicio el juego
-document.querySelector('.reiniciar').addEventListener('click', () => {
-    tablero = null;
-    fichas = [];
-    detenerTemporizador();
-    minutos = 2;
-    segundos = 0;
-    domGanador.classList.remove('mostrar');
-    iniciarJuego();
-});
+// //reinicio el juego
+// document.querySelector('.reiniciar').addEventListener('click', () => {
+//     tablero = null;
+//     fichas = [];
+//     detenerTemporizador();
+//     minutos = 2;
+//     segundos = 0;
+//     domGanador.classList.remove('mostrar');
+//     iniciarJuego();
+// });
