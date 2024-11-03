@@ -22,7 +22,7 @@ class Tablero {
         // ancho rect / por el numero de columnas de la matriz.
         const cellWidth = rectWidth / this.columnas;
         const cellHeight = rectHeight / this.filas;
-        /el tamaño de los circulos/
+        // /el tamaño de los circulos/
     
         // /posiciones del rectangulo x e y/ 
         //dividido 2 para que este en el medio del canvas

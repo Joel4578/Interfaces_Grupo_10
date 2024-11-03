@@ -39,33 +39,33 @@ let temporizador;
 let minutos = 2;
 let segundos = 0;
 
-// function iniciartemporizador(){
+function iniciartemporizador(){
 
-//     let tempDom = document.querySelector(".temporizador");
+    let tempDom = document.querySelector(".temporizador");
 
-//     temporizador = setInterval(() => {
-//         tempDom.innerHTML = `${minutos}:${segundos}`;
+    temporizador = setInterval(() => {
+        tempDom.innerHTML = `${minutos}:${segundos}`;
 
-//         if(minutos === 0 && segundos === 0){
-//             detenerTemporizador();
-//             terminarJuego();
-//             setTimeout(() => {mostrarGanador('Empate')}, 500); 
-//         }else{
-//             if(segundos === 0){
-//                 minutos--;
-//                 segundos = 59;
-//             }else{
-//                 segundos--;
+        if(minutos === 0 && segundos === 0){
+            detenerTemporizador();
+            terminarJuego();
+            setTimeout(() => {mostrarGanador('Empate')}, 500); 
+        }else{
+            if(segundos === 0){
+                minutos--;
+                segundos = 59;
+            }else{
+                segundos--;
 
-//             }
-//         }
-//     }, 1000);
+            }
+        }
+    }, 1000);
     
-// }
+}
 
-// function detenerTemporizador(){
-//     clearTimeout(temporizador)
-// }
+function detenerTemporizador(){
+    clearTimeout(temporizador)
+}
 
 
 
@@ -73,7 +73,7 @@ let segundos = 0;
 //obtengo los datos del formulario para iniciar el juego y los asigno a las variables globales
 
 
-let form = document.querySelector('.form-juego');
+let form = document.querySelector('.form-juego')
 form.addEventListener('submit', function (e){
     e.preventDefault();
 
@@ -95,9 +95,9 @@ function iniciarJuego(){
     // iniciartemporizador();
 
     //oculto el formulario y muestro el juego
-    let juego = document.getElementById('juego-pantalla');
-    let formJuego = document.getElementById('pantalla-juego-solo');
-    formJuego.classList.add('ocultar');
+    let juego = document.querySelector('.juegop');
+    let formJuego = document.querySelector('.form-juego');
+    // formJuego.classList.add('ocultar');
     juego.classList.add('mostrar');
     
     //creo el tablero y calculo la cantidad total de fichas
@@ -159,6 +159,7 @@ function onMouseDown(e) {
         posXInicialFicha = clickfig.getPosX();
         posYInicialFicha = clickfig.getPosY();
     }
+    
     drawFigures();
 }
 
@@ -185,6 +186,7 @@ function onMouseup(e) {
     }else if(lastClickedFicha != null){ //si la ficha no fue soltada dentro de un circulo de referencia, la devuelvo a la pila
         lastClickedFicha.setPosition(posXInicialFicha, posYInicialFicha);
     }
+
     drawFigures();
 }
 
@@ -395,13 +397,13 @@ function buscarFicha(x, y, player){
     return false;
 }
 
-// //reinicio el juego
-// document.querySelector('.reiniciar').addEventListener('click', () => {
-//     tablero = null;
-//     fichas = [];
-//     detenerTemporizador();
-//     minutos = 2;
-//     segundos = 0;
-//     domGanador.classList.remove('mostrar');
-//     iniciarJuego();
-// });
+//reinicio el juego
+document.getElementById('reiniciar').addEventListener('click', () => {
+    tablero = null;
+    fichas = [];
+    detenerTemporizador();
+    minutos = 2;
+    segundos = 0;
+    domGanador.classList.remove('mostrar');
+    iniciarJuego();
+});

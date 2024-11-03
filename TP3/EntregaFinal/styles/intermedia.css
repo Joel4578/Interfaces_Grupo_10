@@ -271,10 +271,68 @@
     justify-content: center;
 }
 
-.juego-ejecucion .juego {
+.form-juego.ocultar {
+    display: none;
+}
+
+.juego-ejecucion .juegop {
     width: 755px;
     height: 443px;
     display: none;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+    background-image: url(../imgs/cuatro-en-linea/fondo-juego.png);
+    background-size: cover;
+}
+
+.juegop.mostrar {
+    display: flex;
+    width: 755px;
+    height: 443px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../imgs/cuatro-en-linea/fondo-juego.png);
+}
+
+.info-play {
+    display: flex;
+    justify-content: space-around;
+    background-color: none;
+    /* margin: 40px 0 30px 0; */
+    
+}
+
+.reiniciar {
+    width: 80px;
+}
+
+.juegop {
+    height: 433px;
+}
+
+.temporizador {
+    width: 50px;
+    font-size: 30px;
+}
+
+.ganador {
+    background-color: green;
+    width: 400px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--elevacion1);
+    border-radius: 5%;
+    position: absolute;
+    align-self: center;
+    display: none;
+}
+
+.ganador.mostrar {
+    display: flex;
 }
 
 .juego-ejecucion .container {
@@ -750,9 +808,9 @@
     margin: 10px;
 }
 
-/* juego */
-/* 
-.form-juego{
+/* /juego/ */
+
+/* .form-juego{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -761,53 +819,6 @@
     background-color: var(--collection-1-verde-primario);
     box-shadow: var(--collection-1-verde-secundario);
     text-align: center;
-    
-} */
-
-
-.form-juego.ocultar {
-    display: none;
-}
-
-.info-play {
-    display: flex;
-    justify-content: space-around;
-    margin: 40px 0 30px 0;
-    
-}
-
-.reiniciar {
-    width: 80px;
-}
-
-.juego.mostrar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.juego {
-    height: 433px;
-}
-
-.temporizador {
-    width: 50px;
-    font-size: 30px;
-}
-
-.ganador {
-    background-color: green;
-    width: 400px;
-    height: 200px;
-    justify-content: center;
-    align-items: center;
-    box-shadow: var(--elevacion1);
-    border-radius: 5%;
     position: absolute;
-    align-self: center;
-    display: none;
-}
-
-.ganador.mostrar {
-    display: flex;
-}
+    z-index: 2;
+} */

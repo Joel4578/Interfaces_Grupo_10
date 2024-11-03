@@ -85,8 +85,10 @@
                                 </div>
 
                                 <!-- FORMULARIO PERSONAJES Y MODO -->
-                                <section id="juego" class="juego-ejecucion">
-                                    <form id="pantalla-juego-solo" action="" class="form-juego">
+                                
+                                <div id="juego" class="juego-ejecucion">
+
+                                    <form action="" id="forms" class="form-juego">
 
                                         <div class="container">
 
@@ -121,6 +123,7 @@
                                                         </label>
                                                     </div>  
                                                 </div>
+
                                                 <div class="fichas-jugador">
                                                     <h3 class="titulo-h3">Player 2</h3>
     
@@ -174,25 +177,24 @@
                                             <div class="opciones">
                                                 <button id="volver" class="btn">Volver</button>
 
-                                                <button class="btn-primario txtbtn" type="submit">jugar</button> 
+                                                <button class="btn-primario txtbtn" id="btn-listo-para-jugar" type="submit">jugar</button> 
                                             </div>
 
                                         </div>
 
-                                        <div class="juego">
-                                            <div class="info-play">
-                                                <h2 id="mostrar-jugador" class="mostrar-jugador titulo-h2"></h2>
-                                                <div id="temporizador" class="temporizador txtbtn"></div>
-                                                <button id="reiniciar" class="btn-primario txtbtn reiniciar">Reiniciar</button>   
-                                            </div>
-                                            <div id="ganador" class="ganador titulo-h2"></div>
-                                            <canvas id="canvas" width="755" height="433"></canvas>
-                                        </div>  
-
-                                        
                                     </form>
+
+                                    <div id="juego-pantalla" class="juegop">
+                                        <!-- <div class="info-play">
+                                            <h2 id="mostrar-jugador" class="mostrar-jugador titulo-h2"></h2>
+                                            <div id="temporizador" class="temporizador txtbtn"></div>
+                                            <button id="reiniciar" class="btn-primario txtbtn reiniciar">Reiniciar</button>   
+                                        </div> -->
+                                        <!-- <div id="ganador" class="ganador titulo-h2"></div> -->
+                                        <canvas id="canvas" width="750" height="430"></canvas>
+                                    </div>  
                             
-                                </section>
+                                </div>
 
                                 <div id="pantalla-juego-principal" class="pantalla-activa">
                                     <div class="img">

@@ -16,18 +16,19 @@ const volverAtras = document.getElementById('volver');
 
 // pantalla jugar solo y pantalla multijugador
 
-const pantallaSolo = document.getElementById('pantalla-juego-solo');
+// const pantallaSolo = document.querySelector('.form-juego');
+const pantallaSolo = document.querySelector('#forms');
 const pantallaMultijugador = document.getElementById('pantalla-multijugador');
 
 // comenzar juego 
 
-// const jugar = document.getElementById('btn-listo-para-jugar');
-// const juego = document.getElementById('juego');
+const jugar = document.getElementById('btn-listo-para-jugar');
+const juego = document.getElementById('juego-ejecucion');
 
-// jugar.addEventListener('submit', () =>{
-//     pantallaSolo.style.display = 'none';
-//     juego.style.display = 'flex';
-// });
+jugar.addEventListener('click', () =>{
+    pantallaSolo.style.display = 'none';
+    juego.style.display = 'flex';
+});
 
 
 // mostrar inicio de juego
