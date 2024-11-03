@@ -93,8 +93,10 @@ function iniciarJuego(){
     let juego = document.getElementById('juego-pantalla');
     let formJuego = document.getElementById('pantalla-juego-solo');
     formJuego.classList.add('ocultar');
+    formJuego.classList.remove('mostrar');
+    juego.classList.add('mostrar');
     juego.classList.remove('ocultar');
-    
+    console.log('enviado');
     //creo el tablero y calculo la cantidad total de fichas
     tablero = new Tablero(filas, columnas, canvas);
     totalFichas = filas * columnas;
