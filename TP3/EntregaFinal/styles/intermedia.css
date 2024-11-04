@@ -269,6 +269,7 @@
     height: 443px;
     display: none;
     justify-content: center;
+    user-select: none;
 }
 
 .form-juego.ocultar {
@@ -305,6 +306,7 @@
     left: 5px;
     width: 100%;
     padding: 5px;
+    user-select: none;
 }
 
 .reiniciar {
