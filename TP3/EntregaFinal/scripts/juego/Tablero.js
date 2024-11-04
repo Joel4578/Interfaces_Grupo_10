@@ -42,8 +42,8 @@ class Tablero {
 
   crearMatriz() {
 
-    const rectWidth = this.canvas.width * 0.8;
-    const rectHeight = this.canvas.height * 0.6;
+    const rectWidth = this.canvas.width * .55;
+    const rectHeight = this.canvas.height * 0.87;
     //calcula el ancho total de la celda en funcion en el ancho total del rect
     // ancho rect / por el numero de columnas de la matriz.
     const cellWidth = rectWidth / this.columnas;
@@ -148,7 +148,7 @@ class Tablero {
       const x = ref.x - this.imgReferencia.width / 2; // Centra la flecha en la columna
       const y = ref.y - this - this.imgReferencia.height; // Posición ajustada para que quede justo encima del casillero
 
-      console.log(this.imgReferencia.complete);
+      // console.log(this.imgReferencia.complete);
       
       if (this.imgReferencia.complete) {
         this.context.drawImage(this.imgReferencia, x, y, this.imgReferencia.width, this.imgReferencia.height); // Usa el tamaño real de la flecha
