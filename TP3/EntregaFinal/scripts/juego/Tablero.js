@@ -1,19 +1,41 @@
 class Tablero {
-  constructor(filas, columnas, canvas) {
+  constructor(filas, columnas, canvas, modo) {
     this.filas = filas;
     this.columnas = columnas;
-    this.anchoCasilla = 40; // Ajusta este valor según tus necesidades
-    this.altoCasilla = 40;
+    this.modo = modo;
     this.canvas = canvas;
     this.context = this.canvas.getContext('2d');
     this.matriz = this.crearMatriz();    
+    
+    this.definirModo();
+    this.referencias = []; 
+    this.crearReferencias(); 
     this.dibujartablero();
-    this.referencias = [];
-    this.crearReferencias();
     this.dibujarReferencias();
 
   }
   
+  definirModo(){
+    switch (this.modo) {
+      case '4':
+        this.anchoCasilla = 50;
+        this.altoCasilla = 50;
+        break;
+      case '5':
+        this.anchoCasilla = 45;
+        this.altoCasilla = 45;
+        break;
+      case '6':
+        this.anchoCasilla = 40;
+        this.altoCasilla = 40;
+        break;
+      default:
+        this.anchoCasilla = null; // valor por defecto
+        this.altoCasilla = null; // valor por defecto
+        break;
+    }
+  }
+
   crearMatriz() {
      
         const rectWidth = this.canvas.width * 0.8;
@@ -55,7 +77,8 @@ class Tablero {
     const anchoTablero = this.columnas * this.anchoCasilla;
     const altoTablero = this.filas * this.altoCasilla;
     const margenHorizontal = (this.canvas.width - anchoTablero) / 2;
-    const margenVertical = this.canvas.height - altoTablero - 20
+    
+    const margenVertical = this.canvas.height - altoTablero - 20; 
 
     // Cargar la imagen del casillero
     const casilleroImg = new Image();
@@ -64,14 +87,15 @@ class Tablero {
     casilleroImg.onload = () => {
         for (let i = 0; i < this.filas; i++) {
             for (let j = 0; j < this.columnas; j++) {
-                const x = margenHorizontal + j * this.anchoCasilla; 
+                const x = margenHorizontal + j * this.anchoCasilla;
                 const y = margenVertical + i * this.altoCasilla;
                 this.context.drawImage(casilleroImg, x, y, this.anchoCasilla, this.altoCasilla);
             }
         }
     };
+}
 
-  }
+
 
   getRadio(){
     //ancho del canvas * 0.8 usa el ancho total del canvas y
@@ -84,31 +108,57 @@ class Tablero {
 
   crearReferencias() {
     const Radius = this.getRadio();
+    let cellWidthFactor;
+    console.log(this.modo)
+    // modo de juego
+    switch (this.modo) {
+      case '4':
+        cellWidthFactor = 0.45;
+        break;
+      case '5':
+        cellWidthFactor = 0.50;
+        break;
+      case '6':
+        cellWidthFactor = 0.50;
+        break;
+      default:
+        cellWidthFactor = 0.45;
+        break;
+    }
+    const cellWidth = this.canvas.width * cellWidthFactor / this.columnas;
     const offsetX = (this.canvas.width - cellWidth * this.columnas) / 2;
-    const offsetY = (this.canvas.height - cellHeight * this.filas) / 2; // Cambiado para centrar verticalmente
-    const cellWidth = this.canvas.width * 0.5 / this.columnas;
-    const cellHeight = this.canvas.height * 0.8 / this.filas;
-    
+
+    // Calcular el margen vertical y la posición inicial de y
+    const altoTablero = this.filas * this.altoCasilla;
+    const margenVertical = this.canvas.height - altoTablero - 20;
+    const offsetY = margenVertical / 2; // Centra verticalmente 
+
     for (let i = 0; i < this.columnas; i++) {
-        const x = Math.round(offsetX + i * cellWidth + cellWidth / 2);
-        const y = Math.round(offsetY + cellHeight / 2); // Asegúrate de que el y esté centrado
+      const x = Math.round(offsetX + i * cellWidth + cellWidth / 2);
+      const y = Math.round(offsetY);
 
-        let circuloReferencia = { x, y, radius: Radius, columna: i };
-        this.referencias.push(circuloReferencia);
+      let circuloReferencia = { x, y, radius: Radius, columna: i };
+      this.referencias.push(circuloReferencia);
     }
- }
-
-  dibujarReferencias() {
-    for (let i = 0; i < this.referencias.length; i++) {
-        let ref = this.referencias[i];
-        this.context.beginPath();
-        this.context.arc(ref.x, ref.y, ref.radius, 0, 2 * Math.PI);
-        this.context.fillStyle = "#78EC8C";
-        this.context.fill();
-        this.context.closePath();
-    }
-
   }
+
+dibujarReferencias() {
+  const flechaImg = new Image();
+  flechaImg.src = 'imgs/cuatro-en-linea/flecha.png';
+
+  flechaImg.onload = () => {
+      for (let i = 0; i < this.referencias.length; i++) {
+          let ref = this.referencias[i];
+          
+          const x = ref.x - flechaImg.width / 2; // Centra la flecha en la columna
+          const y = ref.y - flechaImg.height; // Posición ajustada para que quede justo encima del casillero
+
+          this.context.drawImage(flechaImg, x, y, flechaImg.width, flechaImg.height); // Usa el tamaño real de la flecha
+      }
+  };
+}
+
+
 
   getFilas(){
     return this.filas;
