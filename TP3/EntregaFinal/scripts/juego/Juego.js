@@ -307,7 +307,7 @@ function verificarHorizontal(player){
 //verificar vertical
 function verificarVertical(player){
     let filas = tablero.getFilas() - 1;
-    let columnas = tablero.getColumnas() - 1;
+    let columnas = tablero.getColumnas();
     
     for(let col = 0; col < columnas; col++){ //recorro desde la primer columna
         //empiezo desde ultima fila (abajo) hasta que la fila sea mayor o igual a la cantidad de fichas necesarias

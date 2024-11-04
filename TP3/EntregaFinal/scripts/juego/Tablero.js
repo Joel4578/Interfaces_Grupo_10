@@ -41,7 +41,7 @@ class Tablero {
     const rectWidth = this.canvas.width * 0.46;
     const rectHeight = this.canvas.height * 0.69;
     const cellWidth = rectWidth / this.columnas;
-    const cellHeight = rectHeight / this.filas;
+    const cellHeight = rectHeight / this.filas +4;
     const offsetX = (this.canvas.width - rectWidth) / 2;
     const offsetY = (this.canvas.height - rectHeight) / 2;
 
