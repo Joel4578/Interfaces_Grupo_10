@@ -6,8 +6,25 @@ class Ficha extends Figure {
       this.disponible = true;
       this.image = new Image();
       this.imageURL = imageURL;
+      this.velocidadY = 0; // Velocidad vertical inicial
+      this.gravedad = 0.5; 
+      this.enCaida = false; 
   }
  
+   // Método para actualizar la posición de la ficha
+   actualizar() {
+    if (this.enCaida) {
+        this.velocidadY += this.gravedad; 
+        this.y += this.velocidadY; 
+
+        if (this.y + this.radio >= Tablero.rectHeight) {
+            this.y = Tablero.rectHeight - this.radio; 
+            this.enCaida = false; 
+            this.velocidadY = 0; 
+            this.disponible = false; 
+        }
+    }
+}
   draw() {
     
         super.draw(); // Llama al método de la clase padre para dibujar la figura base

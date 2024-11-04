@@ -44,14 +44,21 @@ class Figure {
 
 
   draw() {
-      this.ctx.fillStyle = this.fill;
-  }
+    this.ctx.fillStyle = this.fill;
+    this.ctx.beginPath();
+    // Por ejemplo, si estás dibujando un círculo
+    this.ctx.arc(this.posX, this.posY, this.radio, 0, Math.PI * 2);
+    this.ctx.fill();
+}
+
   setResaltado(resaltado){
       this.resaltado = resaltado;
   }
-  /*para saber si el mouse esta dentro de la figura */
-  isPointInside(x,y) { };
+  isPointInside(x, y) {
+    const dx = x - this.posX;
+    const dy = y - this.posY;
+    return Math.sqrt(dx * dx + dy * dy) < this.radio; // asumiendo que tienes un atributo `radio`
+}
 
-  
 
 }

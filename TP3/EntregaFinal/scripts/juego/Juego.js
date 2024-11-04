@@ -183,11 +183,10 @@ function onMouseup(e) {
         }
         mostrarTurno(turnoPlayer);
 
-    }else if(lastClickedFicha != null){ //si la ficha no fue soltada dentro de un circulo de referencia, la devuelvo a la pila
-        lastClickedFicha.setPosition(posXInicialFicha, posYInicialFicha);
+       
     }
-
     drawFigures();
+   
 }
 
 function onMouseMove(e) {
@@ -399,9 +398,18 @@ function buscarFicha(x, y, player){
     return false;
 }
 
-//reinicio el juego
+// Reinicio el juego
 document.getElementById('reiniciar').addEventListener('click', () => {
-    tablero = null;
+    // Reiniciar el tablero
+    if (tablero) {
+        // Vaciar la matriz de fichas
+        for (let i = 0; i < tablero.filas; i++) {
+            for (let j = 0; j < tablero.columnas; j++) {
+                tablero.matriz[i][j].tieneFicha = false; // Marca las celdas como vacías
+            }
+        }
+    }
+    clearCanvas();
     fichas = [];
     detenerTemporizador();
     minutos = 2;
@@ -409,4 +417,3 @@ document.getElementById('reiniciar').addEventListener('click', () => {
     domGanador.classList.remove('mostrar');
     iniciarJuego();
 });
-

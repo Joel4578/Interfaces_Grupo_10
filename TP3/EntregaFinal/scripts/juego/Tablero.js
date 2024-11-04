@@ -9,14 +9,11 @@ class Tablero {
     this.img = new Image();
     this.img.src = 'imgs/cuatro-en-linea/casillero.png';
     this.imgReferencia = new Image();
-    this.imgReferencia.src = 'imgs/cuatro-en-linea/flecha.png'
+    this.imgReferencia.src = 'imgs/cuatro-en-linea/flecha.png';
 
     this.definirModo();
     this.referencias = [];
     this.crearReferencias();
-    this.dibujartablero();
-    this.dibujarReferencias();
-
   }
 
   definirModo() {
@@ -34,42 +31,29 @@ class Tablero {
         this.altoCasilla = 40;
         break;
       default:
-        this.anchoCasilla = null; // valor por defecto
-        this.altoCasilla = null; // valor por defecto
+        this.anchoCasilla = null;
+        this.altoCasilla = null;
         break;
     }
   }
 
   crearMatriz() {
-
-    const rectWidth = this.canvas.width * .55;
-    const rectHeight = this.canvas.height * 0.87;
-    //calcula el ancho total de la celda en funcion en el ancho total del rect
-    // ancho rect / por el numero de columnas de la matriz.
+    const rectWidth = this.canvas.width * 0.46;
+    const rectHeight = this.canvas.height * 0.69;
     const cellWidth = rectWidth / this.columnas;
     const cellHeight = rectHeight / this.filas;
-    // /el tamaño de los circulos/
-
-    // /posiciones del rectangulo x e y/ 
-    //dividido 2 para que este en el medio del canvas
     const offsetX = (this.canvas.width - rectWidth) / 2;
-    const offsetY = (this.canvas.height - rectHeight) / 2; //modificar esto para la posicion de las fichas en el tablero
-    const Radius = this.getRadio();
-    //creo una matriz vacia de tamaño filas * columnas
+    const offsetY = (this.canvas.height - rectHeight) / 2;
+
+    const radius = Math.min(cellWidth, cellHeight) / 2;
+
     let matAux = Array.from({ length: this.filas }, () => Array(this.columnas).fill(0));
     for (let i = 0; i < this.filas; i++) {
       for (let j = 0; j < this.columnas; j++) {
-        /*
-          x: posicion horizontal inicial del rectangulo del tablero
-          j*cellwidth : es la pos horizontal de la columna * ancho de cada celda
-          desplza la pos x  en la que se encuentre el ciruclo
-          /2 se ajusa para que el circulo este dentro de la celda
-          resumen :  para centrar el circulo dentro de la celda
-        */
-        const x = offsetX + j * cellWidth + cellWidth;
-        const y = offsetY + i * cellHeight + cellHeight / 2;
+        const x = offsetX + j * cellWidth + cellWidth / 2; // Centrado
+        const y = offsetY + i * cellHeight + cellHeight / 2; // Centrado
 
-        let celda = { x, y, radius: Radius, tieneFicha: false };
+        let celda = { x, y, radius, tieneFicha: false, width: cellWidth, height: cellHeight };
         matAux[i][j] = celda;
       }
     }
@@ -77,11 +61,8 @@ class Tablero {
   }
 
   dibujartablero() {
-    const anchoTablero = this.columnas * this.anchoCasilla;
-    const altoTablero = this.filas * this.altoCasilla;
-    const margenHorizontal = (this.canvas.width - anchoTablero) / 2;
-    const margenVertical = this.canvas.height - altoTablero - 30;
-
+    const margenHorizontal = (this.canvas.width - this.columnas * this.anchoCasilla) / 2;
+    const margenVertical = this.canvas.height - (this.filas * this.altoCasilla) - 40;
 
     for (let i = 0; i < this.filas; i++) {
       for (let j = 0; j < this.columnas; j++) {
@@ -92,22 +73,16 @@ class Tablero {
     }
   }
 
-
-
   getRadio() {
-    //ancho del canvas * 0.8 usa el ancho total del canvas y
-    //divide por el numero de columnas  de la matriz
-    //representa el ancho de cada celda en el tablero
     const cellWidth = this.canvas.width * 0.8 / this.columnas;
     const cellHeight = this.canvas.height * 0.6 / this.filas;
-    return Math.min(cellWidth, cellHeight) / 2 - 5;
+    return Math.min(cellWidth, cellHeight) / 2; 
   }
 
   crearReferencias() {
     const Radius = this.getRadio();
     let cellWidthFactor;
-    console.log(this.modo)
-    // modo de juego
+
     switch (this.modo) {
       case '4':
         cellWidthFactor = 0.45;
@@ -125,10 +100,9 @@ class Tablero {
     const cellWidth = this.canvas.width * cellWidthFactor / this.columnas;
     const offsetX = (this.canvas.width - cellWidth * this.columnas) / 2;
 
-    // Calcular el margen vertical y la posición inicial de y
     const altoTablero = this.filas * this.altoCasilla;
     const margenVertical = this.canvas.height - altoTablero - 20;
-    const offsetY = margenVertical / 2; // Centra verticalmente 
+    const offsetY = margenVertical / 2;
 
     for (let i = 0; i < this.columnas; i++) {
       const x = Math.round(offsetX + i * cellWidth + cellWidth / 2);
@@ -140,24 +114,17 @@ class Tablero {
   }
 
   dibujarReferencias() {
-
-
     for (let i = 0; i < this.referencias.length; i++) {
       let ref = this.referencias[i];
 
-      const x = ref.x - this.imgReferencia.width / 2; // Centra la flecha en la columna
-      const y = ref.y - this - this.imgReferencia.height; // Posición ajustada para que quede justo encima del casillero
+      const x = ref.x - this.imgReferencia.width / 2;
+      const y = ref.y - this.imgReferencia.height;
 
-      // console.log(this.imgReferencia.complete);
-      
       if (this.imgReferencia.complete) {
-        this.context.drawImage(this.imgReferencia, x, y, this.imgReferencia.width, this.imgReferencia.height); // Usa el tamaño real de la flecha
+        this.context.drawImage(this.imgReferencia, x, y, this.imgReferencia.width, this.imgReferencia.height);
       }
-
     }
   }
-
-
 
   getFilas() {
     return this.filas;
@@ -171,29 +138,24 @@ class Tablero {
     return this.referencias;
   }
 
-  //verifico si una ficha se encuentra dentro de los circulos de referencia
   estaDentroRef(circulo, ref) {
     let _x = ref.x - circulo.getPosX();
     let _y = ref.y - circulo.getPosY();
-
     return Math.sqrt(_x * _x + _y * _y) < ref.radius;
   }
 
-
   ubicarFichaEnMatriz(columna, ficha) {
-    for (let i = this.filas - 1; i >= 0; i--) {
+    const filaInicio = this.filas - 1;
+    for (let i = filaInicio; i >= 0; i--) {
       let celda = this.matriz[i][columna];
-      if (celda.tieneFicha === false) { //verifico que no haya una ficha en la celda
+      if (!celda.tieneFicha) {
+        // Ajusta la posición de la ficha para que esté centrada en la celda
         ficha.setPosition(celda.x, celda.y);
-        this.matriz[i][columna].tieneFicha = true;
-        ficha.disponible = false; //se setea en false para que no se pueda mover la ficha ubicada en una celda
+        celda.tieneFicha = true;
+        ficha.disponible = false;
         ficha.resaltado = false;
         break;
       }
-
     }
-
   }
-
-
 }
