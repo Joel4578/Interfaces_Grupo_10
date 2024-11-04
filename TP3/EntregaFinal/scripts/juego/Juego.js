@@ -115,8 +115,8 @@ function iniciarJuego(){
     function addFigures() {
         //divido por 2 la cantidad total para que tengan la misma cantidad de fichas
         for (let i = 0; i < totalFichas / 2; i++) {
-            addficha(60, 450, tablero.getRadio(), 'blue', ctx, player1, personaje1, 'red');
-            addficha(840, 450, tablero.getRadio(), 'red', ctx, player2, personaje2, 'green');
+            addficha(60, 200, tablero.getRadio(), 'blue', ctx, player1, personaje1, 'red');
+            addficha(840, 100, tablero.getRadio(), 'red', ctx, player2, personaje2, 'green');
         }
         drawFigures();
     }
@@ -228,7 +228,7 @@ function ubicarFicha(lastClickedFigure, col){
 }
 
 function clearCanvas() {
-    ctx.fillStyle = '#210876';
+    ctx.fillStyle = 'transparent';
     ctx.fillRect(0, 0, canvasWidth, canvasHeight);
     tablero.dibujartablero();
     tablero.dibujarReferencias();
@@ -266,7 +266,7 @@ function mostrarGanador(player){
 }
 
 //muestro el turno actual
-let domTurno = document.getElementById('mostrar-jugador');
+let domTurno = document.querySelector('.mostrar-jugador');
 function mostrarTurno(player){
     domTurno.innerHTML = "";
     domTurno.innerHTML = `Turno: ${player.getNombre()}`;
