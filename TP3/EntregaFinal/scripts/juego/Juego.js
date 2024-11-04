@@ -39,6 +39,8 @@ let temporizador;
 let minutos = 2;
 let segundos = 0;
 
+let firstDraw
+
 function iniciartemporizador(){
 
     let tempDom = document.querySelector(".temporizador");
@@ -67,11 +69,7 @@ function detenerTemporizador(){
     clearTimeout(temporizador)
 }
 
-
-
-
 //obtengo los datos del formulario para iniciar el juego y los asigno a las variables globales
-
 
 let form = document.querySelector('.form-juego')
 form.addEventListener('submit', function (e){
@@ -103,6 +101,9 @@ function iniciarJuego(){
     
     //creo el tablero y calculo la cantidad total de fichas
     tablero = new Tablero(filas, columnas, canvas, modo);
+    firstDraw = setInterval(() => {
+        tablero.dibujartablero()
+    }, 1);
     totalFichas = filas * columnas;
     //creo los jugadores
     player1 = new Player(1, "Player 1");
@@ -114,8 +115,8 @@ function iniciarJuego(){
     function addFigures() {
         //divido por 2 la cantidad total para que tengan la misma cantidad de fichas
         for (let i = 0; i < totalFichas / 2; i++) {
-            addficha(60, 200, tablero.getRadio(), 'blue', ctx, player1, personaje1, 'red');
-            addficha(840, 100, tablero.getRadio(), 'red', ctx, player2, personaje2, 'green');
+            addficha(50, 100, tablero.getRadio(), 'blue', ctx, player1, personaje1, 'red');
+            addficha(canvas.width - 50, 100, tablero.getRadio(), 'red', ctx, player2, personaje2, 'green');
         }
         drawFigures();
     }
@@ -135,7 +136,6 @@ function iniciarJuego(){
 }
 
 function drawFigures() {
-    clearCanvas();
     for (let i = 0; i < fichas.length; i++) {
         fichas[i].draw(ctx);
     }
@@ -192,7 +192,11 @@ function onMouseup(e) {
 
 function onMouseMove(e) {
     if (isMouseDown && lastClickedFicha != null) {
+        clearInterval(firstDraw)
         lastClickedFicha.setPosition(e.offsetX, e.offsetY);
+        clearCanvas()
+        tablero.dibujartablero()
+        tablero.dibujarReferencias();
         drawFigures();
     }
 }
@@ -227,10 +231,8 @@ function ubicarFicha(lastClickedFigure, col){
 }
 
 function clearCanvas() {
-    ctx.fillStyle = 'transparent';
+    ctx.fillStyle = '#99D9EA';
     ctx.fillRect(0, 0, canvasWidth, canvasHeight);
-    tablero.dibujartablero();
-    tablero.dibujarReferencias();
 }
 
 //chequear si hay ganadores o empate en caso de que ya no queden fichas disponibles
