@@ -91,7 +91,7 @@ form.addEventListener('submit', function (e){
 
 
 function iniciarJuego(){
-    // iniciartemporizador();
+    iniciartemporizador();
 
     //oculto el formulario y muestro el juego
     let juego = document.querySelector('.juegop');

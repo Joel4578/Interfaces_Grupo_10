@@ -299,14 +299,21 @@
 }
 
 .info-play {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 80% auto auto;
+    justify-content: space-between;
     position: absolute;
     top: 5px;
     left: 5px;
     width: 100%;
     padding: 5px;
     user-select: none;
+}
+
+
+.info-play h2 {
+    display: flex;
+    justify-items: start;
 }
 
 .reiniciar {
