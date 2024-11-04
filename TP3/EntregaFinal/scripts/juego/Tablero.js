@@ -2,8 +2,8 @@ class Tablero {
   constructor(filas, columnas, canvas) {
     this.filas = filas;
     this.columnas = columnas;
-    this.anchoCasilla = 50; // Ajusta este valor según tus necesidades
-    this.altoCasilla = 50;
+    this.anchoCasilla = 40; // Ajusta este valor según tus necesidades
+    this.altoCasilla = 40;
     this.canvas = canvas;
     this.context = this.canvas.getContext('2d');
     this.matriz = this.crearMatriz();    
@@ -22,7 +22,7 @@ class Tablero {
         // ancho rect / por el numero de columnas de la matriz.
         const cellWidth = rectWidth / this.columnas;
         const cellHeight = rectHeight / this.filas;
-        /el tamaño de los circulos/
+        // /el tamaño de los circulos/
     
         // /posiciones del rectangulo x e y/ 
         //dividido 2 para que este en el medio del canvas
@@ -52,10 +52,10 @@ class Tablero {
   
  
   dibujartablero() {
-    const anchoCanvas = this.canvas.width * 0.8;
-    const altoCanvas = this.canvas.height * 0.6;
-    const margenHorizontal = (anchoCanvas - this.columnas * this.anchoCasilla) / 2;
-    const margenVertical = (altoCanvas - this.filas * this.altoCasilla) / 2;
+    const anchoTablero = this.columnas * this.anchoCasilla;
+    const altoTablero = this.filas * this.altoCasilla;
+    const margenHorizontal = (this.canvas.width - anchoTablero) / 2;
+    const margenVertical = this.canvas.height - altoTablero - 20
 
     // Cargar la imagen del casillero
     const casilleroImg = new Image();
@@ -82,22 +82,21 @@ class Tablero {
     return Math.min(cellWidth, cellHeight) / 2 - 5;
   }
 
-  crearReferencias(){
+  crearReferencias() {
     const Radius = this.getRadio();
-    const cellWidth = this.canvas.width * 0.8 / this.columnas;
-    const cellHeight = this.canvas.height * 0.6 / this.filas;
     const offsetX = (this.canvas.width - cellWidth * this.columnas) / 2;
-    const offsetY = (this.canvas.height - cellHeight * this.filas) / 6;
-
+    const offsetY = (this.canvas.height - cellHeight * this.filas) / 2; // Cambiado para centrar verticalmente
+    const cellWidth = this.canvas.width * 0.5 / this.columnas;
+    const cellHeight = this.canvas.height * 0.8 / this.filas;
+    
     for (let i = 0; i < this.columnas; i++) {
         const x = Math.round(offsetX + i * cellWidth + cellWidth / 2);
-        const y = Math.round(offsetY - Radius / 2);
-    
-        let circuloReferencia = {x, y, radius: Radius, columna: i};
+        const y = Math.round(offsetY + cellHeight / 2); // Asegúrate de que el y esté centrado
+
+        let circuloReferencia = { x, y, radius: Radius, columna: i };
         this.referencias.push(circuloReferencia);
     }
-  }
-
+ }
 
   dibujarReferencias() {
     for (let i = 0; i < this.referencias.length; i++) {

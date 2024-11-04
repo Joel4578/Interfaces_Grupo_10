@@ -1,6 +1,6 @@
 // hay que cambiar todo lo que falte que quedó copiado del codigo, reemplazarlo por lo nuestro
 // se cambia el JS, NO EL HTML
-document.addEventListener('DOMContentLoaded', function() {
+
 let  canvas = document.getElementById('canvas');
 let  ctx = canvas.getContext('2d');
 
@@ -23,7 +23,6 @@ let columnas;
 let totalFichas;
 let tablero = null;
 let fichas = [];
-
 let lastClickedFicha = null;
 
 //control del turno del jugador
@@ -39,33 +38,33 @@ let temporizador;
 let minutos = 2;
 let segundos = 0;
 
-// function iniciartemporizador(){
+function iniciartemporizador(){
 
-//     let tempDom = document.querySelector(".temporizador");
+    let tempDom = document.querySelector(".temporizador");
 
-//     temporizador = setInterval(() => {
-//         tempDom.innerHTML = `${minutos}:${segundos}`;
+    temporizador = setInterval(() => {
+        tempDom.innerHTML = `${minutos}:${segundos}`;
 
-//         if(minutos === 0 && segundos === 0){
-//             detenerTemporizador();
-//             terminarJuego();
-//             setTimeout(() => {mostrarGanador('Empate')}, 500); 
-//         }else{
-//             if(segundos === 0){
-//                 minutos--;
-//                 segundos = 59;
-//             }else{
-//                 segundos--;
+        if(minutos === 0 && segundos === 0){
+            detenerTemporizador();
+            terminarJuego();
+            setTimeout(() => {mostrarGanador('Empate')}, 500); 
+        }else{
+            if(segundos === 0){
+                minutos--;
+                segundos = 59;
+            }else{
+                segundos--;
 
-//             }
-//         }
-//     }, 1000);
+            }
+        }
+    }, 1000);
     
-// }
+}
 
-// function detenerTemporizador(){
-//     clearTimeout(temporizador)
-// }
+function detenerTemporizador(){
+    clearTimeout(temporizador)
+}
 
 
 
@@ -73,7 +72,7 @@ let segundos = 0;
 //obtengo los datos del formulario para iniciar el juego y los asigno a las variables globales
 
 
-let form = document.querySelector('.form-juego');
+let form = document.querySelector('.form-juego')
 form.addEventListener('submit', function (e){
     console.log("Formulario enviado");
     e.preventDefault();
@@ -96,28 +95,15 @@ form.addEventListener('submit', function (e){
 function iniciarJuego(){
     // iniciartemporizador();
 
-        let juego = document.getElementById('juego');
-        let formJuego = document.getElementById('pantalla-juego-solo');
-
-        if (formJuego) {
-            console.log("Estado antes de ocultar:", formJuego.classList);
-            formJuego.classList.add('ocultar');
-            console.log("Estado después de ocultar:", formJuego.classList);
-
-        } else {
-            console.log("formJuego no se encontró");
-        }
-    
-        if (juego) {
-            juego.classList.add('mostrar');
-        } else {
-            console.log("juego no se encontró");
-        }
+    //oculto el formulario y muestro el juego
+    let juego = document.querySelector('.juegop');
+    let formJuego = document.querySelector('.form-juego');
+    // formJuego.classList.add('ocultar');
+    juego.classList.add('mostrar');
     
     //creo el tablero y calculo la cantidad total de fichas
     tablero = new Tablero(filas, columnas, canvas);
     totalFichas = filas * columnas;
-    
     //creo los jugadores
     player1 = new Player(1, "Player 1");
     player2 = new Player(2, "Player 2");
@@ -173,6 +159,7 @@ function onMouseDown(e) {
         posXInicialFicha = clickfig.getPosX();
         posYInicialFicha = clickfig.getPosY();
     }
+    
     drawFigures();
 }
 
@@ -199,6 +186,7 @@ function onMouseup(e) {
     }else if(lastClickedFicha != null){ //si la ficha no fue soltada dentro de un circulo de referencia, la devuelvo a la pila
         lastClickedFicha.setPosition(posXInicialFicha, posYInicialFicha);
     }
+
     drawFigures();
 }
 
@@ -409,13 +397,14 @@ function buscarFicha(x, y, player){
     return false;
 }
 
-// //reinicio el juego
-// document.querySelector('.reiniciar').addEventListener('click', () => {
-//     tablero = null;
-//     fichas = [];
-//     detenerTemporizador();
-//     minutos = 2;
-//     segundos = 0;
-//     domGanador.classList.remove('mostrar');
-//     iniciarJuego();
- });
+//reinicio el juego
+document.getElementById('reiniciar').addEventListener('click', () => {
+    tablero = null;
+    fichas = [];
+    detenerTemporizador();
+    minutos = 2;
+    segundos = 0;
+    domGanador.classList.remove('mostrar');
+    iniciarJuego();
+});
+

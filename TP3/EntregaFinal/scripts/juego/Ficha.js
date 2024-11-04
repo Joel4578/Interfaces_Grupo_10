@@ -9,20 +9,24 @@ class Ficha extends Figure {
   }
  
   draw() {
-      /*me traigo todos los valores de las propiedades
-      del constructor de la clase padre
-       y se la asigno a la funcion dibujar*/
-      super.draw();
-      this.ctx.beginPath();
-      this.ctx.arc(this.posX, this.posY, this.radius, 0, 2 * Math.PI);
-      this.ctx.fill();
-      
-      if(this.resaltado === true){
-          
-          this.ctx.strokeStyle = this.resaltadoEstilo;
-          this.ctx.lineWidth = 5;
-          this.ctx.stroke();
-      }
+    
+        super.draw(); // Llama al método de la clase padre para dibujar la figura base
+        this.ctx.beginPath();
+        this.ctx.arc(this.posX, this.posY, this.radius, 0, 2 * Math.PI);
+        this.ctx.fill();
+    
+        if (this.resaltado === true) {
+            this.ctx.strokeStyle = this.resaltadoEstilo;
+            this.ctx.lineWidth = 5;
+            this.ctx.stroke();
+        }
+    
+        // Dibuja la imagen si ha sido cargada
+        if (this.image.src) {
+            this.ctx.drawImage(this.image, this.posX - this.radius, this.posY - this.radius, this.radius / 0.5, this.radius / 0.5);
+        }
+    
+    
      
       //cuando creo la ficha le asigno la url de la imagen, solo accede una vez
       if(this.image.src === ""){
