@@ -318,6 +318,7 @@
 
 .reiniciar {
     width: 80px;
+    margin-right: 5px;
 }
 
 .juegop {
@@ -327,6 +328,7 @@
 .temporizador {
     width: 50px;
     font-size: 30px;
+    margin-right: 5px;
 }
 
 .ganador {
