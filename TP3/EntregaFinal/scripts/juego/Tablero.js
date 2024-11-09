@@ -39,9 +39,9 @@ class Tablero {
 
   crearMatriz() {
     const rectWidth = this.canvas.width * 0.46;
-    const rectHeight = this.canvas.height * 0.72;
+    const rectHeight = this.canvas.height * 0.75;
     const cellWidth = rectWidth / this.columnas;
-    const cellHeight = rectHeight / this.filas +4;
+    const cellHeight = rectHeight / this.filas + 8;
     const offsetX = (this.canvas.width - rectWidth) / 2;
     const offsetY = (this.canvas.height - rectHeight) / 2;
 
@@ -62,7 +62,7 @@ class Tablero {
 
   dibujartablero() {
     const margenHorizontal = (this.canvas.width - this.columnas * this.anchoCasilla) / 2;
-    const margenVertical = this.canvas.height - (this.filas * this.altoCasilla) - 40;
+    const margenVertical = this.canvas.height - (this.filas * this.altoCasilla) - 10;
 
     for (let i = 0; i < this.filas; i++) {
       for (let j = 0; j < this.columnas; j++) {
@@ -118,7 +118,7 @@ class Tablero {
       let ref = this.referencias[i];
 
       const x = ref.x - this.imgReferencia.width / 2;
-      const y = ref.y - this.imgReferencia.height;
+      const y = ref.y - this.imgReferencia.height  + 40;
 
       if (this.imgReferencia.complete) {
         this.context.drawImage(this.imgReferencia, x, y, this.imgReferencia.width, this.imgReferencia.height);

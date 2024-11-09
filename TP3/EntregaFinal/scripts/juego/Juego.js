@@ -415,8 +415,8 @@ document.getElementById('reiniciar').addEventListener('click', () => {
     clearCanvas();
     fichas = [];
     detenerTemporizador();
-    minutos = 2;
-    segundos = 0;
+    minutos = 1;
+    segundos = 59;
     domGanador.classList.remove('mostrar');
     iniciarJuego();
 });
