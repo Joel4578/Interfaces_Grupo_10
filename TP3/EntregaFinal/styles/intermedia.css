@@ -316,8 +316,13 @@
 }
 
 .temporizador {
-    width: 50px;
+    width: 70px;
     font-size: 30px;
+    background-color: #267D06;
+    border-radius: 5px;
+    border-color: black;
+    text-align: center;
+    margin-left: 200px;
 }
 
 .ganador {

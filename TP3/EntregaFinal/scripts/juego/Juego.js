@@ -91,7 +91,7 @@ form.addEventListener('submit', function (e){
 
 
 function iniciarJuego(){
-    // iniciartemporizador();
+    iniciartemporizador();
 
     //oculto el formulario y muestro el juego
     let juego = document.querySelector('.juegop');
@@ -173,7 +173,7 @@ function onMouseup(e) {
        if(ganador != null){
             detenerTemporizador();
             mostrarGanador(ganador);
-            terminarJuego();
+           
        }
        //intercambio los turnos luego de cada tirada
         if(turnoPlayer.getId() == 1){
@@ -205,7 +205,9 @@ function findClickedFigure(x, y) {
         const ficha = fichas[i];
         //devuelvo la ficha solo si se clickeo una del jugador del turno actual
         if (ficha.getPlayerId() == turnoPlayer.getId() && ficha.isPointInside(x, y)) {
+          
             return ficha;
+            
         }
     }   
 }
@@ -227,6 +229,7 @@ function estaEnZona(){
 //ubico la ficha en el tablero
 function ubicarFicha(lastClickedFigure, col){
     tablero.ubicarFichaEnMatriz(col, lastClickedFigure);
+    
 }
 
 function clearCanvas() {
