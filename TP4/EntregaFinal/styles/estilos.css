@@ -1,0 +1,105 @@
+.inicio{
+    background-color: brown;
+}
+
+nav{
+    display: flex;
+    justify-content: right;
+}
+
+p{
+    font-size: 20px;
+}
+
+.appdivertida {
+    display: flex;  
+     background-color: aqua;
+    flex-wrap: wrap;
+    gap: 20px;  
+}
+
+.divertida{
+    font-size: 47px;
+    width: 500px;
+}
+
+.texto-appdivertida{
+    justify-content:left;
+    width: 640px;
+    height: 350px;
+    font-size: 20px;
+    margin-left: 50px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial;
+}
+
+
+
+.cinco{
+   display: flex; 
+   width: 472px;
+   height: 1100px;
+}
+
+.cuatro{
+    width: 600px;
+    height: 600px;
+    margin-top: -600px;
+}
+
+.gif4{
+    width: 550px;
+    height: 300px;
+    margin-top: -750px;
+    margin-left: 200px;
+}
+
+.card{
+    width: 30%;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;  
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.descarga {
+    background-color: violet;
+    display: flex;
+    flex-direction: column;  /* Organiza los elementos de arriba hacia abajo */
+    align-items: center;     /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    text-align: center;      /* Alinea el texto al centro */
+    padding: 20px;           /* Agrega algo de espaciado interno */
+    height: 100vh;           /* Ocupa el 100% de la altura de la ventana */
+}
+
+.descarga h2 {
+    margin-bottom: 20px;  /* Espacio entre el título y el botón */
+    font-size: 60px;      /* Tamaño del texto del título */
+}
+
+.btn-descarga {
+    margin-top: 50px;
+    margin-bottom: -30px;  /* Espacio entre el botón y la imagen */
+    padding: 12px 24px;   /* Espaciado interno del botón */
+    font-size: 30px;      /* Tamaño del texto del botón */
+    background-color: #4CAF50; /* Color de fondo */
+    color: white;         /* Color del texto */
+    border: 10px;
+    border-color: white;         
+    border-radius: 20px;   /* Bordes redondeados */
+    cursor: pointer;     /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición para el color de fondo */
+}
+
+.btn-descarga:hover {
+    background-color: #45a049; /* Cambio de color al pasar el mouse */
+}
+
+.descarga img {
+    width: 100%;           /* Hace que la imagen ocupe todo el ancho de la pantalla */
+    height: auto;
+    margin-top: -20px;
+}
