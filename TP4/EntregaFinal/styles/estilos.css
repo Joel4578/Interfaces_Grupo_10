@@ -12,6 +12,10 @@
 
 }
 
+h2{
+    font-size: 60px;
+}
+
 /* nav */
 
 .nav {
@@ -157,8 +161,7 @@
 .contenedor-texto-divertido-h {
     position: relative;
     width: 508px;
-    bottom: 630px;
-    left: 120px;
+    left: 50px;
 }
 
 .contenedor-texto-divertido-h h3 {
@@ -177,17 +180,16 @@
     color: rgba(2, 24, 126, 1);
     font-size: 20px;
 }
-
+/*
 .personaje-cuatro {
     position: relative;
     bottom: 900px;
-}.inicio{
-    background-color: brown;
 }
 
-nav{
-    display: flex;
-    justify-content: right;
+*/
+    .inicio{
+    background-color: brown;
+   
 }
 
 p{
@@ -207,11 +209,6 @@ p{
 }
 
 .texto-appdivertida{
-    justify-content:left;
-    width: 640px;
-    height: 350px;
-    font-size: 20px;
-    margin-left: 50px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial;
 }
 
@@ -221,6 +218,7 @@ p{
    display: flex; 
    width: 472px;
    height: 1100px;
+   margin-left: 200px;
 }
 
 .cuatro{
@@ -265,16 +263,16 @@ p{
 
 .btn-descarga {
     margin-top: 50px;
-    margin-bottom: -30px;  /* Espacio entre el botón y la imagen */
-    padding: 12px 24px;   /* Espaciado interno del botón */
-    font-size: 30px;      /* Tamaño del texto del botón */
-    background-color: #4CAF50; /* Color de fondo */
-    color: white;         /* Color del texto */
+    margin-bottom: -30px;  
+    padding: 12px 24px;  
+    font-size: 30px;      
+    background-color: #4CAF50; 
+    color: white;        
     border: 10px;
     border-color: white;         
-    border-radius: 20px;   /* Bordes redondeados */
-    cursor: pointer;     /* Cambia el cursor al pasar sobre el botón */
-    transition: background-color 0.3s ease; /* Transición para el color de fondo */
+    border-radius: 20px;  
+    cursor: pointer;     
+    transition: background-color 0.3s ease; 
 }
 
 .btn-descarga:hover {
@@ -285,4 +283,177 @@ p{
     width: 100%;           /* Hace que la imagen ocupe todo el ancho de la pantalla */
     height: auto;
     margin-top: -20px;
+}
+
+/*seccion de textos*/
+
+.textos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.textos h2{
+    flex-wrap: nowrap;
+   margin-top: 150px;
+}
+.textos-container{
+    width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.textos-container h3{
+   font-size:40px;
+   width: 400px;
+}
+
+.textos-container p{
+  font-size:20px;
+  width: 400px;
+}
+
+/*seccion video*/
+
+.video{
+    background-color:yellow;
+    display: flex;
+}
+
+.titulo-container{
+   margin-left: 100px;
+}
+
+.titulo-container h2{
+    width: 802px;
+    margin-bottom: 50px;
+    margin-top: 200px;
+}
+
+.tres{
+    margin-top: 270px;
+    margin-left: -170px;
+}
+
+
+/*seccion 3d*/
+
+.tresd{
+   display: flex;
+   align-items: center;
+}
+
+.tresd div{
+    margin-left: 100px;
+}
+
+.tresd h2{
+    width: 746px;
+}
+
+.tresd p{
+    width: 467px;
+}
+
+.tresd img{
+    margin-left: -230px;
+}
+
+
+/*novedades*/
+
+.novedades{
+    background-color: #4CAF50;
+    display: flex;
+}
+
+.novedades h2{
+    margin-top: 145px;
+    width: 816px;
+    height: 171px;
+}
+
+
+.nov-container{
+    margin-left: 100px;
+}
+
+
+/* Contenedor general */
+.suscripcion-container {
+    display: flex;
+    align-items: center;
+    border-radius: 25px; 
+    border: 9px solid white; 
+    overflow: hidden; 
+    background-color: #ECECEC; 
+    width: 780px;
+    height: 100px;
+    margin-top: 50px;
+  }
+  
+  /* Estilos del input */
+  .input-suscripcion {
+    border: none; 
+    padding: 10px;
+    font-size: 20px;
+    flex: 1; 
+    border-right: 9px solid white; 
+    color: white; /* Color del texto */
+    background-color: #ECECEC; 
+  }
+  
+  /* Estilos del botón */
+  .btn-suscripcion {
+    padding: 10px 20px;
+    background-color: #83C252; 
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-suscripcion:hover {
+    background-color: #e67e22; 
+  }
+  
+  .nov-container p{
+    width: 578px;
+    height: 95px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+
+/*footer*/
+
+footer{
+    background-color: #5e5e5d;
+}
+.plataformas{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    background-color: #242424;
+}
+
+.plataformas img{
+    width: 1080px;
+    height: 75px;
+}
+
+footer p{
+    margin-left: 100px;
+    margin-top: 20px;
+    width: 820px;
+    height: 361px;
+    font-size: 20px;
+    color: white;
+}
+
+.redes-sociales{
+    margin-left: 100px;
+    height: 84px;
 }
