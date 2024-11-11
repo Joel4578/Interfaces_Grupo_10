@@ -8,7 +8,8 @@
 .fondo {
     width: 100%;
     background-image: url(../imgs/inicio/fondo.png);
-    background-size: contain;
+    background-size: cover;
+
 }
 
 /* nav */
@@ -149,4 +150,35 @@
     z-index: 200;
     bottom: 970px;
     left: 1370px;
+}
+
+/* texto */
+
+.contenedor-texto-divertido-h {
+    position: relative;
+    width: 508px;
+    bottom: 630px;
+    left: 120px;
+}
+
+.contenedor-texto-divertido-h h3 {
+    color: rgba(2, 24, 126, 1);
+    font-size: 47px;
+    font-weight: bold;
+}
+
+.contenedor-texto-divertido-h .contenedor-texto-divertido-p {
+    margin-top: 20px;
+    position: relative;
+    width: 704px;
+}
+
+.contenedor-texto-divertido-h .contenedor-texto-divertido-p p {
+    color: rgba(2, 24, 126, 1);
+    font-size: 20px;
+}
+
+.personaje-cuatro {
+    position: relative;
+    bottom: 900px;
 }
