@@ -1,4 +1,187 @@
-.inicio{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.fondo {
+    width: 100%;
+    background-image: url(../imgs/inicio/fondo.png);
+    background-size: cover;
+
+}
+
+/* nav */
+
+.nav {
+    width: 100%;
+}
+
+.nav nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 120px 0 120px;
+}
+
+.nav .logo-nav {
+    display: none;
+}
+
+.nav .btn-comprar {
+    width: 200px;
+    height: 50px;
+    background-color: #83C252;
+    border: 8px solid #fff;
+    border-radius: 111px;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 20px;
+    box-shadow: 5px 5px 0px 0px rgba(2, 24, 126, 1);
+    cursor: pointer;
+}
+
+/* parte de la izquierda */
+
+.arbol-uno {
+    position: relative;
+    right: 120px;
+    bottom: 20px;
+    z-index: 800;
+}
+
+.piedra-uno {
+    position: relative;
+    right: 400px;
+    bottom: 20px;
+    z-index: 900;
+}
+
+.arbusto-uno {
+    position: relative;
+    right: 470px;
+    top: 30px;
+    z-index: 1000;
+}
+
+.arbusto-dos {
+    position: relative;
+    right: 650px;
+    bottom: 60px;
+    z-index: 700;
+}
+
+/* parte del medio */
+
+.logo-inicio {
+    position: relative;
+    z-index: 1000;
+    bottom: 500px;
+    right: 20%;
+}
+
+.personaje-uno {
+    position: relative;
+    z-index: 1000;
+    bottom: 750px;
+    left: 750px;
+}
+
+.personaje-dos {
+    position: relative;
+    z-index: 900;
+    bottom: 900px;
+    left: 600px;
+}
+
+.personaje-tres {
+    position: relative;
+    z-index: 800;
+    bottom: 850px;
+    left: 530px;
+}
+
+/* parte de la derecha */
+
+.arbol-dos {
+    position: relative;
+    z-index: 500;
+    bottom: 760px;
+    left: 700px;
+}
+
+.arbol-tres {
+    position: relative;
+    z-index: 300;
+    bottom: 830px;
+    left: 500px;
+}
+
+.piedra-dos {
+    position: relative;
+    z-index: 1000;
+    bottom: 740px;
+    left: 140px;
+}
+
+.piedra-tres {
+    position: relative;
+    z-index: 900;
+    bottom: 750px;
+    left: 110px;
+}
+
+.piedra-cuatro {
+    position: relative;
+    z-index: 700;
+    bottom: 760px;
+    right: 90px;
+}
+
+.arbusto-tres {
+    position: relative;
+    z-index: 400;
+    bottom: 900px;
+    left: 1670px;
+}
+
+.arbusto-cuatro {
+    position: relative;
+    z-index: 200;
+    bottom: 970px;
+    left: 1370px;
+}
+
+/* texto */
+
+.contenedor-texto-divertido-h {
+    position: relative;
+    width: 508px;
+    bottom: 630px;
+    left: 120px;
+}
+
+.contenedor-texto-divertido-h h3 {
+    color: rgba(2, 24, 126, 1);
+    font-size: 47px;
+    font-weight: bold;
+}
+
+.contenedor-texto-divertido-h .contenedor-texto-divertido-p {
+    margin-top: 20px;
+    position: relative;
+    width: 704px;
+}
+
+.contenedor-texto-divertido-h .contenedor-texto-divertido-p p {
+    color: rgba(2, 24, 126, 1);
+    font-size: 20px;
+}
+
+.personaje-cuatro {
+    position: relative;
+    bottom: 900px;
+}.inicio{
     background-color: brown;
 }
 
