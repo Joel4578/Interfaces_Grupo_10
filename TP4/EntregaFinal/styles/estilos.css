@@ -5,11 +5,12 @@
     user-select: none;
 }
 
-.fondo {
+.fondo-inicio {
     width: 100%;
+    height: 144vh;
     background-image: url(../imgs/inicio/fondo.png);
-    background-size: cover;
-
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 h2{
@@ -26,6 +27,12 @@ h2{
     display: flex;
     justify-content: space-between;
     padding: 10px 120px 0 120px;
+    position: relative;
+    z-index: 1000px;
+}
+
+.nav .menu-hamburguesa img {
+    cursor: pointer;
 }
 
 .nav .logo-nav {
@@ -49,29 +56,29 @@ h2{
 
 .arbol-uno {
     position: relative;
-    right: 120px;
-    bottom: 20px;
+    right: 130px;
+    bottom: 60px;
     z-index: 800;
 }
 
 .piedra-uno {
     position: relative;
-    right: 400px;
-    bottom: 20px;
+    right: 420px;
+    bottom: 50px;
     z-index: 900;
 }
 
 .arbusto-uno {
     position: relative;
-    right: 470px;
-    top: 30px;
+    right: 500px;
+    top: 5px;
     z-index: 1000;
 }
 
 .arbusto-dos {
     position: relative;
-    right: 650px;
-    bottom: 60px;
+    right: 680px;
+    bottom: 90px;
     z-index: 700;
 }
 
@@ -80,29 +87,28 @@ h2{
 .logo-inicio {
     position: relative;
     z-index: 1000;
-    bottom: 500px;
-    right: 20%;
+    bottom: 950px;
+    left: 35%;
 }
 
 .personaje-uno {
     position: relative;
     z-index: 1000;
-    bottom: 750px;
-    left: 750px;
+    bottom: 500px;
 }
 
 .personaje-dos {
     position: relative;
     z-index: 900;
-    bottom: 900px;
-    left: 600px;
+    bottom: 650px;
+    right: 155px;
 }
 
 .personaje-tres {
     position: relative;
     z-index: 800;
-    bottom: 850px;
-    left: 530px;
+    bottom: 600px;
+    right: 230px;
 }
 
 /* parte de la derecha */
@@ -110,50 +116,50 @@ h2{
 .arbol-dos {
     position: relative;
     z-index: 500;
-    bottom: 760px;
-    left: 700px;
+    bottom: 1260px;
+    left: 1120px;
 }
 
 .arbol-tres {
     position: relative;
     z-index: 300;
-    bottom: 830px;
-    left: 500px;
+    bottom: 1350px;
+    left: 885px;
 }
 
 .piedra-dos {
     position: relative;
     z-index: 1000;
-    bottom: 740px;
-    left: 140px;
+    bottom: 1230px;
+    left: 560px;
 }
 
 .piedra-tres {
     position: relative;
     z-index: 900;
-    bottom: 750px;
-    left: 110px;
+    bottom: 1240px;
+    left: 530px;
 }
 
 .piedra-cuatro {
     position: relative;
     z-index: 700;
-    bottom: 760px;
-    right: 90px;
+    bottom: 1260px;
+    left: 370px;
 }
 
 .arbusto-tres {
     position: relative;
     z-index: 400;
-    bottom: 900px;
-    left: 1670px;
+    bottom: 1285px;
+    left: 350px;
 }
 
 .arbusto-cuatro {
     position: relative;
     z-index: 200;
-    bottom: 970px;
-    left: 1370px;
+    bottom: 1360px;
+    left: 50px;
 }
 
 /* texto */
@@ -161,7 +167,8 @@ h2{
 .contenedor-texto-divertido-h {
     position: relative;
     width: 508px;
-    left: 50px;
+    left: 90px;
+    bottom: 100px;
 }
 
 .contenedor-texto-divertido-h h3 {
@@ -180,27 +187,37 @@ h2{
     color: rgba(2, 24, 126, 1);
     font-size: 20px;
 }
-/*
-.personaje-cuatro {
-    position: relative;
-    bottom: 900px;
-}
 
-*/
-    .inicio{
-    background-color: brown;
-   
-}
-
-p{
-    font-size: 20px;
-}
+/* SEGUNDA PANTALLA */
 
 .appdivertida {
     display: flex;  
-     background-color: aqua;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient( #88DE7F 10%, #A8EBEC 90%);
     flex-wrap: wrap;
     gap: 20px;  
+    margin-bottom: 250px;
+}
+
+.personaje-cuatro {
+    position: relative;
+    left: 1026px;
+    bottom: 610px;
+}
+
+.gif4{
+    position: relative;
+    right: 200px;
+    top: 190px;
+    width: 576.38px;
+    height: 324.35px;
+}
+
+.personaje-cinco {
+    position: relative;
+    right: 360px;
+    bottom: 610px;
 }
 
 .divertida{
@@ -212,53 +229,47 @@ p{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial;
 }
 
+/* TERCERA PANTALLA */
 
-
-.cinco{
-   display: flex; 
-   width: 472px;
-   height: 1100px;
-   margin-left: 200px;
+.info-juego {
+    margin-bottom: 300px;
 }
 
-.cuatro{
-    width: 600px;
-    height: 600px;
-    margin-top: -600px;
-}
-
-.gif4{
-    width: 550px;
-    height: 300px;
-    margin-top: -750px;
-    margin-left: 200px;
+.cards {
+    display: flex;
+    justify-content: center;
 }
 
 .card{
-    width: 30%;
+    width: 333px;
+    margin: 20px;
+    display: grid;
+    justify-content: space-around;
 }
 
-.cards{
-    display: flex;
-    justify-content: space-between;  
-    margin-left: 50px;
-    margin-right: 50px;
+.card p {
+    margin-top: 15px;
+    height: 218px;
+    font-size: 20px;
 }
 
-.descarga {
-    background-color: violet;
+/* CUARTA PANTALLA */
+
+.seccion-descarga {
+    background-color: #5829BF;
     display: flex;
     flex-direction: column;  /* Organiza los elementos de arriba hacia abajo */
     align-items: center;     /* Centra los elementos horizontalmente */
     justify-content: center; /* Centra los elementos verticalmente */
     text-align: center;      /* Alinea el texto al centro */
-    padding: 20px;           /* Agrega algo de espaciado interno */
+    padding: 20px;
+    width: 100%;           /* Agrega algo de espaciado interno */
     height: 100vh;           /* Ocupa el 100% de la altura de la ventana */
 }
 
-.descarga h2 {
-    margin-bottom: 20px;  /* Espacio entre el título y el botón */
-    font-size: 60px;      /* Tamaño del texto del título */
+.seccion-descarga .seccion-titulo {
+    background-color: #5829BF;
+    padding-top: 100px;
 }
 
 .btn-descarga {
