@@ -360,8 +360,9 @@ h2{
 /*seccion video*/
 
 .video{
-    background-color:yellow;
+    background-color:#EFB71E;
     display: flex;
+    justify-content: center;
 }
 
 .titulo-container{
@@ -369,6 +370,7 @@ h2{
 }
 
 .titulo-container h2{
+    color: #fff;
     width: 802px;
     margin-bottom: 50px;
     margin-top: 200px;
@@ -385,6 +387,7 @@ h2{
 .tresd{
    display: flex;
    align-items: center;
+   justify-content: center;
 }
 
 .tresd div{
@@ -392,6 +395,7 @@ h2{
 }
 
 .tresd h2{
+    color: #9D2121;
     width: 746px;
 }
 
@@ -408,6 +412,7 @@ h2{
 
 .novedades{
     background-color: #4CAF50;
+    background-image: ;
     display: flex;
 }
 
@@ -422,6 +427,15 @@ h2{
     margin-left: 100px;
 }
 
+/* imagen antes del footer */
+
+.imagen-personajes {
+    width: 100%;
+}
+
+.imagen-personajes img {
+    width: 100%;
+}
 
 /* Contenedor general */
 .suscripcion-container {
