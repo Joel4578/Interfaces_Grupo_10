@@ -232,7 +232,7 @@ h2{
 /* TERCERA PANTALLA */
 
 .info-juego {
-    margin-bottom: 300px;
+    margin-bottom: 130px;
 }
 
 .cards {
@@ -262,14 +262,20 @@ h2{
     align-items: center;     /* Centra los elementos horizontalmente */
     justify-content: center; /* Centra los elementos verticalmente */
     text-align: center;      /* Alinea el texto al centro */
-    padding: 20px;
+    /* padding: 20px; */
     width: 100%;           /* Agrega algo de espaciado interno */
-    height: 100vh;           /* Ocupa el 100% de la altura de la ventana */
+    height: 140vh;           /* Ocupa el 100% de la altura de la ventana */
 }
 
 .seccion-descarga .seccion-titulo {
-    background-color: #5829BF;
     padding-top: 100px;
+    margin-bottom: 70px;
+    width: 950px;
+    height: 153px;
+}
+
+.seccion-descarga .seccion-titulo h2 {
+    color: #fff;
 }
 
 .btn-descarga {
@@ -277,51 +283,78 @@ h2{
     margin-bottom: -30px;  
     padding: 12px 24px;  
     font-size: 30px;      
-    background-color: #4CAF50; 
+    background-color: #83C252; 
     color: white;        
-    border: 10px;
-    border-color: white;         
-    border-radius: 20px;  
-    cursor: pointer;     
+    border: 8px solid #fff;      
+    border-radius: 50px;  
     transition: background-color 0.3s ease; 
+    z-index: 20;
 }
 
 .btn-descarga:hover {
+    cursor: pointer;     
     background-color: #45a049; /* Cambio de color al pasar el mouse */
 }
 
-.descarga img {
-    width: 100%;           /* Hace que la imagen ocupe todo el ancho de la pantalla */
-    height: auto;
-    margin-top: -20px;
-}
-
-/*seccion de textos*/
-
-.textos{
+.seccion-descarga .seccion-imagen {
     display: flex;
-    flex-wrap: wrap;
-}
-
-.textos h2{
-    flex-wrap: nowrap;
-   margin-top: 150px;
-}
-.textos-container{
     width: 100%;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+    position: relative;
+    bottom: 60px;
 }
 
-.textos-container h3{
-   font-size:40px;
-   width: 400px;
+.seccion-imagen img {
+    width: 100%;
 }
 
-.textos-container p{
-  font-size:20px;
-  width: 400px;
+/* quinta pantalla */
+
+.textos .contenedor-titulo {
+    display: flex;
+    width: 802px;
+    height: 57px;
+    margin: 170px 0 120px 100px;
+}
+
+.textos .contenedor-titulo h2 {
+    font-size: 60px;
+    font-family: "lato";
+}
+
+.textos .contenedor-general-amigos {
+    display: grid;
+    grid-template-columns: auto 50%;
+}
+
+.contenedor-general-amigos .contenedor-img {
+    display: flex;
+    justify-content: center;;
+}
+
+.contenedor-general-amigos .contenedor-img img {
+    width: 291px;
+    height: 436px;
+}
+
+.contenedor-general-amigos .contenedor-txt {
+    display: grid;
+    justify-content: center;
+}
+
+.contenedor-general-amigos .textos-container {
+    display: flex;
+    width: 467px;
+    height: 167px;
+    margin-bottom: 200px;
+}
+
+.contenedor-general-amigos .textos-container h3 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.contenedor-general-amigos .textos-container p {
+    font-size: 20px;
 }
 
 /*seccion video*/
