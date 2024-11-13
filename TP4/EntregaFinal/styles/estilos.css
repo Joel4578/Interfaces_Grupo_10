@@ -19,6 +19,7 @@ h2{
 
 /* nav */
 
+/* Estilo para el menú hamburguesa */
 .nav {
     width: 100%;
 }
@@ -28,15 +29,106 @@ h2{
     justify-content: space-between;
     padding: 10px 120px 0 120px;
     position: relative;
-    z-index: 1000px;
+    z-index: 1000;
 }
 
-.nav .menu-hamburguesa img {
+.menu-haburguesa img {
     cursor: pointer;
+    width: 30px; /* Tamaño de las barras */
+    height: 20px;
+    transition: transform 0.3s ease; /* Transición para el cambio de imagen */
 }
 
-.nav .logo-nav {
-    display: none;
+/* Estilo de las barras (por defecto) */
+.menu-haburguesa img {
+    position: relative;
+    display: block;
+}
+
+.menu-haburguesa img:before, .menu-haburguesa img:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.menu-haburguesa img:before {
+    top: 0;
+}
+
+.menu-haburguesa img:after {
+    bottom: 0;
+}
+
+/* Animación para convertir las barras en una cruz */
+.menu-haburguesa.open img:before {
+    transform: rotate(45deg);
+    top: 50%;
+}
+
+.menu-haburguesa.open img:after {
+    transform: rotate(-45deg);
+    bottom: 50%;
+}
+
+.menu-haburguesa.open img {
+    transform: rotate(180deg); /* Rota la imagen */
+}
+
+/* Estilo del menú desplegable */
+.menu-desplegable {
+    position: fixed;
+    top: 0;
+    left: -100%; /* El menú empieza fuera de la pantalla */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: left 0.3s ease; /* Desplazamiento del menú */
+    z-index: 999;
+}
+
+.menu-desplegable ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.menu-desplegable li {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.menu-desplegable.show {
+    left: 0;
+}
+
+.menu-desplegable.show li {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.2s; /* Los elementos aparecen con un pequeño retraso */
+}
+
+.menu-desplegable.show li:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+.menu-desplegable.show li:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.menu-desplegable.show li:nth-child(3) {
+    transition-delay: 0.6s;
 }
 
 .nav .btn-comprar {
@@ -412,7 +504,7 @@ h2{
 
 .novedades{
     background-color: #4CAF50;
-    background-image: ;
+    
     display: flex;
 }
 

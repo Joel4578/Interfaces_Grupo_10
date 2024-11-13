@@ -3,9 +3,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/estilos.css">
+    <link rel="stylesheet" href="styles/loader.css">
+
     <title>Document</title>
 </head>
 <body>
+
+    <div class="loader-container" id="loader-container">
+        <div class="loader" id="loader">
+            <div class="percentage" id="percentage">0%</div>
+            <div class="bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+    </div>
 
     <!-- inicio (primer pantalla) -->
 
@@ -13,13 +24,22 @@
 
         <header class="nav">
             <nav>
-                <div class="menu-haburguesa">
-                    <img class="btn-menu-hamburguesa" src="imgs/inicio/menu-hamburguesa.png" alt="">
+                <div class="menu-haburguesa" id="menu-hamburguesa">
+                    <img class="btn-menu-hamburguesa" src="imgs/inicio/menu-hamburguesa.png" alt="Menú">
                 </div>
-                <img class="logo-nav" src="imgs/inicio/logo 1.png" alt="">
+                <img class="logo-nav" src="imgs/inicio/logo 1.png" alt="Logo">
                 <button class="btn-comprar">COMPRAR</button>
             </nav>
         </header>
+
+        <!-- Menú desplegable -->
+   <div id="menu-desplegable" class="menu-desplegable">
+    <ul>
+        <li>Informacion</li>
+        <li>Mas juegos</li>
+        <li>Desarrolladores</li>
+    </ul>
+   </div>
     
         
             <!-- parte de la izquierda -->
@@ -315,6 +335,7 @@
 
     </footer>
 
-    
+    <script src="js/loader.js"></script>
+    <script src="js/hamburguesa.js"></script>
 </body>
 </html>
