@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-
+<!-- 
     <div class="loader-container" id="loader-container">
         <div class="loader" id="loader">
             <div class="percentage" id="percentage">0%</div>
@@ -17,8 +17,8 @@
             </div>
         </div>
     </div>
-
-    <!-- inicio (primer pantalla) -->
+-->
+    <!--  inicio (primer pantalla) -->
 
     <div class="fondo-inicio">
 
@@ -78,8 +78,13 @@
             </div>
         </div>
 
-        <img class="gif4" src="imgs/appdivertida/gif4.png" alt="gif4" >
-        
+        <div class="gif-container">
+            <img class="gif" src="imgs/appdivertida/gif4.png" alt="gif1" data-index="1">
+            <img class="gif" src="imgs/appdivertida/gif3.png" alt="gif2" data-index="2">
+            <img class="gif" src="imgs/appdivertida/gif2.png" alt="gif3" data-index="3">
+            <img class="gif" src="imgs/appdivertida/gif1.png" alt="gif4" data-index="4">
+        </div>
+    
         <div class="fondo-personajes">
             <img class="personaje-cuatro" src="imgs/appdivertida/5.png" alt="5">
             <img class="personaje-cinco" src="imgs/appdivertida/4.png" alt="4" >
@@ -114,7 +119,7 @@
 
     <!-- (cuarta pantalla) -->
 
-    <section class="seccion-descarga">
+    <section class="seccion-descarga" id="descarga">
 
         <div class="seccion-titulo">
             <h2>Descubre el juego que convierte las Matemáticas en diversión</h2>
@@ -139,12 +144,44 @@
         <div class="contenedor-general-amigos">
 
             <div class="contenedor-img">
+                <div>
                 <img src="imgs/textos/0.png" alt="">
+            </div>
+                <div>
+                <img src="imgs/textos/a1.png" alt="">
+            </div>
+                <div>
+                <img src="imgs/textos/a2.png" alt="">
+            </div>
+                <div>
+                <img src="imgs/textos/a3.png" alt="">
+            </div>
+                <div>
+                <img src="imgs/textos/4 58.png" alt="">
+            </div>
+                <div>
+                <img src="imgs/textos/5 (1).png" alt="">
+            </div>
+                <div>
+                <img src="imgs/textos/a6.png" alt=""> 
+            </div>
+                <div>
+                <img src="imgs/textos/a7.png" alt=""> 
+            </div>
+                <div>
+                 <img src="imgs/textos/a8.png" alt=""> 
+            </div>
+                 <div>
+                <img src="imgs/textos/a9.png" alt=""> 
+            </div>
+                <div>
+                <img src="imgs/textos/a10.png" alt="">  
+            </div>           
             </div>
 
             <div class="contenedor-txt">
                 <div class="textos-container">
-                    <!-- <img src="imgs/textos/0.png" alt=""> -->
+                    
                     <div class="info">
                     <h3>Sumas Mágicas</h3>
                     <p>Ayuda a UNO y sus amigos a juntar bloques y ver cómo sus números crecen al sumar.
@@ -153,7 +190,7 @@
                     </div>
                 </div>
                 <div class="textos-container">
-                    <!-- <img src="imgs/textos/a1.png" alt=""> -->
+                   
                     <div class="info">
                     <h3>Rompecabezas de Restas</h3>
                     <p>Acompaña a UNO en un recorrido lleno de obstáculos donde solo podrás avanzar
@@ -162,7 +199,7 @@
                     </div>
                 </div>
                 <div class="textos-container">
-                    <!-- <img src="imgs/textos/a2.png" alt=""> -->
+                    
                     <div class="info">
                     <h3>Carrera de Conteo</h3>
                     <p>Corre contra el reloj mientras cuentas bloques en secuencia para 
@@ -171,7 +208,7 @@
                 </div>
                 </div>
                 <div class="textos-container">
-                    <!-- <img src="imgs/textos/a3.png" alt=""> -->
+                   
                     <div class="info">
                     <h3>Encuentra el Número Oculto</h3>
                     <p>Busca entre los escenarios y ayuda a UNO a encontrar el número perdido para 
@@ -180,7 +217,7 @@
                 </div>
                 </div>
                 <div class="textos-container">
-                    <!-- <img src="imgs/textos/4 58.png" alt=""> -->
+                    
                     <div class="info">
                     <h3>Desafío de Comparación</h3>
                     <p>En este reto, debes ayudar a UNO a identificar qué NumberBlock es mayor 
@@ -189,7 +226,7 @@
                 </div>
                 </div>
                 <div class="textos-container">
-                    <!-- <img src="imgs/textos/5 (1).png" alt=""> -->
+                    
                     <div class="info">
                     <h3>Forma el Número Correcto</h3>
                     <p>¿Puedes combinar los bloques para crear el número solicitado? Elige los 
@@ -198,7 +235,7 @@
                 </div>
                 </div>
                 <div class="textos-container">
-                    <!-- <img src="imgs/textos/a6.png" alt=""> -->
+                 
                     <div class="info">
                     <h3>Encuentra el Número Oculto</h3>
                     <p>Busca entre los escenarios y ayuda a UNO a encontrar el número perdido 
@@ -207,7 +244,7 @@
                 </div>
                 </div>
                 <div class="textos-container">
-                    <!-- <img src="imgs/textos/a7.png" alt=""> -->
+                   
                     <div class="info">
                     <h3>Salto de Sumas</h3>
                     <p>Lleva a UNO a saltar de bloque en bloque sumando números a medida 
@@ -216,7 +253,7 @@
                 </div>
                 </div>
                 <div class="textos-container">
-                    <!-- <img src="imgs/textos/a8.png" alt=""> -->
+                    
                     <div class="info">
                     <h3>Rompecabezas de Secuencias</h3>
                     <p>Ayuda a UNO a completar series de números en orden ascendente o descendente. 
@@ -225,7 +262,7 @@
                 </div>
                 </div>
                 <div class="textos-container">
-                    <!-- <img src="imgs/textos/a9.png" alt=""> -->
+                   
                     <div class="info">
                     <h3>El Desafío del Doble</h3>
                     <p>Descubre qué sucede cuando multiplicas un NumberBlock por dos. Ayuda a 
@@ -234,7 +271,7 @@
                     </div>
                 </div>
                 <div class="textos-container">
-                    <!-- <img src="imgs/textos/a10.png" alt=""> -->
+                   
                     <div class="info">
                     <h3>Aventura de Divisiones</h3>
                     <p>Guía a UNO y sus amigos mientras dividen bloques en partes iguales. Divide 
@@ -243,7 +280,7 @@
                     </div>
                 </div>
                 <div class="textos-container">
-                    <!-- <img src="" alt=""> -->
+                   
                     <div class="info">
                         <h3>Suma de Amigos</h3>
                         <p>Haz que UNO se junte con otros personajes para ver cómo los números 
@@ -337,5 +374,9 @@
 
     <script src="js/loader.js"></script>
     <script src="js/hamburguesa.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/descarga-paralax.js"></script>
+    <script src="js/gif-appdivertida.js"></script>
+    <script src="js/cambio-numeros.js"></script>
 </body>
 </html>

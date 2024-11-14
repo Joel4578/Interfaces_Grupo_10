@@ -281,15 +281,45 @@ h2{
 }
 
 /* SEGUNDA PANTALLA */
-
 .appdivertida {
-    display: flex;  
+    display: flex;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient( #88DE7F 10%, #A8EBEC 90%);
+    background-image: linear-gradient(#88DE7F 10%, #A8EBEC 90%);
     flex-wrap: wrap;
-    gap: 20px;  
+    gap: 20px;
     margin-bottom: 250px;
+}
+
+.gif-container {
+    position: relative;
+    width: 576.38px; 
+    height: 324.35px; 
+    top: 190px;
+    right: 200px;
+    border: 29px solid #1B5F99;   
+    border-radius: 77px;
+    overflow: hidden;         
+}
+
+/* Estilos de las imágenes GIF */
+.gif {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0; /* Por defecto, todas las imágenes estarán ocultas */
+    transition: opacity 1s ease-in-out; /* Transición suave */
+}
+
+/* Mostrar solo una imagen a la vez */
+.gif.active {
+    opacity: 1;
+}
+
+/* No modificar la posición del contenedor de personajes */
+.fondo-personajes {
+    position: relative;
 }
 
 .personaje-cuatro {
@@ -298,7 +328,7 @@ h2{
     bottom: 610px;
 }
 
-.gif4{
+.gif4 {
     position: relative;
     right: 200px;
     top: 190px;
@@ -330,33 +360,57 @@ h2{
 .cards {
     display: flex;
     justify-content: center;
+    gap: 30px;
 }
 
-.card{
+.card {
     width: 333px;
     margin: 20px;
     display: grid;
     justify-content: space-around;
+    opacity: 0;  /* Iniciar ocultas */
+    transform: translateY(50px);  /* Desplazadas hacia abajo */
+    transition: opacity 0.5s ease, transform 0.5s ease;  /* Transición suave */
 }
+
 
 .card p {
     margin-top: 15px;
     height: 218px;
     font-size: 20px;
+    color: #333;
 }
+
+.card.show {
+    opacity: 1;  /* Hacer visible */
+    transform: translateY(0);  /* Desplazarse hacia arriba */
+}
+
+.card:nth-child(1).show {
+    transition-delay: 0s;
+}
+
+.card:nth-child(2).show {
+    transition-delay: 0.3s;
+}
+
+.card:nth-child(3).show {
+    transition-delay: 0.6s;
+}
+
 
 /* CUARTA PANTALLA */
 
 .seccion-descarga {
-    background-color: #5829BF;
+    background-image:url(../imgs/descarga/fondo-violeta.png);
     display: flex;
-    flex-direction: column;  /* Organiza los elementos de arriba hacia abajo */
-    align-items: center;     /* Centra los elementos horizontalmente */
-    justify-content: center; /* Centra los elementos verticalmente */
-    text-align: center;      /* Alinea el texto al centro */
-    /* padding: 20px; */
-    width: 100%;           /* Agrega algo de espaciado interno */
-    height: 140vh;           /* Ocupa el 100% de la altura de la ventana */
+    flex-direction: column;  
+    align-items: center;    
+    justify-content: center; 
+    text-align: center;      
+    width: 100%;           
+    height: 1157px;           
+    position: relative;  /* Necesario para los movimientos de la imagen */
 }
 
 .seccion-descarga .seccion-titulo {
@@ -391,13 +445,20 @@ h2{
 .seccion-descarga .seccion-imagen {
     display: flex;
     width: 100%;
+    height: 717px;
     position: relative;
-    bottom: 60px;
+    overflow: hidden; 
 }
 
 .seccion-imagen img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.1s ease;
+    will-change: transform;
+    transform: scale(1.1);  /* Escala la imagen al 120% de su tamaño original */
 }
+
 
 /* quinta pantalla */
 
@@ -412,27 +473,39 @@ h2{
     font-size: 60px;
     font-family: "lato";
 }
-
 .textos .contenedor-general-amigos {
     display: grid;
-    grid-template-columns: auto 50%;
+    grid-template-columns: 1fr 1fr;  /* Dos columnas de igual tamaño */
+    gap: 20px;  /* Espacio entre columnas */
+    bottom: 20px;
+    width: 100%;
 }
 
-.contenedor-general-amigos .contenedor-img {
+
+.textos .contenedor-img {
     display: flex;
-    justify-content: center;;
+    justify-content: center;
+    overflow: hidden;  /* Para evitar el desbordamiento de imágenes */
+    width: 100%;
+    height: 100%;
+    margin-top: -50px;
 }
 
+/* Estilo de las imágenes */
 .contenedor-general-amigos .contenedor-img img {
-    width: 291px;
-    height: 436px;
+    width: 100%;
+    max-width: 291px;  /* Ajusta el tamaño máximo de las imágenes */
+    height: auto;
+    transition: opacity 0.5s ease-in-out;  /* Transición suave de opacidad */
+    position: absolute;  /* Necesario para que las imágenes se apilen */
+    opacity: 0;  /* Empezamos con todas las imágenes ocultas */
 }
 
+/* Aseguramos que los textos estén centrados y en la columna correcta */
 .contenedor-general-amigos .contenedor-txt {
     display: grid;
     justify-content: center;
 }
-
 .contenedor-general-amigos .textos-container {
     display: flex;
     width: 467px;
@@ -452,9 +525,10 @@ h2{
 /*seccion video*/
 
 .video{
-    background-color:#EFB71E;
+    background-image: url(../imgs/video/fondo-amarillo.png);
     display: flex;
     justify-content: center;
+    height: 1443px;
 }
 
 .titulo-container{
@@ -464,6 +538,7 @@ h2{
 .titulo-container h2{
     color: #fff;
     width: 802px;
+    height: 171px;
     margin-bottom: 50px;
     margin-top: 200px;
 }
@@ -471,6 +546,8 @@ h2{
 .tres{
     margin-top: 270px;
     margin-left: -170px;
+    width: 638px;
+    height: 989px;
 }
 
 
@@ -478,7 +555,7 @@ h2{
 
 .tresd{
    display: flex;
-   align-items: center;
+  
    justify-content: center;
 }
 
@@ -489,6 +566,9 @@ h2{
 .tresd h2{
     color: #9D2121;
     width: 746px;
+    height: 285px;
+    margin-top: 200px;
+    margin-bottom: 100px;
 }
 
 .tresd p{
