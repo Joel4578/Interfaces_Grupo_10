@@ -542,6 +542,10 @@ h2{
 
 /*seccion video*/
 
+#video{
+    display: none;
+}
+
 .video{
     background-image: url(../imgs/video/fondo-amarillo.png);
     display: flex;
@@ -598,12 +602,59 @@ h2{
 }
 
 
+/*seccion imagenes personajes*/
+
+.imagen-personajes {
+    background-image: url(../imgs/imagen/455.png);
+    width: 100%;
+    height: 729px; 
+    display: flex;  
+    flex-direction: column; 
+    gap: 20px; 
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.personajes {
+    display: flex;  
+    flex-direction: row; 
+    justify-content: space-evenly;
+    gap: 25px;
+    height: 375px;
+}
+
+.personajes2 {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-evenly;
+    gap: 25px; 
+    height: 325px;
+}
+
+
+.personajes img.imgcorta, .personajes2 img.imgcorta{
+    width: 213px;
+}
+
+.personajes img, .personajes2 img  {
+    transition: transform 0.3s ease, filter 0.3s ease; 
+    
+}
+
+.personajes img:hover, .personajes2 img:hover {
+    transform: scale(1.1); 
+    filter: brightness(1.3); 
+}
+
+
+
+
 /*novedades*/
 
 .novedades{
     background-color: #4CAF50;
-    
     display: flex;
+    flex-direction: column;
 }
 
 .novedades h2{
@@ -612,6 +663,10 @@ h2{
     height: 171px;
 }
 
+.gif7{
+    margin-left: -300px;
+    margin-top: 100px;
+}
 
 .nov-container{
     margin-left: 100px;
