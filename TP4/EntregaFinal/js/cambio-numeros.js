@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Obtenemos todas las imágenes dentro del contenedor
-    const images = document.querySelectorAll('.contenedor-img img');
+    const images = document.querySelectorAll('.img img');
 
     // Añadimos el evento de scroll
     window.addEventListener('scroll', handleScroll);
@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', function () {
             let imgPosition = img.getBoundingClientRect().top + window.scrollY; 
 
             // Si la imagen está dentro de la parte visible de la ventana
-            if (scrollPosition > imgPosition - 100 && scrollPosition < imgPosition + img.height) {
-                img.style.opacity = 1;  
+            if (scrollPosition > imgPosition - 170 && scrollPosition < imgPosition + img.height) {
+                img.style.opacity = 0;
             } else {
-                img.style.opacity = 0;  
+                img.style.opacity = 1;
             }
         });
     }

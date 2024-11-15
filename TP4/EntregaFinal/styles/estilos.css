@@ -28,7 +28,7 @@ h2{
     display: flex;
     justify-content: space-between;
     padding: 10px 120px 0 120px;
-    position: relative;
+    /* position: sticky; */
     z-index: 1000;
 }
 
@@ -293,10 +293,10 @@ h2{
 
 .gif-container {
     position: relative;
-    width: 576.38px; 
+    width: 530.38px; 
     height: 324.35px; 
     top: 190px;
-    right: 200px;
+    right: 110px;
     border: 29px solid #1B5F99;   
     border-radius: 77px;
     overflow: hidden;         
@@ -474,11 +474,43 @@ h2{
     font-family: "lato";
 }
 .textos .contenedor-general-amigos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;  /* Dos columnas de igual tamaño */
-    gap: 20px;  /* Espacio entre columnas */
     bottom: 20px;
     width: 100%;
+    display: grid;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+.contenedor-info {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto 40%;
+    margin: 10px;
+}
+
+.contenedor-info .img {
+    display: flex;
+    width: 500px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.contenedor-info .img img {
+    opacity: 0;
+    transition: .5s;
+}
+
+.contenedor-info .text {
+    margin-top: 80px;
+}
+
+.contenedor-general-amigos .contenedor-info h3 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.contenedor-general-amigos .contenedor-info p {
+    font-size: 20px;
 }
 
 
@@ -491,36 +523,13 @@ h2{
     margin-top: -50px;
 }
 
-/* Estilo de las imágenes */
-.contenedor-general-amigos .contenedor-img img {
-    width: 100%;
-    max-width: 291px;  /* Ajusta el tamaño máximo de las imágenes */
-    height: auto;
-    transition: opacity 0.5s ease-in-out;  /* Transición suave de opacidad */
-    position: absolute;  /* Necesario para que las imágenes se apilen */
-    opacity: 0;  /* Empezamos con todas las imágenes ocultas */
+.contenedor-img img {
+    opacity: 0;
+    transition: 1s;
 }
 
-/* Aseguramos que los textos estén centrados y en la columna correcta */
-.contenedor-general-amigos .contenedor-txt {
-    display: grid;
-    justify-content: center;
-}
-.contenedor-general-amigos .textos-container {
-    display: flex;
-    width: 467px;
-    height: 167px;
-    margin-bottom: 200px;
-}
 
-.contenedor-general-amigos .textos-container h3 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
 
-.contenedor-general-amigos .textos-container p {
-    font-size: 20px;
-}
 
 /*seccion video*/
 
