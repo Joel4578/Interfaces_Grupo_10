@@ -134,7 +134,7 @@ h2{
 .nav .btn-comprar {
     width: 200px;
     height: 50px;
-    background-color: #83C252;
+    background: linear-gradient(135deg, #83C252, #6EAB47);
     border: 8px solid #fff;
     border-radius: 111px;
     color: #fff;
@@ -142,6 +142,15 @@ h2{
     font-size: 20px;
     box-shadow: 5px 5px 0px 0px rgba(2, 24, 126, 1);
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background: linear-gradient(135deg, var(--collection-1-verde-secundario), #9FD974); 
+    transform: translateY(-5px) scale(1.05) rotate(-3deg); 
+    box-shadow: -5px 10px 20px rgba(2, 24, 126, 0.7); 
+    animation: glow-pulse 1s infinite alternate; 
+    color: #ffe57f; 
 }
 
 /* parte de la izquierda */
