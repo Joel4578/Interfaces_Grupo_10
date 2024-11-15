@@ -28,7 +28,7 @@ h2{
     display: flex;
     justify-content: space-between;
     padding: 10px 120px 0 120px;
-    /* position: sticky; */
+    position: sticky;
     z-index: 1000;
 }
 
