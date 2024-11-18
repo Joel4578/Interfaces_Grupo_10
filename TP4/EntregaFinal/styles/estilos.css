@@ -577,7 +577,7 @@ h2{
 
 .tresd{
    display: flex;
-  
+   height: 1000px;
    justify-content: center;
 }
 
@@ -597,8 +597,11 @@ h2{
     width: 467px;
 }
 
-.tresd img{
-    margin-left: -230px;
+#glb{
+    width: 350px;
+    height: 600px;
+    margin-top: 300px;
+    margin-left: -100px;
 }
 
 
