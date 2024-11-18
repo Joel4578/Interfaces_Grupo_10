@@ -5,6 +5,13 @@
     user-select: none;
 }
 
+.fondo-inicio {
+    width: 100%;
+    height: 144vh;
+    background-image: url(../imgs/inicio/fondo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
 h2{
     font-size: 60px;
@@ -255,8 +262,6 @@ h2{
     bottom: 1360px;
     left: 50px;
 }
-
-
 
 /* texto */
 
