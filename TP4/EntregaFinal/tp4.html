@@ -30,7 +30,7 @@
                 <button class="btn-comprar">COMPRAR</button>
             </nav>
         </header>
-<!--
+
         
    <div id="menu-desplegable" class="menu-desplegable">
     <ul>
@@ -63,7 +63,7 @@
             <img class="arbusto-cuatro" src="imgs/inicio/Vector (2).png" alt="arbusto1">
         
     </div>
--->
+    
     <!-- seccion app divertida (segunda pantalla) -->
 
     <section class="appdivertida">
@@ -293,14 +293,14 @@
     
     <section class="video">
         <div class="titulo-container">
-        <h2>Mira el video y descubre el sorprendente mundo de los NumberBlocks!</h2>
-        <a href="https://www.youtube.com/watch?app=desktop&v=0YKa9DQYdRg">
-        <img src="imgs/video/Group 22.png" alt="">
-        </a>
+            <h2>Mira el video y descubre el sorprendente mundo de los NumberBlocks!</h2>
+            <a href="https://www.youtube.com/watch?app=desktop&v=0YKa9DQYdRg">
+                <img src="imgs/video/Group 22.png" alt="">
+            </a>
         </div>
         <img src="imgs/video/Numberblocks-Number-3-with-Crown 1.png" alt="3" class="tres">
     </section>
-
+    
     <section class="tresd">
         <div>
         <h2>¡Experimenta Efectos 3D Asombrosos en NumberBlocks: Una Aventura Matemática Inmersiva!</h2>
@@ -312,7 +312,13 @@
             ¡Cada sesión de juego se convierte en una experiencia inolvidable llena de color 
             y diversión!</p>
         </div>  
-        <img src="imgs/3d/image 239.png" alt="">
+        <model-viewer 
+        alt="3d" 
+        src="imgs/3d/keypad_from_half_life_2_prop.glb" 
+        poster="shared-assets/models/NeilArmstrong.webp" 
+        shadow-intensity="1" 
+        camera-controls touch-action="pan-y">
+        </model-viewer>
 
     </section>
 
@@ -332,29 +338,38 @@
         <img src="imgs/imagen/455 (11).png" alt="" class="imgcorta">
     </div>
     </section>
-
     <section class="novedades">
-        <div class="nov-container">
-        <h2>¿Quieres ser el primero en enterarse de todas las novedades?</h2>
-        <div class="suscripcion-container">
-            <input type="text" class="input-suscripcion" placeholder="Ingresa tu correo aquí">
-            <button class="btn-suscripcion">SUSCRIBIRSE</button>
-          </div>
-          
-        <p>Al inscribirse en nuestra lista de correo, nos autoriza a ponernos en contacto 
-            con usted para enviarle ofertas y actualizaciones de marketing por correo electrónico,
-            y también acepta nuestra Política de privacidad y las Condiciones del servicio</p>
-
-        <img src="imgs/novedades/nov.png" alt="">    
-
-        </div>    
-     <div class="gifs">
-        <iframe src="https://giphy.com/embed/5ddqGqO8x5rrJ7v5tf" width="480" height="480" style="" frameBorder="0" allowFullScreen></iframe>
-        <iframe src="https://giphy.com/embed/HuocoB7MEUeLMifGFN" width="509" height="509" style="" frameBorder="0" allowFullScreen></iframe>
-        <iframe src="https://giphy.com/embed/fuTByMqFxstXjmDSYm" class="gif7" width="561" height="997" style="" frameBorder="0" allowFullScreen></iframe>
-       
-    </div>
+        <div class="nov-fondo">
+            <div class="nov-container">
+                <h2>¿Quieres ser el primero en enterarse de todas las novedades?</h2>
+                <div class="suscripcion-container">
+                    <input type="text" class="input-suscripcion" placeholder="Ingresa tu correo aquí">
+                    <button class="btn-suscripcion">SUSCRIBIRSE</button>
+                </div>
+    
+                <p>Al inscribirse en nuestra lista de correo, nos autoriza a ponernos en contacto 
+                    con usted para enviarle ofertas y actualizaciones de marketing por correo electrónico,
+                    y también acepta nuestra Política de privacidad y las Condiciones del servicio</p>
+    
+                <img src="imgs/novedades/nov.png" alt="">
+            </div>
+    
+            <!-- Contenedor de las nubes -->
+            <div class="nubes">
+                <img src="imgs/novedades/nube1.png" alt="Nube 1" class="nube nube-izquierda">
+                <img src="imgs/novedades/nube2.png" alt="Nube 2" class="nube nube-derecha1">
+                <img src="imgs/novedades/nube3.png" alt="Nube 3" class="nube nube-derecha2">
+            </div>
+        </div>
+    
+        <!-- Sección de Gifs -->
+        <div class="gifs">
+            <iframe src="https://giphy.com/embed/5ddqGqO8x5rrJ7v5tf" width="480" height="480" frameBorder="0" allowFullScreen></iframe>
+            <iframe src="https://giphy.com/embed/HuocoB7MEUeLMifGFN" width="509" height="509" frameBorder="0" allowFullScreen></iframe>
+            <iframe src="https://giphy.com/embed/fuTByMqFxstXjmDSYm" class="gif7" width="561" height="997" frameBorder="0" allowFullScreen></iframe>
+        </div>
     </section>
+    
 
     <!-- footer -->
 
@@ -393,5 +408,6 @@
     <script src="js/descarga-paralax.js"></script>
     <script src="js/gif-appdivertida.js"></script>
     <script src="js/cambio-numeros.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </body>
 </html>

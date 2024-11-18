@@ -10,6 +10,253 @@ h2{
     font-size: 60px;
 }
 
+/* nav */
+
+/* Estilo para el menú hamburguesa */
+.nav {
+    width: 100%;
+}
+
+.nav nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 120px 0 120px;
+    position: sticky;
+    z-index: 1000;
+}
+
+.menu-haburguesa img {
+    cursor: pointer;
+    width: 30px; /* Tamaño de las barras */
+    height: 20px;
+    transition: transform 0.3s ease; /* Transición para el cambio de imagen */
+}
+
+/* Estilo de las barras (por defecto) */
+.menu-haburguesa img {
+    position: relative;
+    display: block;
+}
+
+.menu-haburguesa img:before, .menu-haburguesa img:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.menu-haburguesa img:before {
+    top: 0;
+}
+
+.menu-haburguesa img:after {
+    bottom: 0;
+}
+
+/* Animación para convertir las barras en una cruz */
+.menu-haburguesa.open img:before {
+    transform: rotate(45deg);
+    top: 50%;
+}
+
+.menu-haburguesa.open img:after {
+    transform: rotate(-45deg);
+    bottom: 50%;
+}
+
+.menu-haburguesa.open img {
+    transform: rotate(180deg); /* Rota la imagen */
+}
+
+/* Estilo del menú desplegable */
+.menu-desplegable {
+    position: fixed;
+    top: 0;
+    left: -100%; /* El menú empieza fuera de la pantalla */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: left 0.3s ease; /* Desplazamiento del menú */
+    z-index: 999;
+}
+
+.menu-desplegable ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.menu-desplegable li {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.menu-desplegable.show {
+    left: 0;
+}
+
+.menu-desplegable.show li {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.2s; /* Los elementos aparecen con un pequeño retraso */
+}
+
+.menu-desplegable.show li:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+.menu-desplegable.show li:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.menu-desplegable.show li:nth-child(3) {
+    transition-delay: 0.6s;
+}
+
+.nav .btn-comprar {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(135deg, #83C252, #6EAB47);
+    border: 8px solid #fff;
+    border-radius: 111px;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 20px;
+    box-shadow: 5px 5px 0px 0px rgba(2, 24, 126, 1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background: linear-gradient(135deg, var(--collection-1-verde-secundario), #9FD974); 
+    transform: translateY(-5px) scale(1.05) rotate(-3deg); 
+    box-shadow: -5px 10px 20px rgba(2, 24, 126, 0.7); 
+    animation: glow-pulse 1s infinite alternate; 
+    color: #ffe57f; 
+}
+
+/* parte de la izquierda */
+
+.arbol-uno {
+    position: relative;
+    right: 130px;
+    bottom: 60px;
+    z-index: 800;
+}
+
+.piedra-uno {
+    position: relative;
+    right: 420px;
+    bottom: 50px;
+    z-index: 900;
+}
+
+.arbusto-uno {
+    position: relative;
+    right: 500px;
+    top: 5px;
+    z-index: 1000;
+}
+
+.arbusto-dos {
+    position: relative;
+    right: 680px;
+    bottom: 90px;
+    z-index: 700;
+}
+
+/* parte del medio */
+
+.logo-inicio {
+    position: relative;
+    z-index: 1000;
+    bottom: 950px;
+    left: 35%;
+}
+
+.personaje-uno {
+    position: relative;
+    z-index: 1000;
+    bottom: 500px;
+}
+
+.personaje-dos {
+    position: relative;
+    z-index: 900;
+    bottom: 650px;
+    right: 155px;
+}
+
+.personaje-tres {
+    position: relative;
+    z-index: 800;
+    bottom: 600px;
+    right: 230px;
+}
+
+/* parte de la derecha */
+
+.arbol-dos {
+    position: relative;
+    z-index: 500;
+    bottom: 1260px;
+    left: 1120px;
+}
+
+.arbol-tres {
+    position: relative;
+    z-index: 300;
+    bottom: 1350px;
+    left: 885px;
+}
+
+.piedra-dos {
+    position: relative;
+    z-index: 1000;
+    bottom: 1230px;
+    left: 560px;
+}
+
+.piedra-tres {
+    position: relative;
+    z-index: 900;
+    bottom: 1240px;
+    left: 530px;
+}
+
+.piedra-cuatro {
+    position: relative;
+    z-index: 700;
+    bottom: 1260px;
+    left: 370px;
+}
+
+.arbusto-tres {
+    position: relative;
+    z-index: 400;
+    bottom: 1285px;
+    left: 350px;
+}
+
+.arbusto-cuatro {
+    position: relative;
+    z-index: 200;
+    bottom: 1360px;
+    left: 50px;
+}
+
+
 
 /* texto */
 
@@ -398,27 +645,103 @@ h2{
 
 
 /*novedades*/
-
-.novedades{
-    background-color: #4CAF50;
+.novedades {
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow: hidden; /* Para evitar que las nubes se desborden fuera del contenedor */
 }
 
-.novedades h2{
+.nov-fondo {
+    background-image: url(../imgs/novedades/Rectangle\ 11.png);
+    position: relative; /* Necesario para posicionar las nubes dentro de este contenedor */
+}
+
+.novedades h2 {
     margin-top: 145px;
     width: 816px;
     height: 171px;
 }
 
-.gif7{
+.suscripcion-container {
+    margin-top: 20px;
+}
+
+.nov-container {
+    margin-left: 100px;
+    height: 900px;
+}
+
+.gifs {
+    background-image: url(../imgs/novedades/fondo-prefooter.png);
+}
+
+.nubes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Para que las nubes cubran toda el área visible */
+    pointer-events: none; /* Las nubes no deben interferir con la interacción con otros elementos */
+}
+
+.nube {
+    position: absolute;
+    bottom: 0;
+    animation: moverNubes 60s linear infinite; /* Efecto parallax */
+}
+
+.nube-izquierda {
+    left: 1%; /* Nube 1, cerca del borde izquierdo */
+    width: 387px;
+    height: 181px;
+}
+
+.nube-derecha1 {
+    right: 15%; /* Nube 2 y 3 a la derecha del contenedor */
+    width: 264px;
+    height: 124px;
+}
+
+.nube-derecha2 {
+    right: 10%; /* Nube 2 y 3 a la derecha del contenedor */
+    width: 387px;
+    height: 181px;
+}
+
+.nube-izquierda {
+    bottom: 20px; /* Coloca la nube 1 justo debajo del div "nov-container" */
+}
+
+.nube-derecha1:nth-child(2) {
+    bottom: 100px; /* Nube 2 un poco más arriba que la 3 */
+}
+
+.nube-derecha:nth-child(3) {
+    bottom: 30px; /* Nube 3 */
+}
+
+/* Animación de parallax */
+@keyframes moverNubes {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.gif7 {
     margin-left: -300px;
     margin-top: 100px;
 }
 
-.nov-container{
-    margin-left: 100px;
+.gifs {
+    background-image: url(../imgs/novedades/fondo-prefooter.png);
+    height: 389px;
 }
+
+
 
 /* imagen antes del footer */
 
