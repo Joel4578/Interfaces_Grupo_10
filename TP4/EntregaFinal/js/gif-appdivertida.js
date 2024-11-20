@@ -15,3 +15,5 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(changeGif, 3000);
     gifs[currentIndex].classList.add('active');
 });
+
+
