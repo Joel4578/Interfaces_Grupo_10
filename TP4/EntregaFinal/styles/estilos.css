@@ -551,6 +551,9 @@ h2{
     display: flex;
     justify-content: center;
     height: 1443px;
+    position: relative;
+    overflow-x: hidden;
+    z-index: 0;
 }
 
 .titulo-container{
@@ -565,11 +568,12 @@ h2{
     margin-top: 200px;
 }
 
+
 .tres{
     margin-top: 270px;
     margin-left: -170px;
     width: 638px;
-    height: 989px;
+    height: 989px; 
 }
 
 
@@ -696,7 +700,7 @@ h2{
 .nube {
     position: absolute;
     bottom: 0;
-    animation: moverNubes 60s linear infinite; /* Efecto parallax */
+    animation: moverNubes 10s linear infinite; /* Efecto parallax */
 }
 
 .nube-izquierda {
@@ -746,7 +750,7 @@ h2{
 
 .gifs {
     background-image: url(../imgs/novedades/fondo-prefooter.png);
-    height: 389px;
+
 }
 
 
