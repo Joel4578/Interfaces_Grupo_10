@@ -852,26 +852,22 @@ header {
 
 
 /*empieza la seccion de los spritesheets*/
-/*cambiar imagen
+
 .sprite{
-    height: 1000px;
-    width: 500px;
-    margin: auto;
-
+    height: 117px;
+    width: 117px;
+    margin: auto; 
+    background:url(../imgs/novedades/image.png) repeat-x;
+    animation:walk 1s steps(23) infinite;
     
-    background:url(../imgs/novedades/spt1.1.jpg) repeat-x;
-    
-
-    animation:walk .8s steps(7) infinite;
-    position:relative;
 }
-*/
+
 
 @keyframes walk {
     /* Partimos de la primera viñeta del sprite sheet */
     0% { background-position:0 }
     /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
-    100% { background-position:-3500px }
+    100% { background-position:-2300px }
   }
   
 
