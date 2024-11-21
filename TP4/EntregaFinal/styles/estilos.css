@@ -3,11 +3,17 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
+
 }
 
 .fondo-inicio {
+    width: 100%;
+    height: 144vh;
+    position: relative;
     background-image: url(../imgs/inicio/fondo.png);
+    background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 h2{
@@ -19,12 +25,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 86px;
-    position: sticky;
+    height: 103px;
+    position: fixed;
     top: 0;
     z-index: 10009;
     transition: all 0.3s ease;
-  }
+    /* position: absolute; */
+}
 
   .inicio{
     width: 100%;
@@ -84,6 +91,7 @@ header {
         background-color: lightblue;
         position: sticky;
 
+        background-color: #333;
     }
 
 /* hamburguesa */
@@ -96,10 +104,12 @@ header {
     height: 100%;
     pointer-events: none;
     z-index: 1;
-  }
-  .menu-hambur-somnbra .linea-hamburguesa {
+}
+
+.menu-hambur-somnbra .linea-hamburguesa {
     margin-top: -6px;
-  }
+}
+
 .menu-hambur {
     display: flex;
     flex-direction: column;
@@ -257,22 +267,14 @@ header {
     transition-delay: 0.6s;
 }
 
-.nav .btn-comprar {
-    width: 200px;
-    height: 50px;
-    background-color: #83C252;
-    border: 8px solid #fff;
-    border-radius: 111px;
-    color: #fff;
-    font-weight: bolder;
-    font-size: 20px;
-    box-shadow: 5px 5px 0px 0px rgba(2, 24, 126, 1);
-    cursor: pointer;
-}
+
 
 /* fin del menu desplegable */
 
-
+.logo{
+width: 150px;
+height: 86px;
+}
 /* Estilo para el menú hamburguesa */
 .nav {
     width: 100%;
@@ -281,10 +283,12 @@ header {
 .nav nav {
     display: flex;
     justify-content: space-between;
-    padding: 10px 120px 0 120px;
+    align-items: center;
+    padding: 0px 120px 0 120px;
     position: sticky;
     z-index: 1000;
     width: 100%;
+    height: 100%;
 }
 
 .menu-haburguesa img {
@@ -343,113 +347,191 @@ header {
 }
 
 /* parte de la izquierda */
+.arbol-wrapper {
+    position: relative; 
+    z-index: 800; 
+}
+
 
 .arbol-uno {
-    position: relative;
-    right: 130px;
-    bottom: 60px;
-    z-index: 800;
+    position: absolute; 
+    width: 560px;
+    height: 867px;
+    top: -1; 
+    left: -153px;
+    z-index: 1; /
 }
 
 .piedra-uno {
-    position: relative;
+    position: absolute;
+    height: 78px;
+    width: 145px;
+    top: 793px;
+    left: 129px;
     right: 420px;
     bottom: 50px;
     z-index: 900;
 }
 
 .arbusto-uno {
-    position: relative;
-    right: 500px;
-    top: 5px;
-    z-index: 1000;
+    position: absolute;
+    width: 249px;
+    height: 114px;
+    left: 161px;
+    top: 717px;
+    z-index: 800;
 }
 
 .arbusto-dos {
-    position: relative;
-    right: 680px;
-    bottom: 90px;
-    z-index: 700;
+    position: absolute;
+    width: 155.51px;
+    height: 102.33px;
+    top: 821.65px;
+    left: 197.06px;
+    z-index: 1000;
 }
 
 /* parte del medio */
 
 .logo-inicio {
-    position: relative;
-    z-index: 1000;
-    bottom: 950px;
-    left: 35%;
+    position: absolute;
+    width: 560px;
+    height: 320px;
+    top: 55px;
+    left: 360px;
+    gap: 0px;
+    opacity: 0px;
+    
 }
 
 .personaje-uno {
-    position: relative;
-    z-index: 1000;
-    bottom: 500px;
+    position: absolute;
+    width: 240.4px;
+    height: 314.48px;
+    top: 527.28px;
+    left: 439px;
+    transform: rotate(-6.51deg);
+    transform-origin: center center; /* Rota alrededor del centro */
+    z-index: 1122;
 }
-
+.box {
+    width: 140px;
+    position: absolute;
+    height: 33px;
+}
+.sombra-personaje-uno{
+    top: 780px;
+    left: 522px;
+}
+.sombra-personaje-dos {
+    top: 736px;
+    left: 606px;
+}
+.sombra-personaje-tres{
+    top: 697px;
+    left: 696px;
+}
+.box .ellipse {
+    width: 140px;
+    height: 33px;
+    top: 0;
+    left: 0;
+    background-color: #43673f9c;
+    border-radius: 70px/16.5px;
+    filter: blur(9px);
+    backdrop-filter: blur(0.000001px);
+    z-index: 1;
+}
 .personaje-dos {
-    position: relative;
-    z-index: 900;
-    bottom: 650px;
-    right: 155px;
+    position: absolute;
+    width: 197px;
+    height: 270px;
+    top: 426.04px;
+    left: 536px;
+    z-index: 1000;
+    transform: rotate(-6.72deg);
 }
 
 .personaje-tres {
-    position: relative;
-    z-index: 800;
-    bottom: 600px;
-    right: 230px;
+    position: absolute;
+    width: 174px;
+    height: 384px;
+    top: 338px;
+    left: 677.25px;
+    transform: rotate(-8.73deg);
 }
 
 /* parte de la derecha */
 
 .arbol-dos {
-    position: relative;
-    z-index: 500;
-    bottom: 1260px;
-    left: 1120px;
+    position: absolute;
+    width: 434.21px;
+    height: 672.52px;
+    top: 106.71px;
+    left: 881.03px;
+    z-index: 10;
+    overflow: hidden;
 }
 
 .arbol-tres {
-    position: relative;
-    z-index: 300;
-    bottom: 1350px;
-    left: 885px;
+    position: absolute;
+    width: 278.03px;
+    height: 430.85px;
+    top: 278.38px;
+    left: 1080.97px;
+    gap: 0px;
+    opacity: 0px;
+    z-index: 6;
+    overflow: hidden;
+
 }
 
 .piedra-dos {
-    position: relative;
-    z-index: 1000;
-    bottom: 1230px;
-    left: 560px;
+    position: absolute;
+    width: 66.65px;
+    height: 56.55px;
+    top: 737.5px;
+    left: 1037.84px;
+    transform: translate(-180deg);
+    z-index: 11;
 }
 
 .piedra-tres {
-    position: relative;
-    z-index: 900;
-    bottom: 1240px;
-    left: 530px;
+    position: absolute;
+    width: 59.24px;
+    height: 35.01px;
+    top: 784.64px;
+    left: 1051.84px;
+    transform: translate(-180deg);
+    z-index: 14;
 }
 
 .piedra-cuatro {
-    position: relative;
-    z-index: 700;
-    bottom: 1260px;
-    left: 370px;
+    position: absolute;
+    width: 113.77px;
+    height: 74.05px;
+    top: 737.5px;
+    left: 1072.22px;
+    gap: 0px;
+    opacity: 0px;
+    z-index: 13;
 }
 
 .arbusto-tres {
-    position: relative;
-    z-index: 400;
-    bottom: 1285px;
-    left: 350px;
+    position: absolute;
+    width: 244.37px;
+    height: 107.71px;
+    top: 662.1px;
+    left: 1080.97px;
+    z-index: 7;
 }
 
 .arbusto-cuatro {
-    position: relative;
-    z-index: 200;
-    bottom: 1360px;
-    left: 50px;
+    position: absolute;
+    width: 191.19px;
+    height: 63.28px;
+    top: 630.46px;
+    left: 1028.46px;
 }
 
 /* texto */
@@ -459,6 +541,7 @@ header {
     width: 508px;
     left: 90px;
     bottom: 100px;
+    margin-top: 200px;
 }
 
 .contenedor-texto-divertido-h h3 {
@@ -494,7 +577,8 @@ header {
 .gif-container {
     position: relative;
     width: 530.38px; 
-    height: 324.35px; 
+    height: 324.35px;
+    margin-top: 200px; 
     top: 190px;
     right: 310px;
     border: 29px solid #1B5F99;   
@@ -520,14 +604,14 @@ header {
 /* No modificar la posición del contenedor de personajes */
 .fondo-personajes {
     position: relative;
+    overflow: hidden;
+
 }
 
 .personaje-cuatro {
     position: relative;
-    left: 1026px;
-    bottom: 610px;
-    height: 1219px;
-    width: 572px;
+    left: 826px;
+    bottom: 580px;
 }
 
 .gif4 {
@@ -540,8 +624,8 @@ header {
 
 .personaje-cinco {
     position: relative;
-    right: 360px;
-    bottom: 610px;
+    right: 510px;
+    bottom: 620px;
 }
 
 .divertida{
@@ -556,6 +640,7 @@ header {
 
 .info-juego {
     margin-bottom: 130px;
+    margin-top: 650px;
 }
 
 .cards {
@@ -653,7 +738,7 @@ header {
 
 .seccion-imagen img {
     width: 100%;
-    height: 100%;
+    margin-top: 60px;
     object-fit: cover;
     transition: transform 0.1s ease;
     will-change: transform;
@@ -805,29 +890,32 @@ header {
 
 .imagen-personajes {
     background-image: url(../imgs/imagen/455.png);
+    background-repeat: no-repeat;
+    /* background-size: cover; */
     width: 100%;
-    height: 729px; 
-    display: flex;  
-    flex-direction: column; 
-    gap: 20px; 
-    justify-content: space-between;
-    margin-bottom: 20px;
+    height: 900px;
+    transition: transform .3s ease;
+    /* display: grid;   */
+    /* justify-content: space-evenly; */
 }
 
 .personajes {
-    display: flex;  
-    flex-direction: row; 
-    justify-content: space-evenly;
-    gap: 25px;
-    height: 375px;
+    display: flex;
+    gap: 34px;
+    height: 368px;
+    width: 278px;
+    justify-content: space-between;
+    /* display: none; */
 }
 
 .personajes2 {
     display: flex; 
-    flex-direction: row; 
-    justify-content: space-evenly;
-    gap: 25px; 
-    height: 325px;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 35px; 
+    height: 320px;
+    width: 370px;
+    /* display: none; */
 }
 
 
@@ -842,35 +930,10 @@ header {
 
 .personajes img:hover, .personajes2 img:hover {
     transform: scale(1.1); 
-    filter: brightness(1.3); 
+    filter: brightness(1.3);
 }
-
-
-
 
 /*novedades*/
-
-
-/*empieza la seccion de los spritesheets*/
-
-.sprite{
-    height: 117px;
-    width: 117px;
-    margin: auto; 
-    background:url(../imgs/novedades/image.png) repeat-x;
-    animation:walk 1s steps(23) infinite;
-    
-}
-
-
-@keyframes walk {
-    /* Partimos de la primera viñeta del sprite sheet */
-    0% { background-position:0 }
-    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
-    100% { background-position:-2300px }
-  }
-  
-
 .novedades {
     display: flex;
     flex-direction: column;
@@ -898,8 +961,8 @@ header {
     height: 900px;
 }
 
-.gifs {
-    background-image: url(../imgs/novedades/fondo-prefooter.png);
+.nov-container img {
+    z-index: 1000;
 }
 
 .nubes {
@@ -907,7 +970,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Para que las nubes cubran toda el área visible */
+    height: 100vh; /* Para que las nubes cubran toda el área visible */
     pointer-events: none; /* Las nubes no deben interferir con la interacción con otros elementos */
 }
 
@@ -918,56 +981,82 @@ header {
 }
 
 .nube-izquierda {
-    left: 1%; /* Nube 1, cerca del borde izquierdo */
-    width: 387px;
+    bottom: 50px;
+    right: -50%;
+    width: 370px;
     height: 181px;
 }
 
 .nube-derecha1 {
-    right: 15%; /* Nube 2 y 3 a la derecha del contenedor */
+    right: -30%; /* Nube 2 y 3 a la derecha del contenedor */
+    bottom: -90px;
     width: 264px;
     height: 124px;
 }
 
 .nube-derecha2 {
-    right: 10%; /* Nube 2 y 3 a la derecha del contenedor */
+    right: -25%; /* Nube 2 y 3 a la derecha del contenedor */
+    bottom: -80px;
     width: 387px;
     height: 181px;
-}
-
-.nube-izquierda {
-    bottom: 20px; /* Coloca la nube 1 justo debajo del div "nov-container" */
-}
-
-.nube-derecha1:nth-child(2) {
-    bottom: 100px; /* Nube 2 un poco más arriba que la 3 */
-}
-
-.nube-derecha:nth-child(3) {
-    bottom: 30px; /* Nube 3 */
 }
 
 /* Animación de parallax */
 @keyframes moverNubes {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-800%);
     }
 }
 
 .gif7 {
+    position: relative;
     margin-left: -300px;
     margin-top: 100px;
 }
+/* 
+.gifs {
+    background-image: linear-gradient(#CAE2C3 10% , #D6DAAD 90%);
+    background-size: cover;
+} */
 
 .gifs {
-    background-image: url(../imgs/novedades/fondo-prefooter.png);
-
+    /* background-image: url(../imgs/novedades/fondo-prefooter.png); */
+    background: linear-gradient(#CAE2C3 10% , #D6DAAD 90%), 
+              url(../imgs/novedades/fondo-prefooter.png); /* Gradiente y luego la imagen */
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay; 
 }
 
+.gif1, .gif2, .gif3 {
+    position: relative;
+    /* bottom: 700px; */
+}
 
+.gif1 {
+    width: 480px;
+    height: 480px;
+    bottom: 30px;
+    left: 100px;
+}
+
+.gif2 {
+    width: 509px;
+    height: 509px;
+    bottom: 30px;
+    left: -80px;
+}
+
+.gif3 {
+    position: absolute;
+    bottom: -60px;
+    width: 560px;
+    height: 997px;
+    right: 50px;
+}
 
 /* imagen antes del footer */
 
@@ -977,6 +1066,30 @@ header {
 
 .imagen-personajes img {
     width: 100%;
+}
+
+.container-suscripcion {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.container-suscripcion .registrado {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    display: none;
+}
+
+.container-suscripcion .registrado p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000080;
+    width: 100px;
+    height: 30px;
+    padding: 20px;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* Contenedor general */
@@ -998,7 +1111,6 @@ header {
     padding: 10px;
     font-size: 20px;
     flex: 1; 
-    border-right: 9px solid white; 
     color: white; /* Color del texto */
     background-color: #ECECEC; 
   }
@@ -1007,6 +1119,8 @@ header {
   .btn-suscripcion {
     padding: 10px 20px;
     background-color: #83C252; 
+    margin-right: 10px;
+
     color: white;
     font-size: 20px;
     border: none;
