@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
+
 }
 
 .fondo-inicio {
@@ -12,6 +13,7 @@
     background-image: url(../imgs/inicio/fondo.png);
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 h2{
@@ -24,11 +26,12 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 103px;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 10009;
     transition: all 0.3s ease;
-  }
+    /* position: absolute; */
+}
 
   
   .box {
@@ -91,10 +94,12 @@ header {
     height: 100%;
     pointer-events: none;
     z-index: 1;
-  }
-  .menu-hambur-somnbra .linea-hamburguesa {
+}
+
+.menu-hambur-somnbra .linea-hamburguesa {
     margin-top: -6px;
-  }
+}
+
 .menu-hambur {
     display: flex;
     flex-direction: column;
@@ -513,6 +518,7 @@ height: 86px;
     top: 106.71px;
     left: 881.03px;
     z-index: 10;
+    overflow: hidden;
 }
 
 .arbol-tres {
@@ -524,7 +530,8 @@ height: 86px;
     gap: 0px;
     opacity: 0px;
     z-index: 6;
-    
+    overflow: hidden;
+
 }
 
 .piedra-dos {
@@ -643,6 +650,8 @@ height: 86px;
 /* No modificar la posición del contenedor de personajes */
 .fondo-personajes {
     position: relative;
+    overflow: hidden;
+
 }
 
 .personaje-cuatro {
@@ -1106,6 +1115,27 @@ height: 86px;
     width: 100%;
 }
 
+.container-suscripcion {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.container-suscripcion .registrado {
+    display: flex;
+    align-items: center;
+}
+
+.container-suscripcion .registrado p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000080;
+    width: 100px;
+    height: 30px;
+    padding: 20px;
+    color: #fff;
+}
+
 /* Contenedor general */
 .suscripcion-container {
     display: flex;
@@ -1125,7 +1155,6 @@ height: 86px;
     padding: 10px;
     font-size: 20px;
     flex: 1; 
-    border-right: 9px solid white; 
     color: white; /* Color del texto */
     background-color: #ECECEC; 
   }
@@ -1134,6 +1163,8 @@ height: 86px;
   .btn-suscripcion {
     padding: 10px 20px;
     background-color: #83C252; 
+    margin-right: 10px;
+
     color: white;
     font-size: 20px;
     border: none;

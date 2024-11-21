@@ -20,41 +20,43 @@
 -->
     <!--  inicio (primer pantalla) -->
 
+    <header class="nav">
+        <nav>
+            <div class="menu-hambur">
+                    
+                <svg class="linea-hamburguesa linea1" width="42" height="12" viewBox="0 0 42 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Línea naranja -->
+                    <rect class="rect-hamburguesa" x="2" y="2" rx="4"/>
+                </svg>
+                <svg class="linea-hamburguesa linea2" width="42" height="12" viewBox="0 0 42 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Línea naranja -->
+                    <rect class="rect-hamburguesa" x="2" y="2" rx="4"/>
+                </svg>
+                <svg class="linea-hamburguesa linea3" width="42" height="12" viewBox="0 0 42 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Línea naranja -->
+                    <rect class="rect-hamburguesa" x="2" y="2" rx="4"/>
+                </svg>
+                <!-- SOMBRA A HACER -->
+                <!-- <div class="menu-hambur-somnbra">
+                    <svg class="linea-hamburguesa linea1" width="46" height="16" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="sombra-hamburguesa" x="4" y="4" rx="4" />
+                    </svg>
+                    <svg class="linea-hamburguesa linea2" width="46" height="16" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="sombra-hamburguesa" x="4" y="4" rx="4" />
+                    </svg>
+                    <svg class="linea-hamburguesa linea3" width="46" height="16" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="sombra-hamburguesa" x="4" y="4" rx="4"/>
+                    </svg>
+                </div> -->
+            </div>
+            <img class="logo" src="imgs/inicio/logo 1.png" alt="">
+            <button id="btn-comprar" class="btn-comprar">COMPRAR</button>
+        </nav>
+    </header>
+
     <div class="fondo-inicio">
 
-        <header class="nav">
-            <nav>
-                <div class="menu-hambur">
-                        
-                    <svg class="linea-hamburguesa linea1" width="42" height="12" viewBox="0 0 42 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Línea naranja -->
-                        <rect class="rect-hamburguesa" x="2" y="2" rx="4"/>
-                    </svg>
-                    <svg class="linea-hamburguesa linea2" width="42" height="12" viewBox="0 0 42 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Línea naranja -->
-                        <rect class="rect-hamburguesa" x="2" y="2" rx="4"/>
-                    </svg>
-                    <svg class="linea-hamburguesa linea3" width="42" height="12" viewBox="0 0 42 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Línea naranja -->
-                        <rect class="rect-hamburguesa" x="2" y="2" rx="4"/>
-                    </svg>
-                    <!-- SOMBRA A HACER -->
-                    <!-- <div class="menu-hambur-somnbra">
-                        <svg class="linea-hamburguesa linea1" width="46" height="16" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect class="sombra-hamburguesa" x="4" y="4" rx="4" />
-                        </svg>
-                        <svg class="linea-hamburguesa linea2" width="46" height="16" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect class="sombra-hamburguesa" x="4" y="4" rx="4" />
-                        </svg>
-                        <svg class="linea-hamburguesa linea3" width="46" height="16" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect class="sombra-hamburguesa" x="4" y="4" rx="4"/>
-                        </svg>
-                    </div> -->
-                </div>
-                <img class="logo" src="imgs/inicio/logo 1.png" alt="">
-                <button id="btn-comprar" class="btn-comprar">COMPRAR</button>
-            </nav>
-        </header>
+        
 
         
    <div id="menu-desplegable" class="menu-desplegable">
@@ -372,11 +374,18 @@
         <div class="nov-fondo">
             <div class="nov-container">
                 <h2>¿Quieres ser el primero en enterarse de todas las novedades?</h2>
-                <div class="suscripcion-container">
-                    <input type="text" class="input-suscripcion" placeholder="Ingresa tu correo aquí">
-                    <button class="btn-suscripcion">SUSCRIBIRSE</button>
-                </div>
+                
+                <div class="container-suscripcion">
+                    <form action="" class="suscripcion-container">
+                        <input type="mail" class="input-suscripcion" placeholder="Ingresa tu correo aquí" required>
+                        <button id="btn-mail" class="btn-suscripcion">SUSCRIBIRSE</button>
+                    </form>
     
+                        <div class="registrado">
+                                <p>Suscripto!</p>
+                        </div>    
+                </div>
+                    
                 <p>Al inscribirse en nuestra lista de correo, nos autoriza a ponernos en contacto 
                     con usted para enviarle ofertas y actualizaciones de marketing por correo electrónico,
                     y también acepta nuestra Política de privacidad y las Condiciones del servicio</p>
@@ -438,6 +447,7 @@
 
     </footer>
 
+    <script src="js/form.js"></script>
     <script src="js/loader.js"></script>
     <script src="js/hamburguesa.js"></script>
     <script src="js/cards.js"></script>
