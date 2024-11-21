@@ -10,7 +10,7 @@
     height: 144vh;
     position: relative;
     background-image: url(../imgs/inicio/fondo.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
