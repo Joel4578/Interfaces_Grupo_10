@@ -229,7 +229,6 @@ header {
 .menu-desplegable li {
     padding: 20px;
     text-align: left;
-    border-bottom: 1px solid #444;
     opacity: 0;
     transform: translateX(-20%);
     transition: opacity 0.5s ease, transform 1s ease;
@@ -823,9 +822,6 @@ height: 86px;
 
 /*seccion video*/
 
-#video{
-    display: none;
-}
 
 .video{
     background-image: url(../imgs/video/fondo-amarillo.png);
@@ -855,6 +851,11 @@ height: 86px;
     margin-left: -170px;
     width: 638px;
     height: 989px; 
+    position: relative;
+}
+
+#iframe{
+    position: relative;
 }
 
 
@@ -943,6 +944,7 @@ height: 86px;
     display: flex;
     flex-direction: row;
     width: 600px;
+    margin-top: -50px;
 }
 
 
@@ -1174,7 +1176,7 @@ height: 86px;
     padding: 10px;
     font-size: 20px;
     flex: 1; 
-    color: white; /* Color del texto */
+    color: black; /* Color del texto */
     background-color: #ECECEC; 
   }
   
@@ -1233,4 +1235,9 @@ footer p{
 .redes-sociales{
     margin-left: 100px;
     height: 84px;
+}
+
+.fondo-footer{
+    display: flex;
+    width: 100%;
 }

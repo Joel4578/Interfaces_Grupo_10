@@ -103,7 +103,7 @@
 
     <!-- seccion app divertida (segunda pantalla) -->
 
-    <section class="appdivertida">
+    <section class="appdivertida" id="divertida">
         
         <div class="contenedor-texto-divertido-h">
             <div class="texto-appdivertida">
@@ -122,8 +122,8 @@
         </div>
     
         <div class="fondo-personajes">
-            <img class="personaje-cuatro" src="imgs/appdivertida/5.png" alt="5">
-            <img class="personaje-cinco" src="imgs/appdivertida/4.png" alt="4" >
+            <img class="personaje-cuatro" src="imgs/appdivertida/5.png" alt="5" id="cinco">
+            <img class="personaje-cinco" src="imgs/appdivertida/4.png" alt="4" id="cuatro">
         </div>
 
     </section>
@@ -328,17 +328,17 @@
             
     </section>
     
-    <section class="video">
+    <section class="video" id="video">
         <div class="titulo-container">
             <h2>Mira el video y descubre el sorprendente mundo de los NumberBlocks!</h2>
             <iframe width="808" height="454"
           src="https://www.youtube.com/embed/0YKa9DQYdRg?autoplay=1&loop=1&playlist=0YKa9DQYdRg&controls=0&disablekb=1&modestbranding=1"
           title="Numberblocks World #5 - Meet Numberblocks 55-100 and Learn How to Trace Their Numerals | BlueZoo"
-          frameborder="0" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin">
+          frameborder="0" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin" id="iframe">
         </iframe>
             
         </div>
-        <img src="imgs/video/Numberblocks-Number-3-with-Crown 1.png" alt="3" class="tres">
+        <img src="imgs/video/Numberblocks-Number-3-with-Crown 1.png" alt="3" class="tres" id="tres">
     </section>
     
     <section class="tresd">
@@ -449,6 +449,8 @@
               <br><br>
             COOKIE POLICY PRIVACY POLICY</p>
              <div>
+
+            <div class="fondo-footer">    
             <div class="redes-sociales">
                <img src="imgs/footer/redesSociales.png" alt="">
             </div>
@@ -461,7 +463,7 @@
                 <div class="sprite3">
                 </div>
                 </div>
-
+            </div>
     </footer>
 
     <script src="js/form.js"></script>

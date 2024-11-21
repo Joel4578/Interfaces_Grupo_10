@@ -1,45 +1,10 @@
+const elem1 = document.getElementById("iframe");
+const elem2 = document.getElementById("tres");
+const scrollTop = window.scrollY;
 
-(function() {
-    document.addEventListener("mousemove", parallax);
-    const img = document.querySelector('.img-video');
-
-    // Función de parallax
-    function parallax(e) {
-        // Obtener las dimensiones del viewport
-        let _w = window.innerWidth / 2;  // Centro de la pantalla en el eje X
-        let _h = window.innerHeight / 2; // Centro de la pantalla en el eje Y
-        let _mouseX = e.clientX;         // Posición del cursor en el eje X
-        let _mouseY = e.clientY;         // Posición del cursor en el eje Y
-
-        // Invertir el movimiento: se cambia el signo en las ecuaciones
-        let moveX = (_w - _mouseX) * 0.05;  // Invertir la dirección horizontal
-        let moveY = (_h - _mouseY) * 0.05;  // Invertir la dirección vertical
-
-        // Aplicar el movimiento en la imagen usando transform: translate y scale
-        img.style.transform = `translate(${moveX}px, ${moveY}px)`;  // Aumenta el tamaño con scale
-    }
-})();
-
-(function() {
-    document.addEventListener("mousemove", parallax);
-    const img = document.querySelector('.tres');
-
-    // Función de parallax
-    function parallax(e) {
-        // Obtener las dimensiones del viewport
-        let _w = window.innerWidth / 2;  // Centro de la pantalla en el eje X
-        let _h = window.innerHeight / 2; // Centro de la pantalla en el eje Y
-        let _mouseX = e.clientX;         // Posición del cursor en el eje X
-        let _mouseY = e.clientY;         // Posición del cursor en el eje Y
-
-        // Invertir el movimiento: se cambia el signo en las ecuaciones
-        let moveX = (_w - _mouseX) * 0.09;  // Invertir la dirección horizontal
-        let moveY = (_h - _mouseY) * 0.09;  // Invertir la dirección vertical
-
-        // Aplicar el movimiento en la imagen usando transform: translate y scale
-        img.style.transform = `translate(${moveX}px, ${moveY}px)`;  // Aumenta el tamaño con scale
-    }
-})();
-
-
-
+window.onscroll = function(){
+   
+    let posicion = window.scrollY || document.documentElement.scrollTop;
+    elem1.style.bottom = posicion * 0.3 + "px";
+    elem2.style.bottom = posicion * 0.6 + "px";
+}
