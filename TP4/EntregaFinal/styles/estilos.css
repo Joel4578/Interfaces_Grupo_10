@@ -773,7 +773,7 @@ height: 86px;
 
 .seccion-imagen img {
     width: 100%;
-    height: 100%;
+    margin-top: 60px;
     object-fit: cover;
     transition: transform 0.1s ease;
     will-change: transform;
@@ -925,29 +925,34 @@ height: 86px;
 
 .imagen-personajes {
     background-image: url(../imgs/imagen/455.png);
+    background-size: cover;
     width: 100%;
-    height: 729px; 
-    display: flex;  
-    flex-direction: column; 
-    gap: 20px; 
-    justify-content: space-between;
-    margin-bottom: 20px;
+    height: 900px;
+    transition: transform .3s ease;
+    /* display: grid;   */
+    /* justify-content: space-evenly; */
 }
 
 .personajes {
-    display: flex;  
-    flex-direction: row; 
-    justify-content: space-evenly;
-    gap: 25px;
-    height: 375px;
+    display: flex;
+    gap: 40px;
+    height: 455px;
+    width: 365px;
+    grid-template-columns:  auto auto auto auto auto;
+    justify-content: space-between;
+    margin-left: 5px;
+    /* display: none; */
 }
 
 .personajes2 {
     display: flex; 
-    flex-direction: row; 
-    justify-content: space-evenly;
-    gap: 25px; 
-    height: 325px;
+    justify-content: space-between;
+    margin-top: 48px;
+    gap: 40px; 
+    height: 395px;
+    width: 365px;
+    margin-left: 5px;
+    /* display: none; */
 }
 
 
@@ -962,11 +967,8 @@ height: 86px;
 
 .personajes img:hover, .personajes2 img:hover {
     transform: scale(1.1); 
-    filter: brightness(1.3); 
+    filter: brightness(1.3);
 }
-
-
-
 
 /*novedades*/
 .novedades {
@@ -996,8 +998,8 @@ height: 86px;
     height: 900px;
 }
 
-.gifs {
-    background-image: url(../imgs/novedades/fondo-prefooter.png);
+.nov-container img {
+    z-index: 1000;
 }
 
 .nubes {
@@ -1005,7 +1007,7 @@ height: 86px;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Para que las nubes cubran toda el área visible */
+    height: 100vh; /* Para que las nubes cubran toda el área visible */
     pointer-events: none; /* Las nubes no deben interferir con la interacción con otros elementos */
 }
 
@@ -1016,56 +1018,82 @@ height: 86px;
 }
 
 .nube-izquierda {
-    left: 1%; /* Nube 1, cerca del borde izquierdo */
-    width: 387px;
+    bottom: 50px;
+    right: -50%;
+    width: 370px;
     height: 181px;
 }
 
 .nube-derecha1 {
-    right: 15%; /* Nube 2 y 3 a la derecha del contenedor */
+    right: -30%; /* Nube 2 y 3 a la derecha del contenedor */
+    bottom: -90px;
     width: 264px;
     height: 124px;
 }
 
 .nube-derecha2 {
-    right: 10%; /* Nube 2 y 3 a la derecha del contenedor */
+    right: -25%; /* Nube 2 y 3 a la derecha del contenedor */
+    bottom: -80px;
     width: 387px;
     height: 181px;
-}
-
-.nube-izquierda {
-    bottom: 20px; /* Coloca la nube 1 justo debajo del div "nov-container" */
-}
-
-.nube-derecha1:nth-child(2) {
-    bottom: 100px; /* Nube 2 un poco más arriba que la 3 */
-}
-
-.nube-derecha:nth-child(3) {
-    bottom: 30px; /* Nube 3 */
 }
 
 /* Animación de parallax */
 @keyframes moverNubes {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-800%);
     }
 }
 
 .gif7 {
+    position: relative;
     margin-left: -300px;
     margin-top: 100px;
 }
+/* 
+.gifs {
+    background-image: linear-gradient(#CAE2C3 10% , #D6DAAD 90%);
+    background-size: cover;
+} */
 
 .gifs {
-    background-image: url(../imgs/novedades/fondo-prefooter.png);
-
+    /* background-image: url(../imgs/novedades/fondo-prefooter.png); */
+    background: linear-gradient(#CAE2C3 10% , #D6DAAD 90%), 
+              url(../imgs/novedades/fondo-prefooter.png); /* Gradiente y luego la imagen */
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay; 
 }
 
+.gif1, .gif2, .gif3 {
+    position: relative;
+    /* bottom: 700px; */
+}
 
+.gif1 {
+    width: 480px;
+    height: 480px;
+    bottom: 30px;
+    left: 100px;
+}
+
+.gif2 {
+    width: 509px;
+    height: 509px;
+    bottom: 30px;
+    left: 30px;
+}
+
+.gif3 {
+    position: absolute;
+    bottom: -60px;
+    width: 560px;
+    height: 997px;
+    right: 50px;
+}
 
 /* imagen antes del footer */
 
