@@ -8,19 +8,25 @@
     <title>pagina</title>
 </head>
 <body>
-<!-- 
-    <div class="loader-container" id="loader-container">
-        <div class="loader" id="loader">
-            <div class="percentage" id="percentage">0%</div>
-            <div class="bar">
-                <div class="progress" id="progress"></div>
-            </div>
+
+<!-- Loader  -->
+<div class="loader-container" id="loader-container">
+    <div class="loader" id="loader">
+        <div class="percentage" id="percentage">0%</div>
+        <div class="bar">
+            <div class="progress" id="progress"></div>
         </div>
     </div>
--->
+</div>
+
+<!-- Contenido Principal (oculto inicialmente) -->
+<div id="main-content" style="display:none;">
+    <!-- Aquí va tu contenido principal -->
+
     <!--  inicio (primer pantalla) -->
 
-    
+    <div class="fondo-inicio">
+
         <header class="nav">
             <nav>
                 <div class="menu-hambur">
@@ -50,11 +56,10 @@
                         </svg>
                     </div> -->
                 </div>
-                <img class="logo-inicio" id="logo" src="imgs/inicio/logo 1.png" alt="Logo">
+                <img class="logo" src="imgs/inicio/logo 1.png" alt="">
                 <button id="btn-comprar" class="btn-comprar">COMPRAR</button>
             </nav>
         </header>
-        <div class="fondo-inicio">
 
         
    <div id="menu-desplegable" class="menu-desplegable">
@@ -322,9 +327,12 @@
     <section class="video">
         <div class="titulo-container">
             <h2>Mira el video y descubre el sorprendente mundo de los NumberBlocks!</h2>
-            <a href="https://www.youtube.com/watch?app=desktop&v=0YKa9DQYdRg">
-                <img src="imgs/video/Group 22.png" alt="" class="img-video">
-            </a>
+            <iframe width="808" height="454"
+          src="https://www.youtube.com/embed/0YKa9DQYdRg?autoplay=1&loop=1&playlist=0YKa9DQYdRg&controls=0&disablekb=1&modestbranding=1"
+          title="Numberblocks World #5 - Meet Numberblocks 55-100 and Learn How to Trace Their Numerals | BlueZoo"
+          frameborder="0" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+            
         </div>
         <img src="imgs/video/Numberblocks-Number-3-with-Crown 1.png" alt="3" class="tres">
     </section>
@@ -371,16 +379,23 @@
         <div class="nov-fondo">
             <div class="nov-container">
                 <h2>¿Quieres ser el primero en enterarse de todas las novedades?</h2>
-                <div class="suscripcion-container">
-                    <input type="text" class="input-suscripcion" placeholder="Ingresa tu correo aquí">
-                    <button class="btn-suscripcion">SUSCRIBIRSE</button>
-                </div>
+                
+                <div class="container-suscripcion">
+                    <div class="suscripcion-container">
+                        <input id="input-mail" type="mail" class="input-suscripcion" placeholder="Ingresa tu correo aquí" required>
+                        <button id="btn-mail" class="btn-suscripcion">SUSCRIBIRSE</button>
+                    </div>
     
-                <p>Al inscribirse en nuestra lista de correo, nos autoriza a ponernos en contacto 
+                        <div id="mensaje" class="registrado">
+                                <p>Suscripto!</p>
+                        </div>    
+                </div>
+                    
+                <p class="txt">Al inscribirse en nuestra lista de correo, nos autoriza a ponernos en contacto 
                     con usted para enviarle ofertas y actualizaciones de marketing por correo electrónico,
                     y también acepta nuestra Política de privacidad y las Condiciones del servicio</p>
     
-                <img src="imgs/novedades/nov.png" alt="">
+                <img class="image" src="imgs/novedades/nov.png" alt="">
             </div>
     
             <!-- Contenedor de las nubes -->
@@ -437,6 +452,7 @@
 
     </footer>
 
+    <script src="js/form.js"></script>
     <script src="js/loader.js"></script>
     <script src="js/hamburguesa.js"></script>
     <script src="js/cards.js"></script>
@@ -445,5 +461,7 @@
     <script src="js/cambio-numeros.js"></script>
     <script src="js/video.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+</div>
 </body>
 </html>

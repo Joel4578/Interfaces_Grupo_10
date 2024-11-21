@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
+
 }
 
 .fondo-inicio {
@@ -11,8 +12,9 @@
     position: relative;
     overflow: hidden;
     background-image: url(../imgs/inicio/fondo.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    overflow-x: hidden;
 }
 
 h2{
@@ -26,7 +28,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 103px;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 10009;
     transition: all 0.3s ease;
@@ -36,22 +38,25 @@ header {
   
   .box {
     margin-right: 99px;
-      width: 200px;
-      height: 50px;
-  }
+    width: 200px;
+    height: 50px;
+}
 
-  .box .btn {
-      box-sizing: border-box;
-      width: 202px;
-      height: 50px;
-  }
-  .sticky .box .btn {
+.box .btn {
+    box-sizing: border-box;
+    width: 202px;
+    height: 50px;
+}
+
+.sticky .box .btn {
     transform: scale(0.6); 
 }
+
 .sticky #btn-comprar {
     height: 40px;
     width: 151px;
 }
+
   .box .overlap-group {
       position: relative;
       width: 216px;
@@ -93,10 +98,12 @@ header {
     height: 100%;
     pointer-events: none;
     z-index: 1;
-  }
-  .menu-hambur-somnbra .linea-hamburguesa {
+}
+
+.menu-hambur-somnbra .linea-hamburguesa {
     margin-top: -6px;
-  }
+}
+
 .menu-hambur {
     display: flex;
     flex-direction: column;
@@ -524,6 +531,7 @@ left: 565px;
     top: 106.71px;
     left: 881.03px;
     z-index: 10;
+    overflow: hidden;
 }
 
 .arbol-tres {
@@ -535,7 +543,8 @@ left: 565px;
     gap: 0px;
     opacity: 0px;
     z-index: 6;
-    
+    overflow: hidden;
+
 }
 
 .piedra-dos {
@@ -593,6 +602,7 @@ left: 565px;
     width: 508px;
     left: 90px;
     bottom: 100px;
+    margin-top: 200px;
 }
 
 .contenedor-texto-divertido-h h3 {
@@ -626,9 +636,10 @@ left: 565px;
 .gif-container {
     position: relative;
     width: 530.38px; 
-    height: 324.35px; 
+    height: 324.35px;
+    margin-top: 200px; 
     top: 190px;
-    right: 110px;
+    right: 310px;
     border: 29px solid #1B5F99;   
     border-radius: 77px;
     overflow: hidden;         
@@ -652,12 +663,13 @@ left: 565px;
 /* No modificar la posición del contenedor de personajes */
 .fondo-personajes {
     position: relative;
+    /* overflow-x: hidden; */
 }
 
 .personaje-cuatro {
     position: relative;
-    left: 1026px;
-    bottom: 610px;
+    left: 786px;
+    bottom: 580px;
 }
 
 .gif4 {
@@ -670,8 +682,8 @@ left: 565px;
 
 .personaje-cinco {
     position: relative;
-    right: 360px;
-    bottom: 610px;
+    right: 510px;
+    bottom: 620px;
 }
 
 .divertida{
@@ -687,6 +699,7 @@ left: 565px;
 
 .info-juego {
     margin-bottom: 130px;
+    margin-top: 650px;
 }
 
 .cards {
@@ -860,9 +873,6 @@ left: 565px;
     transition: 1s;
 }
 
-
-
-
 /*seccion video*/
 
 #video{
@@ -936,7 +946,8 @@ left: 565px;
 
 .imagen-personajes {
     background-image: url(../imgs/imagen/455.png);
-    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
     width: 100%;
     height: 900px;
     transition: transform .3s ease;
@@ -946,23 +957,20 @@ left: 565px;
 
 .personajes {
     display: flex;
-    gap: 40px;
-    height: 455px;
-    width: 365px;
-    grid-template-columns:  auto auto auto auto auto;
+    gap: 34px;
+    height: 368px;
+    width: 278px;
     justify-content: space-between;
-    margin-left: 5px;
     /* display: none; */
 }
 
 .personajes2 {
     display: flex; 
     justify-content: space-between;
-    margin-top: 48px;
-    gap: 40px; 
-    height: 395px;
-    width: 365px;
-    margin-left: 5px;
+    margin-top: 40px;
+    gap: 35px; 
+    height: 320px;
+    width: 370px;
     /* display: none; */
 }
 
@@ -1002,6 +1010,7 @@ left: 565px;
 
 .suscripcion-container {
     margin-top: 20px;
+    z-index: 2000;
 }
 
 .nov-container {
@@ -1009,8 +1018,12 @@ left: 565px;
     height: 900px;
 }
 
-.nov-container img {
-    z-index: 1000;
+.nov-container .txt {
+    z-index: 2000;
+}
+
+.nov-container .image {
+    z-index: 2000;
 }
 
 .nubes {
@@ -1064,14 +1077,8 @@ left: 565px;
     margin-left: -300px;
     margin-top: 100px;
 }
-/* 
-.gifs {
-    background-image: linear-gradient(#CAE2C3 10% , #D6DAAD 90%);
-    background-size: cover;
-} */
 
 .gifs {
-    /* background-image: url(../imgs/novedades/fondo-prefooter.png); */
     background: linear-gradient(#CAE2C3 10% , #D6DAAD 90%), 
               url(../imgs/novedades/fondo-prefooter.png); /* Gradiente y luego la imagen */
     background-size: cover;
@@ -1095,7 +1102,7 @@ left: 565px;
     width: 509px;
     height: 509px;
     bottom: 30px;
-    left: 30px;
+    left: -80px;
 }
 
 .gif3 {
@@ -1114,6 +1121,30 @@ left: 565px;
 
 .imagen-personajes img {
     width: 100%;
+}
+
+.container-suscripcion {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.container-suscripcion .registrado {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    display: none;
+}
+
+.container-suscripcion .registrado p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000080;
+    width: 100px;
+    height: 30px;
+    padding: 20px;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* Contenedor general */
@@ -1135,7 +1166,6 @@ left: 565px;
     padding: 10px;
     font-size: 20px;
     flex: 1; 
-    border-right: 9px solid white; 
     color: white; /* Color del texto */
     background-color: #ECECEC; 
   }
@@ -1144,6 +1174,8 @@ left: 565px;
   .btn-suscripcion {
     padding: 10px 20px;
     background-color: #83C252; 
+    margin-right: 10px;
+
     color: white;
     font-size: 20px;
     border: none;
