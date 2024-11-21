@@ -937,29 +937,31 @@ height: 86px;
 .nube {
     position: absolute;
     bottom: 0;
-    animation: moverNubes 10s linear infinite; /* Efecto parallax */
+    animation: moverNubes 10s linear infinite; /** Efecto parallax **/
 }
 
 .nube-izquierda {
-    left: 1%; /* Nube 1, cerca del borde izquierdo */
+    /* right: 100%;     */
+    right: 10%;
     width: 387px;
     height: 181px;
 }
 
 .nube-derecha1 {
-    right: 15%; /* Nube 2 y 3 a la derecha del contenedor */
+    right: -10%; /* Nube 2 y 3 a la derecha del contenedor */
     width: 264px;
     height: 124px;
 }
 
 .nube-derecha2 {
-    right: 10%; /* Nube 2 y 3 a la derecha del contenedor */
+    right: -3%; /* Nube 2 y 3 a la derecha del contenedor */
     width: 387px;
     height: 181px;
 }
 
 .nube-izquierda {
     bottom: 20px; /* Coloca la nube 1 justo debajo del div "nov-container" */
+    left: 500px;
 }
 
 .nube-derecha1:nth-child(2) {
@@ -976,7 +978,7 @@ height: 86px;
         transform: translateX(100%);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-500%);
     }
 }
 
@@ -986,11 +988,15 @@ height: 86px;
 }
 
 .gifs {
-    background-image: url(../imgs/novedades/fondo-prefooter.png);
-
+    background-image: linear-gradient(#CAE2C3 10% , #D6DAAD 90%);
+    background-size: cover;
 }
 
-
+.gifs .fondo {
+    background-image: url(../imgs/novedades/fondo-prefooter.png);
+    width: 100%;
+    height: 20vh;
+}
 
 /* imagen antes del footer */
 
