@@ -22,33 +22,34 @@ window.addEventListener('scroll', () => {
 });
 
 // animacion para que el logo se vaya al header
-// Obtener el logo y el header
-// Selecciona el logo
+/// Selecciona el logo
 const logo = document.querySelector('.logo-inicio');
 
-// Valores límite para la posición del logo
-const initialTop = 150; // Posición inicial del logo en px
-const finalTop = 10; // Posición final en el header en px
-const scrollStart = 0; // Scroll donde empieza el movimiento
-const scrollEnd = 300; // Scroll donde termina el movimiento
+// Valores límite para la posición del logo y escala
+const initialTop = 55;
+const finalTop = -131;
+const initialScale = 1;
+const finalScale = 0.247333; 
+const scrollStart = 0; 
+const scrollEnd = 300;
 
-// Escucha el evento de scroll
 window.addEventListener('scroll', () => {
   // Obtén el valor actual del scroll
   const scrollY = window.scrollY;
 
+  // Calcula el progreso del scroll entre 0 y 1
+  let progress = (scrollY - scrollStart) / (scrollEnd - scrollStart);
+
+  // Restringe el progreso entre 0 y 1
+  progress = Math.max(0, Math.min(1, progress));
+
   // Calcula la nueva posición del logo
-  let newTop = initialTop - ((initialTop - finalTop) * (scrollY - scrollStart)) / (scrollEnd - scrollStart);
+  const newTop = initialTop + (finalTop - initialTop) * progress;
 
-  // Restringe el movimiento dentro de los límites
-  newTop = Math.max(finalTop, Math.min(initialTop, newTop));
+  // Calcula la nueva escala del logo
+  const scale = initialScale + (finalScale - initialScale) * progress;
 
-  // Aplica la nueva posición al logo
+  // Aplica la nueva posición y escala al logo
   logo.style.top = `${newTop}px`;
-
-  // Calcula el tamaño dinámico del logo (opcional)
-  const scale = 1 - ((scrollY - scrollStart) / (scrollEnd - scrollStart)) * 0.5; // Reduce hasta un 50%
-  logo.style.transform = `translateX(-50%) scale(${Math.max(0.5, scale)})`;
+  logo.style.transform = `translateX(-50%) scale(${scale})`;
 });
-
-
