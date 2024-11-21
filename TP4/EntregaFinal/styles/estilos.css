@@ -640,6 +640,12 @@ height: 86px;
     transition: transform 0.1s ease-out;
 }
 
+#parallax-image-1 {
+    position: relative;
+    transform: translateY(0);
+    transition: transform 0.1s ease-out;
+}
+
 .divertida{
     font-size: 47px;
 }
