@@ -33,25 +33,27 @@ header {
     /* position: absolute; */
 }
 
-  
-  .box {
+.box {
     margin-right: 99px;
-      width: 200px;
-      height: 50px;
-  }
+    width: 200px;
+    height: 50px;
+}
 
-  .box .btn {
-      box-sizing: border-box;
-      width: 202px;
-      height: 50px;
-  }
-  .sticky .box .btn {
+.box .btn {
+    box-sizing: border-box;
+    width: 202px;
+    height: 50px;
+}
+
+.sticky .box .btn {
     transform: scale(0.6); 
 }
+
 .sticky #btn-comprar {
     height: 40px;
     width: 151px;
 }
+
   .box .overlap-group {
       position: relative;
       width: 216px;
