@@ -928,7 +928,8 @@ height: 86px;
 
 .imagen-personajes {
     background-image: url(../imgs/imagen/455.png);
-    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
     width: 100%;
     height: 900px;
     transition: transform .3s ease;
@@ -938,23 +939,20 @@ height: 86px;
 
 .personajes {
     display: flex;
-    gap: 40px;
-    height: 455px;
-    width: 365px;
-    grid-template-columns:  auto auto auto auto auto;
+    gap: 34px;
+    height: 368px;
+    width: 278px;
     justify-content: space-between;
-    margin-left: 5px;
     /* display: none; */
 }
 
 .personajes2 {
     display: flex; 
     justify-content: space-between;
-    margin-top: 48px;
-    gap: 40px; 
-    height: 395px;
-    width: 365px;
-    margin-left: 5px;
+    margin-top: 40px;
+    gap: 35px; 
+    height: 320px;
+    width: 370px;
     /* display: none; */
 }
 
@@ -1087,7 +1085,7 @@ height: 86px;
     width: 509px;
     height: 509px;
     bottom: 30px;
-    left: 30px;
+    left: -80px;
 }
 
 .gif3 {
