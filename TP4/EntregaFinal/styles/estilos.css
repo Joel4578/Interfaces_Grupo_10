@@ -582,6 +582,7 @@ height: 86px;
     width: 508px;
     left: 90px;
     bottom: 100px;
+    margin-top: 200px;
 }
 
 .contenedor-texto-divertido-h h3 {
@@ -615,9 +616,10 @@ height: 86px;
 .gif-container {
     position: relative;
     width: 530.38px; 
-    height: 324.35px; 
+    height: 324.35px;
+    margin-top: 200px; 
     top: 190px;
-    right: 110px;
+    right: 310px;
     border: 29px solid #1B5F99;   
     border-radius: 77px;
     overflow: hidden;         
@@ -645,8 +647,8 @@ height: 86px;
 
 .personaje-cuatro {
     position: relative;
-    left: 1026px;
-    bottom: 610px;
+    left: 826px;
+    bottom: 580px;
 }
 
 .gif4 {
@@ -659,8 +661,8 @@ height: 86px;
 
 .personaje-cinco {
     position: relative;
-    right: 360px;
-    bottom: 610px;
+    right: 510px;
+    bottom: 620px;
 }
 
 .divertida{
@@ -676,6 +678,7 @@ height: 86px;
 
 .info-juego {
     margin-bottom: 130px;
+    margin-top: 650px;
 }
 
 .cards {
