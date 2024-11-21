@@ -8,6 +8,7 @@
 .fondo-inicio {
     width: 100%;
     height: 144vh;
+    position: relative;
     background-image: url(../imgs/inicio/fondo.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -77,9 +78,7 @@ header {
 .sticky {
         height: 60px;
         width: 100%;
-        transform: scale(0.8);
         background-color: #333;
-
     }
 
 /* hamburguesa */
@@ -391,113 +390,189 @@ height: 86px;
 }
 
 /* parte de la izquierda */
+.arbol-wrapper {
+    position: relative; 
+    z-index: 800; 
+}
+
 
 .arbol-uno {
-    position: relative;
-    right: 130px;
-    bottom: 60px;
-    z-index: 800;
+    position: absolute; 
+    width: 560px;
+    height: 867px;
+    top: -1; 
+    left: -153px;
+    z-index: 1; /
 }
 
 .piedra-uno {
-    position: relative;
+    position: absolute;
+    height: 78px;
+    width: 145px;
+    top: 793px;
+    left: 129px;
     right: 420px;
     bottom: 50px;
     z-index: 900;
 }
 
 .arbusto-uno {
-    position: relative;
-    right: 500px;
-    top: 5px;
-    z-index: 1000;
+    position: absolute;
+    width: 249px;
+    height: 114px;
+    left: 161px;
+    top: 717px;
+    z-index: 800;
 }
 
 .arbusto-dos {
-    position: relative;
-    right: 680px;
-    bottom: 90px;
-    z-index: 700;
+    position: absolute;
+    width: 155.51px;
+    height: 102.33px;
+    top: 821.65px;
+    left: 197.06px;
+    z-index: 1000;
 }
 
 /* parte del medio */
 
 .logo-inicio {
-    position: relative;
-    z-index: 1000;
-    bottom: 950px;
-    left: 35%;
+    position: absolute;
+    width: 560px;
+    height: 320px;
+    top: 55px;
+    left: 360px;
+    gap: 0px;
+    opacity: 0px;
+    
 }
 
 .personaje-uno {
-    position: relative;
-    z-index: 1000;
-    bottom: 500px;
+    position: absolute;
+    width: 240.4px;
+    height: 314.48px;
+    top: 527.28px;
+    left: 439px;
+    transform: rotate(-6.51deg);
+    transform-origin: center center; /* Rota alrededor del centro */
+    z-index: 1122;
 }
-
+.box {
+    width: 140px;
+    position: absolute;
+    height: 33px;
+}
+.sombra-personaje-uno{
+    top: 780px;
+    left: 522px;
+}
+.sombra-personaje-dos {
+    top: 736px;
+    left: 606px;
+}
+.sombra-personaje-tres{
+    top: 697px;
+    left: 696px;
+}
+.box .ellipse {
+    width: 140px;
+    height: 33px;
+    top: 0;
+    left: 0;
+    background-color: #43673f9c;
+    border-radius: 70px/16.5px;
+    filter: blur(9px);
+    backdrop-filter: blur(0.000001px);
+    z-index: 1;
+}
 .personaje-dos {
-    position: relative;
-    z-index: 900;
-    bottom: 650px;
-    right: 155px;
+    position: absolute;
+    width: 197px;
+    height: 270px;
+    top: 426.04px;
+    left: 536px;
+    z-index: 1000;
+    transform: rotate(-6.72deg);
 }
 
 .personaje-tres {
-    position: relative;
-    z-index: 800;
-    bottom: 600px;
-    right: 230px;
+    position: absolute;
+    width: 174px;
+    height: 384px;
+    top: 338px;
+    left: 677.25px;
+    transform: rotate(-8.73deg);
 }
 
 /* parte de la derecha */
 
 .arbol-dos {
-    position: relative;
-    z-index: 500;
-    bottom: 1260px;
-    left: 1120px;
+    position: absolute;
+    width: 434.21px;
+    height: 672.52px;
+    top: 106.71px;
+    left: 881.03px;
+    z-index: 10;
 }
 
 .arbol-tres {
-    position: relative;
-    z-index: 300;
-    bottom: 1350px;
-    left: 885px;
+    position: absolute;
+    width: 278.03px;
+    height: 430.85px;
+    top: 278.38px;
+    left: 1080.97px;
+    gap: 0px;
+    opacity: 0px;
+    z-index: 6;
+    
 }
 
 .piedra-dos {
-    position: relative;
-    z-index: 1000;
-    bottom: 1230px;
-    left: 560px;
+    position: absolute;
+    width: 66.65px;
+    height: 56.55px;
+    top: 737.5px;
+    left: 1037.84px;
+    transform: translate(-180deg);
+    z-index: 11;
 }
 
 .piedra-tres {
-    position: relative;
-    z-index: 900;
-    bottom: 1240px;
-    left: 530px;
+    position: absolute;
+    width: 59.24px;
+    height: 35.01px;
+    top: 784.64px;
+    left: 1051.84px;
+    transform: translate(-180deg);
+    z-index: 14;
 }
 
 .piedra-cuatro {
-    position: relative;
-    z-index: 700;
-    bottom: 1260px;
-    left: 370px;
+    position: absolute;
+    width: 113.77px;
+    height: 74.05px;
+    top: 737.5px;
+    left: 1072.22px;
+    gap: 0px;
+    opacity: 0px;
+    z-index: 13;
 }
 
 .arbusto-tres {
-    position: relative;
-    z-index: 400;
-    bottom: 1285px;
-    left: 350px;
+    position: absolute;
+    width: 244.37px;
+    height: 107.71px;
+    top: 662.1px;
+    left: 1080.97px;
+    z-index: 7;
 }
 
 .arbusto-cuatro {
-    position: relative;
-    z-index: 200;
-    bottom: 1360px;
-    left: 50px;
+    position: absolute;
+    width: 191.19px;
+    height: 63.28px;
+    top: 630.46px;
+    left: 1028.46px;
 }
 
 /* texto */
