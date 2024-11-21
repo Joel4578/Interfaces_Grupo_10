@@ -8,8 +8,9 @@
 
 .fondo-inicio {
     width: 100%;
-    height: 144vh;
+    height: 150vh;
     position: relative;
+    overflow: hidden;
     background-image: url(../imgs/inicio/fondo.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -22,6 +23,7 @@ h2{
 
 /* nav */
 header {
+    width: 1280px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,10 +32,11 @@ header {
     top: 0;
     z-index: 10009;
     transition: all 0.3s ease;
-    /* position: absolute; */
-}
+    position: fixed;
+  }
 
-.box {
+  
+  .box {
     margin-right: 99px;
     width: 200px;
     height: 50px;
@@ -82,10 +85,6 @@ header {
 
 .sticky {
         height: 60px;
-        width: 100%;
-        transform: scale(0.8);
-        background-color: lightblue;
-        position: sticky;
         background-color: #333;
     }
 
@@ -201,6 +200,15 @@ header {
 
 /* FIN DE HAMBURGUESA */
 
+
+/* animacion logo */
+.logo-inicio {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.5s linear;
+  }
 /* Estilo del menú desplegable */
 .menu-desplegable {
     position: fixed;
@@ -268,20 +276,20 @@ header {
 .logo{
 width: 150px;
 height: 86px;
+position: absolute;
+left: 565px;
 }
 /* Estilo para el menú hamburguesa */
-.nav {
-    width: 100%;
-}
+
 
 .nav nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 120px 0 120px;
+    padding: 0 100px;
     position: sticky;
     z-index: 1000;
-    width: 100%;
+    width: 1280px;
     height: 100%;
 }
 
@@ -331,6 +339,70 @@ height: 86px;
     transform: rotate(180deg); /* Rota la imagen */
 }
 
+/* Estilo del menú desplegable */
+
+/* Estilo del menú desplegable */
+.menu-desplegable {
+    position: fixed;
+    top: 100px;
+    left: -100%; /* El menú empieza fuera de la pantalla */
+    width: 250px;
+    height: 250px;
+    margin-left: 100px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: left 0.5s ease; /* Desplazamiento del menú */
+    z-index: 9999;
+    border-radius: 20px;
+}
+
+.menu-desplegable ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    color: white;
+}
+
+.menu-desplegable li {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+    opacity: 0;
+    transform: translateX(-20%);
+    transition: opacity 0.5s ease, transform 1s ease;
+}
+
+.menu-desplegable li:hover{
+    background-color: #45a049;
+    cursor: pointer;
+}
+
+.menu-desplegable.show {
+    left: 0;
+}
+
+.menu-desplegable.show li {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.2s; /* Los elementos aparecen con un pequeño retraso */
+}
+
+.menu-desplegable.show li:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+.menu-desplegable.show li:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.menu-desplegable.show li:nth-child(3) {
+    transition-delay: 0.6s;
+}
+
+
 .nav .btn-comprar {
     width: 200px;
     height: 50px;
@@ -359,15 +431,16 @@ height: 86px;
     z-index: 800; 
 }
 
-
 .arbol-uno {
-    position: absolute; 
+    position: absolute;
     width: 560px;
     height: 867px;
-    top: -1; 
+    top: -1px;
     left: -153px;
-    z-index: 1; /
-}
+    z-index: 1;
+    animation: movimientoArbolUno 3s infinite linear;
+  }
+  
 
 .piedra-uno {
     position: absolute;
@@ -389,6 +462,7 @@ height: 86px;
     z-index: 800;
 }
 
+
 .arbusto-dos {
     position: absolute;
     width: 155.51px;
@@ -399,17 +473,6 @@ height: 86px;
 }
 
 /* parte del medio */
-
-.logo-inicio {
-    position: absolute;
-    width: 560px;
-    height: 320px;
-    top: 55px;
-    left: 360px;
-    gap: 0px;
-    opacity: 0px;
-    
-}
 
 .personaje-uno {
     position: absolute;
@@ -479,6 +542,7 @@ height: 86px;
     z-index: 10;
     overflow: hidden;
 }
+
 
 .arbol-tres {
     position: absolute;
@@ -632,6 +696,17 @@ height: 86px;
     position: relative;
     right: 510px;
     bottom: 620px;
+}
+
+#personaje-cinco {
+    transform: translateX(0);
+    transition: transform 0.1s ease-out;
+}
+
+#parallax-image-1 {
+    position: relative;
+    transform: translateY(0);
+    transition: transform 0.1s ease-out;
 }
 
 .divertida{
