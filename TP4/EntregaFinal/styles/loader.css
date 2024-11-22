@@ -56,22 +56,23 @@
 }
 
 /* Animaciones */
+/*EFECTO REBOTE*/
 @keyframes bounce {
     0% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
     100% { transform: translateY(0); }
 }
-
+/*AUMENTO DE ESCALA*/
 @keyframes grow {
     0% { transform: scaleX(0); }
     100% { transform: scaleX(1); }
 }
-
+/*APARICION EN PANTALLA*/
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
-
+/*EFECTO DE SOMBREADOS*/
 @keyframes glowText {
     0% { text-shadow: 2px 2px 5px rgba(238, 105, 255, 0.8); }
     50% { text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 105, 180, 1); }

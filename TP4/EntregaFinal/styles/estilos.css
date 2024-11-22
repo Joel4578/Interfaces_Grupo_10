@@ -1,3 +1,5 @@
+/*diseño general de la pagina*/
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +8,7 @@
 
 }
 
+/*primer seccion*/
 .fondo-inicio {
     width: 100%;
     height: 150vh;
@@ -141,6 +144,7 @@ header {
     animation: movimientoCruz 1s ease forwards;
 }
 
+/*keyframe para lograr formar la cruz*/
 @keyframes movimientoCruz {
     0% {
         transform: translateY(1px) rotate(9);
@@ -179,7 +183,7 @@ header {
     stroke: none;
     position: absolute;
 }
-
+/*keyframe para desarmar la cruz*/
 @keyframes movimientoCruzReversa {
     0% {
         transform: translateY(1px) rotate(-9);
@@ -425,7 +429,7 @@ left: 565px;
     color: #ffe57f; 
 }
 
-/* parte de la izquierda */
+/* parte de la izquierda de la primer seccion */
 .arbol-wrapper {
     position: relative; 
     z-index: 800; 
@@ -604,8 +608,10 @@ left: 565px;
     top: 630.46px;
     left: 1028.46px;
 }
+/*fin de primer seccion*/
 
-/* texto */
+/* SEGUNDA PANTALLA */
+/* texto - seccion 2 */
 
 .contenedor-texto-divertido-h {
     position: relative;
@@ -632,7 +638,7 @@ left: 565px;
     font-size: 20px;
 }
 
-/* SEGUNDA PANTALLA */
+
 .appdivertida {
     display: flex;
     width: 100%;
@@ -716,8 +722,10 @@ left: 565px;
 .texto-appdivertida{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial;
 }
+/*fin de segunda seccion*/
 
 /* TERCERA PANTALLA */
+/*seccion cards*/
 
 .info-juego {
     margin-bottom: 130px;
@@ -764,9 +772,10 @@ left: 565px;
 .card:nth-child(3).show {
     transition-delay: 0.6s;
 }
-
+/*fin de seccion cards*/
 
 /* CUARTA PANTALLA */
+/*seccion descarga*/
 
 .seccion-descarga {
     background-image:url(../imgs/descarga/fondo-violeta.png);
@@ -825,10 +834,10 @@ left: 565px;
     will-change: transform;
     transform: scale(1.1);  /* Escala la imagen al 120% de su tamaño original */
 }
-
+/*fin de seccion descarga*/
 
 /* quinta pantalla */
-
+/*seccion textos*/
 .textos .contenedor-titulo {
     display: flex;
     width: 802px;
@@ -894,6 +903,8 @@ left: 565px;
     opacity: 0;
     transition: 1s;
 }
+/*fin deseccion textos*/
+
 
 /*seccion video*/
 
@@ -932,7 +943,7 @@ left: 565px;
 #iframe{
     position: relative;
 }
-
+/*fin de seccion video*/
 
 /*seccion 3d*/
 
@@ -964,7 +975,7 @@ left: 565px;
     margin-top: 300px;
     margin-left: -100px;
 }
-
+/*fin de seccion 3d*/
 
 /*seccion imagenes personajes*/
 
@@ -1012,8 +1023,10 @@ left: 565px;
     transform: scale(1.1); 
     filter: brightness(1.3);
 }
+/*fin de seccion imagenes*/
 
-/*novedades*/
+
+/*seccion novedades*/
 
 .sprites-container{
     display: flex;
@@ -1198,6 +1211,7 @@ left: 565px;
     right: 50px;
 }
 
+
 /* imagen antes del footer */
 
 .imagen-personajes {
@@ -1278,7 +1292,9 @@ left: 565px;
     margin-top: 40px;
     margin-bottom: 20px;
   }
-  
+  /*fin de la seccion novedades*/
+
+
 
 /*footer*/
 
@@ -1316,3 +1332,5 @@ footer p{
     display: flex;
     width: 100%;
 }
+
+/*FIN*/
