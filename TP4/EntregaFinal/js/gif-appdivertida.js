@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const elem1 = document.getElementById("cuatro");
 const elem2 = document.getElementById("cinco");
+const elem3 = document.getElementById("texto");
+const elem4 = document.getElementById("gif");
+
 
 const scrollTop = window.scrollY;
 window.onscroll = function(){
@@ -26,7 +29,9 @@ window.onscroll = function(){
     let posicion = window.scrollY || document.documentElement.scrollTop;
 
     elem1.style.bottom = posicion * 0.4 + "px";
-    elem2.style.bottom = posicion * 0.2 + "px";
+    elem2.style.bottom = posicion * 0.3 + "px";
+    elem3.style.bottom = posicion * 0.1 + "px";
+    elem4.style.bottom = posicion * 0.2 + "px";
 }
 
 
