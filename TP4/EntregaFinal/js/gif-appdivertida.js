@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const elem1 = document.getElementById("cuatro");
 const elem2 = document.getElementById("cinco");
+
 const scrollTop = window.scrollY;
 window.onscroll = function(){
    
@@ -27,5 +28,6 @@ window.onscroll = function(){
     elem1.style.bottom = posicion * 0.4 + "px";
     elem2.style.bottom = posicion * 0.2 + "px";
 }
+
 
 

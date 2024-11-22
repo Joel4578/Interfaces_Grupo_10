@@ -13,7 +13,7 @@ function updateLoader() {
         progressBar.style.width = loadProgress + '%';
 
         loadProgress++;
-        setTimeout(updateLoader, 5); // Actualiza cada 50ms (puedes ajustar el tiempo)
+        setTimeout(updateLoader, 50); // Actualiza cada 50ms (puedes ajustar el tiempo)
 
     } else {
         // Una vez que se haya completado la carga, ocultar el loader y mostrar el contenido
