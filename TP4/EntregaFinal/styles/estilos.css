@@ -183,6 +183,7 @@ header {
     stroke: none;
     position: absolute;
 }
+
 /*keyframe para desarmar la cruz*/
 @keyframes movimientoCruzReversa {
     0% {

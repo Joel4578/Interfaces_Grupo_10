@@ -23,7 +23,7 @@ setInterval(changeGif, 3000);
 gifs[currentIndex].classList.add('active');
 });
 
-
+//seleccionamos todos los elementos de la appdivertida para lograr efecto parallax
 const elem1 = document.getElementById("cuatro");
 const elem2 = document.getElementById("cinco");
 const elem3 = document.getElementById("texto");
