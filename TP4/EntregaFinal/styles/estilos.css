@@ -1,12 +1,11 @@
 /*diseño general de la pagina*/
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     user-select: none;
-
 }
+
 
 /*primer seccion*/
 .fondo-inicio {
@@ -24,6 +23,7 @@ h2{
     font-size: 60px;
 }
 
+
 /* nav */
 header {
     width: 1280px;
@@ -36,10 +36,9 @@ header {
     z-index: 10009;
     transition: all 0.3s ease;
     position: fixed;
-  }
+}
 
-  
-  .box {
+.box {
     margin-right: 99px;
     width: 200px;
     height: 50px;
@@ -60,18 +59,18 @@ header {
     width: 151px;
 }
 
-  .box .overlap-group {
-      position: relative;
-      width: 216px;
-      height: 66px;
-      top: -8px;
-      left: -8px;
-      background-color: #83c252;
-      border-radius: 111px;
-      border: 8px solid;
-      border-color: #ffffff;
-      box-shadow: 4px 5px 0px #02187e;
-  }
+.box .overlap-group {
+    position: relative;
+    width: 216px;
+        height: 66px;
+        top: -8px;
+        left: -8px;
+        background-color: #83c252;
+        border-radius: 111px;
+        border: 8px solid;
+        border-color: #ffffff;
+        box-shadow: 4px 5px 0px #02187e;
+    }
 
   .box .text-wrapper {
       position: absolute;
@@ -91,8 +90,8 @@ header {
         background-color: #333;
     }
 
-/* hamburguesa */
 
+/* hamburguesa */
 .menu-hambur-somnbra {
     position: sticky;
     top: 5px;
@@ -183,6 +182,8 @@ header {
     stroke: none;
     position: absolute;
 }
+
+
 /*keyframe para desarmar la cruz*/
 @keyframes movimientoCruzReversa {
     0% {
@@ -213,6 +214,8 @@ header {
     transform: translateX(-50%);
     transition: transform 0.5s linear;
   }
+
+
 /* Estilo del menú desplegable */
 .menu-desplegable {
     position: fixed;
@@ -272,10 +275,8 @@ header {
 .menu-desplegable.show li:nth-child(3) {
     transition-delay: 0.6s;
 }
-
-
-
 /* fin del menu desplegable */
+
 
 .logo{
 width: 150px;
@@ -283,9 +284,10 @@ height: 86px;
 position: absolute;
 left: 565px;
 }
+
+
+
 /* Estilo para el menú hamburguesa */
-
-
 .nav nav {
     display: flex;
     justify-content: space-between;
@@ -303,6 +305,7 @@ left: 565px;
     height: 20px;
     transition: transform 0.3s ease; /* Transición para el cambio de imagen */
 }
+
 
 /* Estilo de las barras (por defecto) */
 .menu-haburguesa img {
@@ -328,6 +331,8 @@ left: 565px;
     bottom: 0;
 }
 
+
+
 /* Animación para convertir las barras en una cruz */
 .menu-haburguesa.open img:before {
     transform: rotate(45deg);
@@ -343,7 +348,7 @@ left: 565px;
     transform: rotate(180deg); /* Rota la imagen */
 }
 
-/* Estilo del menú desplegable */
+
 
 /* Estilo del menú desplegable */
 .menu-desplegable {
@@ -406,7 +411,6 @@ left: 565px;
     transition-delay: 0.6s;
 }
 
-
 .nav .btn-comprar {
     width: 200px;
     height: 50px;
@@ -429,6 +433,8 @@ left: 565px;
     color: #ffe57f; 
 }
 
+
+
 /* parte de la izquierda de la primer seccion */
 .arbol-wrapper {
     position: relative; 
@@ -444,7 +450,6 @@ left: 565px;
     z-index: 1;
     animation: movimientoArbolUno 3s infinite linear;
   }
-  
 
 .piedra-uno {
     position: absolute;
@@ -466,7 +471,6 @@ left: 565px;
     z-index: 800;
 }
 
-
 .arbusto-dos {
     position: absolute;
     width: 155.51px;
@@ -476,8 +480,9 @@ left: 565px;
     z-index: 1000;
 }
 
-/* parte del medio */
 
+
+/* parte del medio */
 .personaje-uno {
     position: absolute;
     width: 240.4px;
@@ -535,8 +540,9 @@ left: 565px;
     transform: rotate(-8.73deg);
 }
 
-/* parte de la derecha */
 
+
+/* parte de la derecha */
 .arbol-dos {
     position: absolute;
     width: 434.21px;
@@ -546,7 +552,6 @@ left: 565px;
     z-index: 10;
     overflow: hidden;
 }
-
 
 .arbol-tres {
     position: absolute;
@@ -558,7 +563,6 @@ left: 565px;
     opacity: 0px;
     z-index: 6;
     overflow: hidden;
-
 }
 
 .piedra-dos {
@@ -610,9 +614,12 @@ left: 565px;
 }
 /*fin de primer seccion*/
 
+
+
+
+
 /* SEGUNDA PANTALLA */
 /* texto - seccion 2 */
-
 .contenedor-texto-divertido-h {
     position: relative;
     width: 508px;
@@ -638,7 +645,6 @@ left: 565px;
     font-size: 20px;
 }
 
-
 .appdivertida {
     display: flex;
     width: 100%;
@@ -647,8 +653,6 @@ left: 565px;
     background-repeat: no-repeat;
     flex-wrap: wrap;
     gap: 20px;
-  
-    
 }
 
 .gif-container {
@@ -662,6 +666,8 @@ left: 565px;
     border-radius: 77px;
     overflow: hidden;         
 }
+
+
 
 /* Estilos de las imágenes GIF */
 .gif {
@@ -724,9 +730,11 @@ left: 565px;
 }
 /*fin de segunda seccion*/
 
+
+
+
 /* TERCERA PANTALLA */
 /*seccion cards*/
-
 .info-juego {
     margin-bottom: 130px;
     margin-top: 650px;
@@ -747,7 +755,6 @@ left: 565px;
     transform: translateY(50px);  /* Desplazadas hacia abajo */
     transition: opacity 0.5s ease, transform 0.5s ease;  /* Transición suave */
 }
-
 
 .card p {
     margin-top: 15px;
@@ -774,9 +781,11 @@ left: 565px;
 }
 /*fin de seccion cards*/
 
+
+
+
 /* CUARTA PANTALLA */
 /*seccion descarga*/
-
 .seccion-descarga {
     background-image:url(../imgs/descarga/fondo-violeta.png);
     display: flex;
@@ -836,6 +845,9 @@ left: 565px;
 }
 /*fin de seccion descarga*/
 
+
+
+
 /* quinta pantalla */
 /*seccion textos*/
 .textos .contenedor-titulo {
@@ -889,7 +901,6 @@ left: 565px;
     font-size: 20px;
 }
 
-
 .textos .contenedor-img {
     display: flex;
     justify-content: center;
@@ -903,12 +914,13 @@ left: 565px;
     opacity: 0;
     transition: 1s;
 }
-/*fin deseccion textos*/
+/*fin de seccion textos*/
+
+
+
 
 
 /*seccion video*/
-
-
 .video{
     background-image: url(../imgs/video/fondo-amarillo.png);
     display: flex;
@@ -931,7 +943,6 @@ left: 565px;
     margin-top: 200px;
 }
 
-
 .tres{
     margin-top: 270px;
     margin-left: -170px;
@@ -945,8 +956,11 @@ left: 565px;
 }
 /*fin de seccion video*/
 
-/*seccion 3d*/
 
+
+
+
+/*seccion 3d imagen movimiento (calculadora)*/
 .tresd{
    display: flex;
    height: 1000px;
@@ -977,8 +991,10 @@ left: 565px;
 }
 /*fin de seccion 3d*/
 
-/*seccion imagenes personajes*/
 
+
+
+/*seccion imagenes personajes*/
 .imagen-personajes {
     background-image: url(../imgs/imagen/455.png);
     background-repeat: no-repeat;
@@ -1009,7 +1025,6 @@ left: 565px;
     /* display: none; */
 }
 
-
 .personajes img.imgcorta, .personajes2 img.imgcorta{
     width: 213px;
 }
@@ -1024,6 +1039,8 @@ left: 565px;
     filter: brightness(1.3);
 }
 /*fin de seccion imagenes*/
+
+
 
 
 /*seccion novedades*/
@@ -1099,7 +1116,9 @@ left: 565px;
     height: 181px;
 }
 
-/* Animación de parallax */
+
+
+/* Animación de parallax  gifs*/
 @keyframes moverNubes {
     0% {
         transform: translateX(0);
@@ -1151,8 +1170,9 @@ left: 565px;
 }
 
 
-/* imagen antes del footer */
 
+
+/* imagen antes del footer */
 .imagen-personajes {
     width: 100%;
 }
@@ -1185,6 +1205,9 @@ left: 565px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+
+
+
 /* Contenedor general */
 .suscripcion-container {
     display: flex;
@@ -1198,6 +1221,8 @@ left: 565px;
     margin-top: 50px;
   }
   
+
+
   /* Estilos del input */
   .input-suscripcion {
     border: none; 
@@ -1208,6 +1233,8 @@ left: 565px;
     background-color: #ECECEC; 
   }
   
+
+
   /* Estilos del botón */
   .btn-suscripcion {
     padding: 10px 20px;
@@ -1236,7 +1263,6 @@ left: 565px;
 
 
 /*footer*/
-
 footer{
     background-color: #5e5e5d;
 }
@@ -1271,6 +1297,8 @@ footer p{
     display: flex;
     width: 100%;
 }
+
+
 
 /* SPRITES DEL FOOTER */
 .sprites-container{
