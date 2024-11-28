@@ -1,4 +1,5 @@
 /*diseño general de la pagina*/
+
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +7,8 @@
     user-select: none;
 }
 
-
 /*primer seccion*/
+
 .fondo-inicio {
     width: 100%;
     height: 150vh;
@@ -23,8 +24,8 @@ h2{
     font-size: 60px;
 }
 
-
 /* nav */
+
 header {
     width: 1280px;
     display: flex;
@@ -62,36 +63,36 @@ header {
 .box .overlap-group {
     position: relative;
     width: 216px;
-        height: 66px;
-        top: -8px;
-        left: -8px;
-        background-color: #83c252;
-        border-radius: 111px;
-        border: 8px solid;
-        border-color: #ffffff;
-        box-shadow: 4px 5px 0px #02187e;
-    }
+    height: 66px;
+    top: -8px;
+    left: -8px;
+    background-color: #83c252;
+    border-radius: 111px;
+    border: 8px solid;
+    border-color: #ffffff;
+    box-shadow: 4px 5px 0px #02187e;
+}
 
-  .box .text-wrapper {
-      position: absolute;
-      top: 15px;
-      left: 42px;
-      -webkit-text-stroke: 1px #ffffff;
-      font-family: "Lato-Black", Helvetica;
-      font-weight: 900;
-      color: #ffffff;
-      font-size: 20px;
-      letter-spacing: 2.20px;
-      line-height: 18.9px;
-  }
+.box .text-wrapper {
+    position: absolute;
+    top: 15px;
+    left: 42px;
+    -webkit-text-stroke: 1px #ffffff;
+    font-family: "Lato-Black", Helvetica;
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 2.20px;
+    line-height: 18.9px;
+}
 
 .sticky {
         height: 60px;
         background-color: #333;
-    }
-
+}
 
 /* hamburguesa */
+
 .menu-hambur-somnbra {
     position: sticky;
     top: 5px;
@@ -121,8 +122,8 @@ header {
     stroke: white;
     stroke-width: 4;
     transition: transform 0.5s ease;
-
 }
+
 .sombra-hamburguesa {
     stroke-width: 4px;  
     width: 42px;
@@ -133,17 +134,21 @@ header {
     stroke: none;
     transform: translate(4px, 4px);
 }
+
 .open .rect-hamburguesa {
     stroke: none;
 }
+
 .open .sombra-hamburguesa {
     display: none;
 }
+
 .menu-hambur.open .linea1 {
     animation: movimientoCruz 1s ease forwards;
 }
 
 /*keyframe para lograr formar la cruz*/
+
 @keyframes movimientoCruz {
     0% {
         transform: translateY(1px) rotate(9);
@@ -183,8 +188,8 @@ header {
     position: absolute;
 }
 
-
 /*keyframe para desarmar la cruz*/
+
 @keyframes movimientoCruzReversa {
     0% {
         transform: translateY(1px) rotate(-9);
@@ -205,18 +210,18 @@ header {
 
 /* FIN DE HAMBURGUESA */
 
-
 /* animacion logo */
+
 .logo-inicio {
     position: absolute;
     top: 150px;
     left: 50%;
     transform: translateX(-50%);
     transition: transform 0.5s linear;
-  }
-
+}
 
 /* Estilo del menú desplegable */
+
 .menu-desplegable {
     position: fixed;
     top: 100px;
@@ -275,8 +280,8 @@ header {
 .menu-desplegable.show li:nth-child(3) {
     transition-delay: 0.6s;
 }
-/* fin del menu desplegable */
 
+/* fin del menu desplegable */
 
 .logo{
 width: 150px;
@@ -285,9 +290,8 @@ position: absolute;
 left: 565px;
 }
 
-
-
 /* Estilo para el menú hamburguesa */
+
 .nav nav {
     display: flex;
     justify-content: space-between;
@@ -306,8 +310,8 @@ left: 565px;
     transition: transform 0.3s ease; /* Transición para el cambio de imagen */
 }
 
-
 /* Estilo de las barras (por defecto) */
+
 .menu-haburguesa img {
     position: relative;
     display: block;
@@ -331,9 +335,8 @@ left: 565px;
     bottom: 0;
 }
 
-
-
 /* Animación para convertir las barras en una cruz */
+
 .menu-haburguesa.open img:before {
     transform: rotate(45deg);
     top: 50%;
@@ -348,9 +351,8 @@ left: 565px;
     transform: rotate(180deg); /* Rota la imagen */
 }
 
-
-
 /* Estilo del menú desplegable */
+
 .menu-desplegable {
     position: fixed;
     top: 100px;
@@ -433,9 +435,8 @@ left: 565px;
     color: #ffe57f; 
 }
 
-
-
 /* parte de la izquierda de la primer seccion */
+
 .arbol-wrapper {
     position: relative; 
     z-index: 800; 
@@ -449,7 +450,7 @@ left: 565px;
     left: -153px;
     z-index: 1;
     animation: movimientoArbolUno 3s infinite linear;
-  }
+}
 
 .piedra-uno {
     position: absolute;
@@ -480,9 +481,8 @@ left: 565px;
     z-index: 1000;
 }
 
-
-
 /* parte del medio */
+
 .personaje-uno {
     position: absolute;
     width: 240.4px;
@@ -493,23 +493,28 @@ left: 565px;
     transform-origin: center center; /* Rota alrededor del centro */
     z-index: 1122;
 }
+
 .box {
     width: 140px;
     position: absolute;
     height: 33px;
 }
+
 .sombra-personaje-uno{
     top: 780px;
     left: 522px;
 }
+
 .sombra-personaje-dos {
     top: 736px;
     left: 606px;
 }
+
 .sombra-personaje-tres{
     top: 697px;
     left: 696px;
 }
+
 .box .ellipse {
     width: 140px;
     height: 33px;
@@ -521,6 +526,7 @@ left: 565px;
     backdrop-filter: blur(0.000001px);
     z-index: 1;
 }
+
 .personaje-dos {
     position: absolute;
     width: 197px;
@@ -540,9 +546,8 @@ left: 565px;
     transform: rotate(-8.73deg);
 }
 
-
-
 /* parte de la derecha */
+
 .arbol-dos {
     position: absolute;
     width: 434.21px;
@@ -612,14 +617,13 @@ left: 565px;
     top: 630.46px;
     left: 1028.46px;
 }
+
 /*fin de primer seccion*/
 
-
-
-
-
 /* SEGUNDA PANTALLA */
+
 /* texto - seccion 2 */
+
 .contenedor-texto-divertido-h {
     position: relative;
     width: 508px;
@@ -667,9 +671,8 @@ left: 565px;
     overflow: hidden;         
 }
 
-
-
 /* Estilos de las imágenes GIF */
+
 .gif {
     position: absolute;
     width: 100%;
@@ -685,6 +688,7 @@ left: 565px;
 }
 
 /* No modificar la posición del contenedor de personajes */
+
 .fondo-personajes {
     position: relative;
     /* overflow-x: hidden; */
@@ -728,13 +732,13 @@ left: 565px;
 .texto-appdivertida{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial;
 }
+
 /*fin de segunda seccion*/
 
-
-
-
 /* TERCERA PANTALLA */
+
 /*seccion cards*/
+
 .info-juego {
     margin-bottom: 130px;
     margin-top: 650px;
@@ -779,13 +783,13 @@ left: 565px;
 .card:nth-child(3).show {
     transition-delay: 0.6s;
 }
+
 /*fin de seccion cards*/
 
-
-
-
 /* CUARTA PANTALLA */
+
 /*seccion descarga*/
+
 .seccion-descarga {
     background-image:url(../imgs/descarga/fondo-violeta.png);
     display: flex;
@@ -843,13 +847,13 @@ left: 565px;
     will-change: transform;
     transform: scale(1.1);  /* Escala la imagen al 120% de su tamaño original */
 }
+
 /*fin de seccion descarga*/
 
-
-
-
 /* quinta pantalla */
+
 /*seccion textos*/
+
 .textos .contenedor-titulo {
     display: flex;
     width: 802px;
@@ -914,13 +918,11 @@ left: 565px;
     opacity: 0;
     transition: 1s;
 }
+
 /*fin de seccion textos*/
 
-
-
-
-
 /*seccion video*/
+
 .video{
     background-image: url(../imgs/video/fondo-amarillo.png);
     display: flex;
@@ -932,7 +934,7 @@ left: 565px;
 }
 
 .titulo-container{
-   margin-left: 100px;
+    margin-left: 100px;
 }
 
 .titulo-container h2{
@@ -954,17 +956,15 @@ left: 565px;
 #iframe{
     position: relative;
 }
+
 /*fin de seccion video*/
 
-
-
-
-
 /*seccion 3d imagen movimiento (calculadora)*/
+
 .tresd{
-   display: flex;
-   height: 1000px;
-   justify-content: center;
+    display: flex;
+    height: 1000px;
+    justify-content: center;
 }
 
 .tresd div{
@@ -989,12 +989,11 @@ left: 565px;
     margin-top: 300px;
     margin-left: -100px;
 }
+
 /*fin de seccion 3d*/
 
-
-
-
 /*seccion imagenes personajes*/
+
 .imagen-personajes {
     background-image: url(../imgs/imagen/455.png);
     background-repeat: no-repeat;
@@ -1038,12 +1037,11 @@ left: 565px;
     transform: scale(1.1); 
     filter: brightness(1.3);
 }
+
 /*fin de seccion imagenes*/
 
-
-
-
 /*seccion novedades*/
+
 .novedades {
     display: flex;
     flex-direction: column;
@@ -1116,9 +1114,8 @@ left: 565px;
     height: 181px;
 }
 
-
-
 /* Animación de parallax  gifs*/
+
 @keyframes moverNubes {
     0% {
         transform: translateX(0);
@@ -1169,10 +1166,8 @@ left: 565px;
     right: 50px;
 }
 
-
-
-
 /* imagen antes del footer */
+
 .imagen-personajes {
     width: 100%;
 }
@@ -1205,10 +1200,8 @@ left: 565px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-
-
-
 /* Contenedor general */
+
 .suscripcion-container {
     display: flex;
     align-items: center;
@@ -1219,24 +1212,22 @@ left: 565px;
     width: 780px;
     height: 100px;
     margin-top: 50px;
-  }
-  
+}
 
+/* Estilos del input */
 
-  /* Estilos del input */
-  .input-suscripcion {
+.input-suscripcion {
     border: none; 
     padding: 10px;
     font-size: 20px;
     flex: 1; 
     color: black; /* Color del texto */
     background-color: #ECECEC; 
-  }
-  
+}
 
+/* Estilos del botón */
 
-  /* Estilos del botón */
-  .btn-suscripcion {
+.btn-suscripcion {
     padding: 10px 20px;
     background-color: #83C252; 
     margin-right: 10px;
@@ -1246,19 +1237,20 @@ left: 565px;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  .btn-suscripcion:hover {
+}
+
+.btn-suscripcion:hover {
     background-color: #e67e22; 
-  }
-  
-  .nov-container p{
+}
+
+.nov-container p{
     width: 578px;
     height: 95px;
     margin-top: 40px;
     margin-bottom: 20px;
-  }
-  /*fin de la seccion novedades*/
+}
+
+/*fin de la seccion novedades*/
 
 
 
@@ -1317,9 +1309,9 @@ footer p{
     background-size: calc(60px * 23) 60px;
     animation:walk 2s steps(23) infinite;
     position:relative;
-  }
+}
 
-  .sprite2 {
+.sprite2 {
     width:60px;
     height:60px;
     margin:auto;  
@@ -1327,9 +1319,9 @@ footer p{
     background-size: calc(60px * 15) 60px;
     animation:walk2 1s steps(15) infinite;
     position:relative;
-  }
+}
 
-  .sprite3 {
+.sprite3 {
     width:60px;
     height:60px;
     margin:auto;  
@@ -1337,29 +1329,29 @@ footer p{
     background-size: calc(60px * 14) 60px;
     animation:walk3 3s steps(14) infinite;
     position:relative;
-  }
+}
 
  /* Animación de personaje caminando: Simplemente mueve el sprite sheet hacia la izquierda, realizando el movimiento. */
- @keyframes walk {
+@keyframes walk {
     /* Partimos de la primera viñeta del sprite sheet */
     0% { background-position:0 }
     /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
     100% { background-position:-1380px }
-  }
+}
 
-  @keyframes walk2 {
+@keyframes walk2 {
     /* Partimos de la primera viñeta del sprite sheet */
     0% { background-position:0 }
     /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
     100% { background-position:-900px }
-  }
+}
 
-  @keyframes walk3 {
+@keyframes walk3 {
     /* Partimos de la primera viñeta del sprite sheet */
     0% { background-position:0 }
     /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
     100% { background-position:-840px }
-  }
+}
 
 
 
