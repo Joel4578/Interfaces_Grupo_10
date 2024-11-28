@@ -5,10 +5,10 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
-
 }
 
 /*primer seccion*/
+
 .fondo-inicio {
     width: 100%;
     height: 150vh;
@@ -25,6 +25,7 @@ h2{
 }
 
 /* nav */
+
 header {
     width: 1280px;
     display: flex;
@@ -36,10 +37,9 @@ header {
     z-index: 10009;
     transition: all 0.3s ease;
     position: fixed;
-  }
+}
 
-  
-  .box {
+.box {
     margin-right: 99px;
     width: 200px;
     height: 50px;
@@ -60,36 +60,36 @@ header {
     width: 151px;
 }
 
-  .box .overlap-group {
-      position: relative;
-      width: 216px;
-      height: 66px;
-      top: -8px;
-      left: -8px;
-      background-color: #83c252;
-      border-radius: 111px;
-      border: 8px solid;
-      border-color: #ffffff;
-      box-shadow: 4px 5px 0px #02187e;
-  }
+.box .overlap-group {
+    position: relative;
+    width: 216px;
+    height: 66px;
+    top: -8px;
+    left: -8px;
+    background-color: #83c252;
+    border-radius: 111px;
+    border: 8px solid;
+    border-color: #ffffff;
+    box-shadow: 4px 5px 0px #02187e;
+}
 
-  .box .text-wrapper {
-      position: absolute;
-      top: 15px;
-      left: 42px;
-      -webkit-text-stroke: 1px #ffffff;
-      font-family: "Lato-Black", Helvetica;
-      font-weight: 900;
-      color: #ffffff;
-      font-size: 20px;
-      letter-spacing: 2.20px;
-      line-height: 18.9px;
-  }
+.box .text-wrapper {
+    position: absolute;
+    top: 15px;
+    left: 42px;
+    -webkit-text-stroke: 1px #ffffff;
+    font-family: "Lato-Black", Helvetica;
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 2.20px;
+    line-height: 18.9px;
+}
 
 .sticky {
         height: 60px;
         background-color: #333;
-    }
+}
 
 /* hamburguesa */
 
@@ -122,8 +122,8 @@ header {
     stroke: white;
     stroke-width: 4;
     transition: transform 0.5s ease;
-
 }
+
 .sombra-hamburguesa {
     stroke-width: 4px;  
     width: 42px;
@@ -134,17 +134,21 @@ header {
     stroke: none;
     transform: translate(4px, 4px);
 }
+
 .open .rect-hamburguesa {
     stroke: none;
 }
+
 .open .sombra-hamburguesa {
     display: none;
 }
+
 .menu-hambur.open .linea1 {
     animation: movimientoCruz 1s ease forwards;
 }
 
 /*keyframe para lograr formar la cruz*/
+
 @keyframes movimientoCruz {
     0% {
         transform: translateY(1px) rotate(9);
@@ -185,6 +189,7 @@ header {
 }
 
 /*keyframe para desarmar la cruz*/
+
 @keyframes movimientoCruzReversa {
     0% {
         transform: translateY(1px) rotate(-9);
@@ -205,16 +210,18 @@ header {
 
 /* FIN DE HAMBURGUESA */
 
-
 /* animacion logo */
+
 .logo-inicio {
     position: absolute;
     top: 150px;
     left: 50%;
     transform: translateX(-50%);
     transition: transform 0.5s linear;
-  }
+}
+
 /* Estilo del menú desplegable */
+
 .menu-desplegable {
     position: fixed;
     top: 100px;
@@ -274,8 +281,6 @@ header {
     transition-delay: 0.6s;
 }
 
-
-
 /* fin del menu desplegable */
 
 .logo{
@@ -284,8 +289,8 @@ height: 86px;
 position: absolute;
 left: 565px;
 }
-/* Estilo para el menú hamburguesa */
 
+/* Estilo para el menú hamburguesa */
 
 .nav nav {
     display: flex;
@@ -306,6 +311,7 @@ left: 565px;
 }
 
 /* Estilo de las barras (por defecto) */
+
 .menu-haburguesa img {
     position: relative;
     display: block;
@@ -330,6 +336,7 @@ left: 565px;
 }
 
 /* Animación para convertir las barras en una cruz */
+
 .menu-haburguesa.open img:before {
     transform: rotate(45deg);
     top: 50%;
@@ -346,7 +353,6 @@ left: 565px;
 
 /* Estilo del menú desplegable */
 
-/* Estilo del menú desplegable */
 .menu-desplegable {
     position: fixed;
     top: 100px;
@@ -407,7 +413,6 @@ left: 565px;
     transition-delay: 0.6s;
 }
 
-
 .nav .btn-comprar {
     width: 200px;
     height: 50px;
@@ -431,6 +436,7 @@ left: 565px;
 }
 
 /* parte de la izquierda de la primer seccion */
+
 .arbol-wrapper {
     position: relative; 
     z-index: 800; 
@@ -444,8 +450,7 @@ left: 565px;
     left: -153px;
     z-index: 1;
     animation: movimientoArbolUno 3s infinite linear;
-  }
-  
+}
 
 .piedra-uno {
     position: absolute;
@@ -466,7 +471,6 @@ left: 565px;
     top: 717px;
     z-index: 800;
 }
-
 
 .arbusto-dos {
     position: absolute;
@@ -489,23 +493,28 @@ left: 565px;
     transform-origin: center center; /* Rota alrededor del centro */
     z-index: 1122;
 }
+
 .box {
     width: 140px;
     position: absolute;
     height: 33px;
 }
+
 .sombra-personaje-uno{
     top: 780px;
     left: 522px;
 }
+
 .sombra-personaje-dos {
     top: 736px;
     left: 606px;
 }
+
 .sombra-personaje-tres{
     top: 697px;
     left: 696px;
 }
+
 .box .ellipse {
     width: 140px;
     height: 33px;
@@ -517,6 +526,7 @@ left: 565px;
     backdrop-filter: blur(0.000001px);
     z-index: 1;
 }
+
 .personaje-dos {
     position: absolute;
     width: 197px;
@@ -548,7 +558,6 @@ left: 565px;
     overflow: hidden;
 }
 
-
 .arbol-tres {
     position: absolute;
     width: 278.03px;
@@ -559,7 +568,6 @@ left: 565px;
     opacity: 0px;
     z-index: 6;
     overflow: hidden;
-
 }
 
 .piedra-dos {
@@ -609,9 +617,11 @@ left: 565px;
     top: 630.46px;
     left: 1028.46px;
 }
+
 /*fin de primer seccion*/
 
 /* SEGUNDA PANTALLA */
+
 /* texto - seccion 2 */
 
 .contenedor-texto-divertido-h {
@@ -639,7 +649,6 @@ left: 565px;
     font-size: 20px;
 }
 
-
 .appdivertida {
     display: flex;
     width: 100%;
@@ -648,8 +657,6 @@ left: 565px;
     background-repeat: no-repeat;
     flex-wrap: wrap;
     gap: 20px;
-  
-    
 }
 
 .gif-container {
@@ -665,6 +672,7 @@ left: 565px;
 }
 
 /* Estilos de las imágenes GIF */
+
 .gif {
     position: absolute;
     width: 100%;
@@ -680,6 +688,7 @@ left: 565px;
 }
 
 /* No modificar la posición del contenedor de personajes */
+
 .fondo-personajes {
     position: relative;
     /* overflow-x: hidden; */
@@ -723,9 +732,11 @@ left: 565px;
 .texto-appdivertida{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial;
 }
+
 /*fin de segunda seccion*/
 
 /* TERCERA PANTALLA */
+
 /*seccion cards*/
 
 .info-juego {
@@ -748,7 +759,6 @@ left: 565px;
     transform: translateY(50px);  /* Desplazadas hacia abajo */
     transition: opacity 0.5s ease, transform 0.5s ease;  /* Transición suave */
 }
-
 
 .card p {
     margin-top: 15px;
@@ -773,9 +783,11 @@ left: 565px;
 .card:nth-child(3).show {
     transition-delay: 0.6s;
 }
+
 /*fin de seccion cards*/
 
 /* CUARTA PANTALLA */
+
 /*seccion descarga*/
 
 .seccion-descarga {
@@ -835,10 +847,13 @@ left: 565px;
     will-change: transform;
     transform: scale(1.1);  /* Escala la imagen al 120% de su tamaño original */
 }
+
 /*fin de seccion descarga*/
 
 /* quinta pantalla */
+
 /*seccion textos*/
+
 .textos .contenedor-titulo {
     display: flex;
     width: 802px;
@@ -890,7 +905,6 @@ left: 565px;
     font-size: 20px;
 }
 
-
 .textos .contenedor-img {
     display: flex;
     justify-content: center;
@@ -904,11 +918,10 @@ left: 565px;
     opacity: 0;
     transition: 1s;
 }
-/*fin deseccion textos*/
 
+/*fin de seccion textos*/
 
 /*seccion video*/
-
 
 .video{
     background-image: url(../imgs/video/fondo-amarillo.png);
@@ -921,7 +934,7 @@ left: 565px;
 }
 
 .titulo-container{
-   margin-left: 100px;
+    margin-left: 100px;
 }
 
 .titulo-container h2{
@@ -931,7 +944,6 @@ left: 565px;
     margin-bottom: 50px;
     margin-top: 200px;
 }
-
 
 .tres{
     margin-top: 270px;
@@ -944,14 +956,15 @@ left: 565px;
 #iframe{
     position: relative;
 }
+
 /*fin de seccion video*/
 
-/*seccion 3d*/
+/*seccion 3d imagen movimiento (calculadora)*/
 
 .tresd{
-   display: flex;
-   height: 1000px;
-   justify-content: center;
+    display: flex;
+    height: 1000px;
+    justify-content: center;
 }
 
 .tresd div{
@@ -976,6 +989,7 @@ left: 565px;
     margin-top: 300px;
     margin-left: -100px;
 }
+
 /*fin de seccion 3d*/
 
 /*seccion imagenes personajes*/
@@ -1010,7 +1024,6 @@ left: 565px;
     /* display: none; */
 }
 
-
 .personajes img.imgcorta, .personajes2 img.imgcorta{
     width: 213px;
 }
@@ -1024,70 +1037,10 @@ left: 565px;
     transform: scale(1.1); 
     filter: brightness(1.3);
 }
+
 /*fin de seccion imagenes*/
 
-
 /*seccion novedades*/
-
-.sprites-container{
-    display: flex;
-    flex-direction: row;
-    width: 600px;
-    margin-top: -50px;
-}
-
-
-.sprite {
-    width:60px;
-    height:60px;
-    margin:auto;  
-    background:url(../imgs/novedades/sprite1.png);
-    background-size: calc(60px * 23) 60px;
-    animation:walk 2s steps(23) infinite;
-    position:relative;
-  }
-
-  .sprite2 {
-    width:60px;
-    height:60px;
-    margin:auto;  
-    background:url(../imgs/novedades/sprite2.png);
-    background-size: calc(60px * 15) 60px;
-    animation:walk2 1s steps(15) infinite;
-    position:relative;
-  }
-
-  .sprite3 {
-    width:60px;
-    height:60px;
-    margin:auto;  
-    background:url(../imgs/novedades/sprite3.png);
-    background-size: calc(60px * 14) 60px;
-    animation:walk3 3s steps(14) infinite;
-    position:relative;
-  }
-  
-  /* Animación de personaje caminando: Simplemente mueve el sprite sheet hacia la izquierda, realizando el movimiento. */
-  @keyframes walk {
-    /* Partimos de la primera viñeta del sprite sheet */
-    0% { background-position:0 }
-    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
-    100% { background-position:-1380px }
-  }
-
-  @keyframes walk2 {
-    /* Partimos de la primera viñeta del sprite sheet */
-    0% { background-position:0 }
-    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
-    100% { background-position:-900px }
-  }
-
-  @keyframes walk3 {
-    /* Partimos de la primera viñeta del sprite sheet */
-    0% { background-position:0 }
-    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
-    100% { background-position:-840px }
-  }
 
 .novedades {
     display: flex;
@@ -1161,7 +1114,8 @@ left: 565px;
     height: 181px;
 }
 
-/* Animación de parallax */
+/* Animación de parallax  gifs*/
+
 @keyframes moverNubes {
     0% {
         transform: translateX(0);
@@ -1212,7 +1166,6 @@ left: 565px;
     right: 50px;
 }
 
-
 /* imagen antes del footer */
 
 .imagen-personajes {
@@ -1248,6 +1201,7 @@ left: 565px;
 }
 
 /* Contenedor general */
+
 .suscripcion-container {
     display: flex;
     align-items: center;
@@ -1258,20 +1212,22 @@ left: 565px;
     width: 780px;
     height: 100px;
     margin-top: 50px;
-  }
-  
-  /* Estilos del input */
-  .input-suscripcion {
+}
+
+/* Estilos del input */
+
+.input-suscripcion {
     border: none; 
     padding: 10px;
     font-size: 20px;
     flex: 1; 
     color: black; /* Color del texto */
     background-color: #ECECEC; 
-  }
-  
-  /* Estilos del botón */
-  .btn-suscripcion {
+}
+
+/* Estilos del botón */
+
+.btn-suscripcion {
     padding: 10px 20px;
     background-color: #83C252; 
     margin-right: 10px;
@@ -1281,24 +1237,24 @@ left: 565px;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  .btn-suscripcion:hover {
+}
+
+.btn-suscripcion:hover {
     background-color: #e67e22; 
-  }
-  
-  .nov-container p{
+}
+
+.nov-container p{
     width: 578px;
     height: 95px;
     margin-top: 40px;
     margin-bottom: 20px;
-  }
-  /*fin de la seccion novedades*/
+}
+
+/*fin de la seccion novedades*/
 
 
 
 /*footer*/
-
 footer{
     background-color: #5e5e5d;
 }
@@ -1333,5 +1289,70 @@ footer p{
     display: flex;
     width: 100%;
 }
+
+
+
+/* SPRITES DEL FOOTER */
+.sprites-container{
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    margin-top: -50px;
+}
+
+
+.sprite {
+    width:60px;
+    height:60px;
+    margin:auto;  
+    background:url(../imgs/novedades/sprite1.png);
+    background-size: calc(60px * 23) 60px;
+    animation:walk 2s steps(23) infinite;
+    position:relative;
+}
+
+.sprite2 {
+    width:60px;
+    height:60px;
+    margin:auto;  
+    background:url(../imgs/novedades/sprite2.png);
+    background-size: calc(60px * 15) 60px;
+    animation:walk2 1s steps(15) infinite;
+    position:relative;
+}
+
+.sprite3 {
+    width:60px;
+    height:60px;
+    margin:auto;  
+    background:url(../imgs/novedades/sprite3.png);
+    background-size: calc(60px * 14) 60px;
+    animation:walk3 3s steps(14) infinite;
+    position:relative;
+}
+
+ /* Animación de personaje caminando: Simplemente mueve el sprite sheet hacia la izquierda, realizando el movimiento. */
+@keyframes walk {
+    /* Partimos de la primera viñeta del sprite sheet */
+    0% { background-position:0 }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+    100% { background-position:-1380px }
+}
+
+@keyframes walk2 {
+    /* Partimos de la primera viñeta del sprite sheet */
+    0% { background-position:0 }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+    100% { background-position:-900px }
+}
+
+@keyframes walk3 {
+    /* Partimos de la primera viñeta del sprite sheet */
+    0% { background-position:0 }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+    100% { background-position:-840px }
+}
+
+
 
 /*FIN*/

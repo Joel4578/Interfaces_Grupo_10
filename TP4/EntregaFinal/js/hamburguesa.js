@@ -9,6 +9,7 @@ menuHamburguesa.addEventListener('click', () => {
       // Alterna la clase 'show' en el menú desplegable para mostrarlo u ocultarlo
 });
 
+// nav(sticky) + logo + movimiento de los contenedores del inicio
 const header = document.querySelector('header');
 // Añade un evento al desplazamiento de la ventana
 window.addEventListener('scroll', () => {

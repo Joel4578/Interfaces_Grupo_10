@@ -1,3 +1,4 @@
+// aplicamos la funcion al documento en general
 document.addEventListener('DOMContentLoaded', function () {
     // Obtenemos todas las imágenes dentro del contenedor
     const images = document.querySelectorAll('.img img');
