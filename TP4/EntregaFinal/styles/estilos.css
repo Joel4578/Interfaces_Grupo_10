@@ -1027,67 +1027,6 @@ left: 565px;
 
 
 /*seccion novedades*/
-
-.sprites-container{
-    display: flex;
-    flex-direction: row;
-    width: 600px;
-    margin-top: -50px;
-}
-
-
-.sprite {
-    width:60px;
-    height:60px;
-    margin:auto;  
-    background:url(../imgs/novedades/sprite1.png);
-    background-size: calc(60px * 23) 60px;
-    animation:walk 2s steps(23) infinite;
-    position:relative;
-  }
-
-  .sprite2 {
-    width:60px;
-    height:60px;
-    margin:auto;  
-    background:url(../imgs/novedades/sprite2.png);
-    background-size: calc(60px * 15) 60px;
-    animation:walk2 1s steps(15) infinite;
-    position:relative;
-  }
-
-  .sprite3 {
-    width:60px;
-    height:60px;
-    margin:auto;  
-    background:url(../imgs/novedades/sprite3.png);
-    background-size: calc(60px * 14) 60px;
-    animation:walk3 3s steps(14) infinite;
-    position:relative;
-  }
-  
-  /* Animación de personaje caminando: Simplemente mueve el sprite sheet hacia la izquierda, realizando el movimiento. */
-  @keyframes walk {
-    /* Partimos de la primera viñeta del sprite sheet */
-    0% { background-position:0 }
-    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
-    100% { background-position:-1380px }
-  }
-
-  @keyframes walk2 {
-    /* Partimos de la primera viñeta del sprite sheet */
-    0% { background-position:0 }
-    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
-    100% { background-position:-900px }
-  }
-
-  @keyframes walk3 {
-    /* Partimos de la primera viñeta del sprite sheet */
-    0% { background-position:0 }
-    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
-    100% { background-position:-840px }
-  }
-
 .novedades {
     display: flex;
     flex-direction: column;
@@ -1332,5 +1271,68 @@ footer p{
     display: flex;
     width: 100%;
 }
+
+/* SPRITES DEL FOOTER */
+.sprites-container{
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    margin-top: -50px;
+}
+
+
+.sprite {
+    width:60px;
+    height:60px;
+    margin:auto;  
+    background:url(../imgs/novedades/sprite1.png);
+    background-size: calc(60px * 23) 60px;
+    animation:walk 2s steps(23) infinite;
+    position:relative;
+  }
+
+  .sprite2 {
+    width:60px;
+    height:60px;
+    margin:auto;  
+    background:url(../imgs/novedades/sprite2.png);
+    background-size: calc(60px * 15) 60px;
+    animation:walk2 1s steps(15) infinite;
+    position:relative;
+  }
+
+  .sprite3 {
+    width:60px;
+    height:60px;
+    margin:auto;  
+    background:url(../imgs/novedades/sprite3.png);
+    background-size: calc(60px * 14) 60px;
+    animation:walk3 3s steps(14) infinite;
+    position:relative;
+  }
+
+ /* Animación de personaje caminando: Simplemente mueve el sprite sheet hacia la izquierda, realizando el movimiento. */
+ @keyframes walk {
+    /* Partimos de la primera viñeta del sprite sheet */
+    0% { background-position:0 }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+    100% { background-position:-1380px }
+  }
+
+  @keyframes walk2 {
+    /* Partimos de la primera viñeta del sprite sheet */
+    0% { background-position:0 }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+    100% { background-position:-900px }
+  }
+
+  @keyframes walk3 {
+    /* Partimos de la primera viñeta del sprite sheet */
+    0% { background-position:0 }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+    100% { background-position:-840px }
+  }
+
+
 
 /*FIN*/
